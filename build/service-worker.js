@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/AdminLTE3-reactjs/build/precache-manifest.0412601c9e8fab4ee0e28e95a1c31e06.js"
+  "/react-lte/build/precache-manifest.4fd59722aa6cb67b673f847bf8b51613.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/AdminLTE3-reactjs/build/index.html", {
+workbox.routing.registerNavigationRoute("/react-lte/build/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

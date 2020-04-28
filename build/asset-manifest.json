@@ -1,13 +1,13 @@
 {
-  "main.css": "/AdminLTE3-reactjs/build/static/css/main.8a71ed32.chunk.css",
-  "main.js": "/AdminLTE3-reactjs/build/static/js/main.6b3f41c2.chunk.js",
-  "main.js.map": "/AdminLTE3-reactjs/build/static/js/main.6b3f41c2.chunk.js.map",
-  "runtime~main.js": "/AdminLTE3-reactjs/build/static/js/runtime~main.74b31258.js",
-  "runtime~main.js.map": "/AdminLTE3-reactjs/build/static/js/runtime~main.74b31258.js.map",
-  "static/js/2.7b13653d.chunk.js": "/AdminLTE3-reactjs/build/static/js/2.7b13653d.chunk.js",
-  "static/js/2.7b13653d.chunk.js.map": "/AdminLTE3-reactjs/build/static/js/2.7b13653d.chunk.js.map",
-  "index.html": "/AdminLTE3-reactjs/build/index.html",
-  "precache-manifest.0412601c9e8fab4ee0e28e95a1c31e06.js": "/AdminLTE3-reactjs/build/precache-manifest.0412601c9e8fab4ee0e28e95a1c31e06.js",
-  "service-worker.js": "/AdminLTE3-reactjs/build/service-worker.js",
-  "static/css/main.8a71ed32.chunk.css.map": "/AdminLTE3-reactjs/build/static/css/main.8a71ed32.chunk.css.map"
+  "main.css": "/react-lte/build/static/css/main.60d67a11.chunk.css",
+  "main.js": "/react-lte/build/static/js/main.c1d9668e.chunk.js",
+  "main.js.map": "/react-lte/build/static/js/main.c1d9668e.chunk.js.map",
+  "runtime~main.js": "/react-lte/build/static/js/runtime~main.7afb28f9.js",
+  "runtime~main.js.map": "/react-lte/build/static/js/runtime~main.7afb28f9.js.map",
+  "static/js/2.6e3ef74c.chunk.js": "/react-lte/build/static/js/2.6e3ef74c.chunk.js",
+  "static/js/2.6e3ef74c.chunk.js.map": "/react-lte/build/static/js/2.6e3ef74c.chunk.js.map",
+  "index.html": "/react-lte/build/index.html",
+  "precache-manifest.4fd59722aa6cb67b673f847bf8b51613.js": "/react-lte/build/precache-manifest.4fd59722aa6cb67b673f847bf8b51613.js",
+  "service-worker.js": "/react-lte/build/service-worker.js",
+  "static/css/main.60d67a11.chunk.css.map": "/react-lte/build/static/css/main.60d67a11.chunk.css.map"
 }

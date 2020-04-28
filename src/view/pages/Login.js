@@ -7,14 +7,17 @@ import {open_url} from "../../lib/utils"
 import PageTopActionIcon from "../components/PageTopActionIcon";
 import BaseComponent from "../../components/BaseComponent";
 
+const email =  window.globalObject.mock ?  window.globalObject.mock.login.email : ""
+const code =  window.globalObject.mock ?  window.globalObject.mock.login.code : ""
+
 class Login extends Component {
     state = {
-        email: '',
-        code: "",
+        email,
+        code,
         sendTxt: "获取验证码",
         sendBtnDisabled: false,
         agree: true,
-        pass: false
+        pass: !!window.globalObject.mock
     };
 
     onSendCapthca() {
@@ -65,6 +68,9 @@ class Login extends Component {
     }
 
     onLogin() {
+        if(window.globalObject.mock){
+            return this.onLoginOk(window.globalObject.mock.access_token)
+        }
         this.onCheckInput();
         const loading = window.weui.loading("登录中...");
         axios.post("/auth/email/captcha/verify", {
@@ -76,34 +82,17 @@ class Login extends Component {
             if (code === 200) {
                 window.weui.toast(msg);
                 const {access_token, user} = body;
-                this.props.dispatch({
-                    type: "user/setState",
-                    payload: {
-                        me: {
-                            ...user,
-                            email: this.state.email
-                        }
-                    }
-                });
-                set_access_token(access_token);
-                this.props.dispatch({
-                    type: "app/logged",
-                    payload: {
-                        access_token
-                    }
-                })
-                window.location.href = "#"
-                window.location.reload()
-                this.props.dispatch({
-                    type: "app/hideHalfScreenDialog"
-                })
+                this.onLoginOk({access_token})
             } else {
-
                 window.weui.topTips(msg)
             }
         }).catch(() => loading.hide())
     }
-
+    onLoginOk({access_token}){
+        set_access_token(access_token);
+        window.location.href = "#"
+        window.location.reload()
+    }
     onCheckInput() {
         const {email, code, agree} = this.state;
         if (agree && validateEmail(email) && code.length === 4) {
@@ -121,8 +110,7 @@ class Login extends Component {
 
     render() {
         return (
-            <BaseComponent id={"login"} className={"Login"}>
-
+            <BaseComponent id={"top-main"} className={"Login"}>
                 <PageTopActionIcon onClick={()=>open_url("#")} type={"close"}/>
 
                 <div className="weui-form" style={{paddingTop: 32}}>
@@ -182,7 +170,7 @@ class Login extends Component {
                     </div>
 
                     {
-                        get_platform() !== 'cordova' &&
+                        (get_platform() !== 'cordova' && window.globalObject.google_login_url )&&
                         <div className={"oauth"}>
                             <div className={"google"} onClick={() => {
                                 const url = parse_url(window.location.href)

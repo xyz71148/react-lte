@@ -6,7 +6,7 @@ import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
 import {initApp}  from  "./lib/boot";
 import * as serviceWorker from './serviceWorker';
-import App from './App';
+import App from './view/App';
 
 import './style/index.css';
 import './lib/weui/weui.css';

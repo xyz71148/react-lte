@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 import {connect} from "react-redux";
-import {get_access_token, getZoneTree, parse_url, set_access_token} from "./lib/utils"
-import './style/App.css';
-import {fetchMe} from './store/front/userActions'
-import Page from './lib/page'
+import {get_access_token, getZoneTree, parse_url, set_access_token} from "../lib/utils"
+import '../style/App.css';
+import {fetchMe} from '../store/front/userActions'
+import Page from '../lib/page'
 
-import MainSidebar from "./components/sider-menu/main-sidebar";
-import {routes,authPrefixes,defaultRoute} from "./config"
+import MainSidebar from "../components/sider-menu/main-sidebar";
+import {routes,authPrefixes,defaultRoute} from "../config"
 
 class App extends Component {
     state = {
         loading: true
     };
-    setUrl(url){
+    handleUrl(url){
         const urlObject = parse_url(url);
         if (urlObject.query.jwt) {
             set_access_token("JWT " + urlObject.query.jwt);
@@ -60,16 +60,23 @@ class App extends Component {
                         access_token
                     }
                 });
-                document.querySelector("#login-wrap").style.display = "none";
+                document.querySelector("#top-wrap").style.display = "none";
             }
             if(Object.keys(window.globalObject.constant).length === 0) {
                 this.getConstants()
             }
             if(authPrefixes.includes(page_id.split("/")[0])){
-                this.props.dispatch(fetchMe(()=>{
+                if(access_token === null){
+                    window.location.href = `${urlObject.protocol}//${urlObject.host}/#login`
+                    window.location.reload()
                     this.finishLoading()
-                }));
-
+                }else{
+                    this.props.dispatch(fetchMe(()=>{
+                        this.finishLoading()
+                    },()=>{
+                        this.finishLoading()
+                    }));
+                }
             }else{
                 this.finishLoading()
             }
@@ -85,9 +92,9 @@ class App extends Component {
         },700)
     }
     getConstants(){
-        const loading = window.weui.loading("加载中...")
+        //const loading = window.weui.loading("加载中...")
         axios.get("/constant").then(({data}) => {
-            loading.hide();
+            //loading.hide();
             const {default_zone, zones, download_urls, plans, payment, zone_names} = data;
             window.globalObject.constant = {
                 zones: getZoneTree(zones, zone_names),
@@ -95,18 +102,16 @@ class App extends Component {
                 zone_names, plans, download_urls
             };
         }).catch(() => {
-            loading.hide();
-            window.weui.toast("获取配置失败")
+            //loading.hide();
+            //window.weui.toast("获取配置失败")
         })
     }
     componentDidMount() {
         window.onpopstate = ()=> {
             const url = parse_url(document.location);
-            this.setUrl(url)
+            this.handleUrl(url)
         };
-
-        this.setUrl(window.location.href)
-
+        this.handleUrl(window.location.href)
     }
 
     getPageProps(id, options) {
