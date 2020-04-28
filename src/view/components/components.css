@@ -1,0 +1,13 @@
+.page_top_icons{
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    top:0px;
+    right:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-left: 4px;
+}
