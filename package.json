@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "rescripts start",
-    "build": "rescripts build ",
+    "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map &&  sed -i '' 's/\\/static/\\.\\./g' ./build/static/css/*.css && sed -i '' 's/\\/static/static/g' ./build/index.html ",
     "test": "rescripts test",
     "eject": "react-scripts eject"
   },
