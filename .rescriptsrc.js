@@ -25,7 +25,9 @@ module.exports = [require.resolve('./.webpack.config.js'), {
                 "jQuery": true,
                 "Chart": true,
                 "moment":true,
-                "Sparkline":true
+                "Sparkline":true,
+                "Swal":true,
+                "toastr":true
             },
             "rules": {
                 "jsx-a11y/anchor-is-valid": "off",

@@ -25,1506 +25,890 @@ export default connect(
                             <div className="card-header">
                                 <h3 className="card-title">
                                     <i className="fas fa-edit"></i>
-                                    Buttons
+                                    Navbar Examples
                                 </h3>
                             </div>
-                            <div className="card-body pad table-responsive">
-                                <p>Various types of buttons. Using the base class <code>.btn</code></p>
-                                <table className="table table-bordered text-center">
-                                    <tr>
-                                        <th>Normal</th>
-                                        <th>Large <code>.btn-lg</code></th>
-                                        <th>Small <code>.btn-sm</code></th>
-                                        <th>Extra Small <code>.btn-xs</code></th>
-                                        <th>Flat <code>.btn-flat</code></th>
-                                        <th>Disabled <code>.disabled</code></th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-default">Default</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-default btn-lg">Default
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-default btn-sm">Default
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-default btn-xs">Default
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-default btn-flat">Default
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-default disabled">Default
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-primary">Primary</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-primary btn-lg">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-primary btn-sm">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-primary btn-xs">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-primary btn-flat">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-primary disabled">Primary
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-secondary">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-secondary btn-lg">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-secondary btn-sm">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-secondary btn-xs">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-secondary btn-flat">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-secondary disabled">Secondary
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-success">Success</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-success btn-lg">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-success btn-sm">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-success btn-xs">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-success btn-flat">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-success disabled">Success
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-info">Info</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-info btn-lg">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-info btn-sm">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-info btn-xs">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-info btn-flat">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-info disabled">Info
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-danger">Danger</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-danger btn-lg">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-danger btn-sm">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-danger btn-xs">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-danger btn-flat">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-danger disabled">Danger
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-warning">Warning</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-warning btn-lg">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-warning btn-sm">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-warning btn-xs">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-warning btn-flat">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-warning disabled">Warning
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <div className="card-body">
+                                <div className="row">
+                                    <div className="col-12 col-md-6">
+                                        <h4>Default Navbar <small>(navbar-light)</small></h4>
+                                        <nav className="navbar navbar-expand navbar-light">
+                                            <ul className="navbar-nav">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" data-widget="pushmenu" href="#"
+                                                       role="button"><i className="fas fa-bars"></i></a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Home</a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                            <form className="form-inline ml-3">
+                                                <div className="input-group input-group-sm">
+                                                    <input className="form-control form-control-navbar" type="search"
+                                                           placeholder="Search" aria-label="Search" />
+                                                        <div className="input-group-append">
+                                                            <button className="btn btn-navbar" type="submit">
+                                                                <i className="fas fa-search"></i>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </nav>
+                                    </div>
+                                    <div className="col-12 col-md-6">
+                                        <h4>Default Navbar <small>(navbar-white navbar-light)</small></h4>
+                                        <nav className="navbar navbar-expand navbar-white navbar-light">
+                                            <ul className="navbar-nav">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" data-widget="pushmenu" href="#"
+                                                       role="button"><i className="fas fa-bars"></i></a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Home</a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                            <form className="form-inline ml-3">
+                                                <div className="input-group input-group-sm">
+                                                    <input className="form-control form-control-navbar" type="search"
+                                                           placeholder="Search" aria-label="Search" />
+                                                        <div className="input-group-append">
+                                                            <button className="btn btn-navbar" type="submit">
+                                                                <i className="fas fa-search"></i>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 col-md-6">
+                                        <h4 className="mt-4">Primary Navbar <small><b>recommended</b> (navbar-primary
+                                            navbar-dark)</small></h4>
+                                        <nav className="navbar navbar-expand navbar-primary navbar-dark">
+                                            <ul className="navbar-nav">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" data-widget="pushmenu" href="#"
+                                                       role="button"><i className="fas fa-bars"></i></a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Home</a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                            <form className="form-inline ml-3">
+                                                <div className="input-group input-group-sm">
+                                                    <input className="form-control form-control-navbar" type="search"
+                                                           placeholder="Search" aria-label="Search" />
+                                                        <div className="input-group-append">
+                                                            <button className="btn btn-navbar" type="submit">
+                                                                <i className="fas fa-search"></i>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </nav>
+                                    </div>
+                                    <div className="col-12 col-md-6">
+                                        <h4 className="mt-4">Primary Navbar <small>(navbar-primary navbar-light)</small>
+                                        </h4>
+                                        <nav className="navbar navbar-expand navbar-primary navbar-light">
+                                            <ul className="navbar-nav">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" data-widget="pushmenu" href="#"
+                                                       role="button"><i className="fas fa-bars"></i></a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Home</a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                            <form className="form-inline ml-3">
+                                                <div className="input-group input-group-sm">
+                                                    <input className="form-control form-control-navbar" type="search"
+                                                           placeholder="Search" aria-label="Search" />
+                                                        <div className="input-group-append">
+                                                            <button className="btn btn-navbar" type="submit">
+                                                                <i className="fas fa-search"></i>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 col-md-6">
+                                        <h4 className="mt-4">Orange Navbar <small><b>recommended</b> (navbar-orange
+                                            navbar-light)</small></h4>
+                                        <nav className="navbar navbar-expand navbar-orange navbar-light">
+                                            <ul className="navbar-nav">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" data-widget="pushmenu" href="#"
+                                                       role="button"><i className="fas fa-bars"></i></a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Home</a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                            <form className="form-inline ml-3">
+                                                <div className="input-group input-group-sm">
+                                                    <input className="form-control form-control-navbar" type="search"
+                                                           placeholder="Search" aria-label="Search" />
+                                                        <div className="input-group-append">
+                                                            <button className="btn btn-navbar" type="submit">
+                                                                <i className="fas fa-search"></i>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </nav>
+                                    </div>
+                                    <div className="col-12 col-md-6">
+                                        <h4 className="mt-4">Orange Navbar <small>(navbar-orange navbar-dark)</small>
+                                        </h4>
+                                        <nav className="navbar navbar-expand navbar-orange navbar-dark">
+                                            <ul className="navbar-nav">
+                                                <li className="nav-item">
+                                                    <a className="nav-link" data-widget="pushmenu" href="#"
+                                                       role="button"><i className="fas fa-bars"></i></a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Home</a>
+                                                </li>
+                                                <li className="nav-item d-none d-sm-inline-block">
+                                                    <a href="#" className="nav-link">Contact</a>
+                                                </li>
+                                            </ul>
+                                            <form className="form-inline ml-3">
+                                                <div className="input-group input-group-sm">
+                                                    <input className="form-control form-control-navbar" type="search"
+                                                           placeholder="Search" aria-label="Search" />
+                                                        <div className="input-group-append">
+                                                            <button className="btn btn-navbar" type="submit">
+                                                                <i className="fas fa-search"></i>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </nav>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <h4>Nav Tabs inside Card Header <small>card-tabs / card-outline-tabs</small></h4>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-sm-6">
+                        <div className="card card-primary card-tabs">
+                            <div className="card-header p-0 pt-1">
+                                <ul className="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                    <li className="nav-item">
+                                        <a className="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
+                                           href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
+                                           aria-selected="true">Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill"
+                                           href="#custom-tabs-one-profile" role="tab"
+                                           aria-controls="custom-tabs-one-profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill"
+                                           href="#custom-tabs-one-messages" role="tab"
+                                           aria-controls="custom-tabs-one-messages" aria-selected="false">Messages</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill"
+                                           href="#custom-tabs-one-settings" role="tab"
+                                           aria-controls="custom-tabs-one-settings" aria-selected="false">Settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="card-body">
+                                <div className="tab-content" id="custom-tabs-one-tabContent">
+                                    <div className="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel"
+                                         aria-labelledby="custom-tabs-one-home-tab">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                        ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non
+                                        magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper
+                                        ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis
+                                        aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus
+                                        porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est
+                                        vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus
+                                        rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris
+                                        lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia
+                                        erat eget sapien porta consectetur.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel"
+                                         aria-labelledby="custom-tabs-one-profile-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel"
+                                         aria-labelledby="custom-tabs-one-messages-tab">
+                                        Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris.
+                                        Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget
+                                        condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum
+                                        orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna
+                                        a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam
+                                        vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
+                                        sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum,
+                                        lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem
+                                        eu risus tincidunt eleifend ac ornare magna.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel"
+                                         aria-labelledby="custom-tabs-one-settings-tab">
+                                        Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis
+                                        tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
+                                        tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
+                                        consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
+                                        pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam.
+                                        Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
+                                        Praesent imperdiet accumsan ex sit amet facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6">
+                        <div className="card card-primary card-tabs">
+                            <div className="card-header p-0 pt-1">
+                                <ul className="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
+                                    <li className="pt-2 px-3"><h3 className="card-title">Card Title</h3></li>
+                                    <li className="nav-item">
+                                        <a className="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill"
+                                           href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home"
+                                           aria-selected="true">Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill"
+                                           href="#custom-tabs-two-profile" role="tab"
+                                           aria-controls="custom-tabs-two-profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill"
+                                           href="#custom-tabs-two-messages" role="tab"
+                                           aria-controls="custom-tabs-two-messages" aria-selected="false">Messages</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill"
+                                           href="#custom-tabs-two-settings" role="tab"
+                                           aria-controls="custom-tabs-two-settings" aria-selected="false">Settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="card-body">
+                                <div className="tab-content" id="custom-tabs-two-tabContent">
+                                    <div className="tab-pane fade show active" id="custom-tabs-two-home" role="tabpanel"
+                                         aria-labelledby="custom-tabs-two-home-tab">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                        ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non
+                                        magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper
+                                        ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis
+                                        aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus
+                                        porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est
+                                        vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus
+                                        rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris
+                                        lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia
+                                        erat eget sapien porta consectetur.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel"
+                                         aria-labelledby="custom-tabs-two-profile-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel"
+                                         aria-labelledby="custom-tabs-two-messages-tab">
+                                        Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris.
+                                        Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget
+                                        condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum
+                                        orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna
+                                        a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam
+                                        vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
+                                        sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum,
+                                        lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem
+                                        eu risus tincidunt eleifend ac ornare magna.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-two-settings" role="tabpanel"
+                                         aria-labelledby="custom-tabs-two-settings-tab">
+                                        Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis
+                                        tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
+                                        tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
+                                        consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
+                                        pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam.
+                                        Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
+                                        Praesent imperdiet accumsan ex sit amet facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-sm-6">
+                        <div className="card card-primary card-outline card-tabs">
+                            <div className="card-header p-0 pt-1 border-bottom-0">
+                                <ul className="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                    <li className="nav-item">
+                                        <a className="nav-link active" id="custom-tabs-three-home-tab"
+                                           data-toggle="pill" href="#custom-tabs-three-home" role="tab"
+                                           aria-controls="custom-tabs-three-home" aria-selected="true">Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill"
+                                           href="#custom-tabs-three-profile" role="tab"
+                                           aria-controls="custom-tabs-three-profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill"
+                                           href="#custom-tabs-three-messages" role="tab"
+                                           aria-controls="custom-tabs-three-messages" aria-selected="false">Messages</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill"
+                                           href="#custom-tabs-three-settings" role="tab"
+                                           aria-controls="custom-tabs-three-settings" aria-selected="false">Settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="card-body">
+                                <div className="tab-content" id="custom-tabs-three-tabContent">
+                                    <div className="tab-pane fade show active" id="custom-tabs-three-home"
+                                         role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                        ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non
+                                        magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper
+                                        ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis
+                                        aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus
+                                        porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est
+                                        vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus
+                                        rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris
+                                        lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia
+                                        erat eget sapien porta consectetur.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel"
+                                         aria-labelledby="custom-tabs-three-profile-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel"
+                                         aria-labelledby="custom-tabs-three-messages-tab">
+                                        Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris.
+                                        Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget
+                                        condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum
+                                        orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna
+                                        a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam
+                                        vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
+                                        sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum,
+                                        lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem
+                                        eu risus tincidunt eleifend ac ornare magna.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-three-settings" role="tabpanel"
+                                         aria-labelledby="custom-tabs-three-settings-tab">
+                                        Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis
+                                        tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
+                                        tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
+                                        consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
+                                        pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam.
+                                        Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
+                                        Praesent imperdiet accumsan ex sit amet facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6">
+                        <div className="card card-primary card-outline card-outline-tabs">
+                            <div className="card-header p-0 border-bottom-0">
+                                <ul className="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                                    <li className="nav-item">
+                                        <a className="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill"
+                                           href="#custom-tabs-four-home" role="tab"
+                                           aria-controls="custom-tabs-four-home" aria-selected="true">Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill"
+                                           href="#custom-tabs-four-profile" role="tab"
+                                           aria-controls="custom-tabs-four-profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill"
+                                           href="#custom-tabs-four-messages" role="tab"
+                                           aria-controls="custom-tabs-four-messages" aria-selected="false">Messages</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-four-settings-tab" data-toggle="pill"
+                                           href="#custom-tabs-four-settings" role="tab"
+                                           aria-controls="custom-tabs-four-settings" aria-selected="false">Settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="card-body">
+                                <div className="tab-content" id="custom-tabs-four-tabContent">
+                                    <div className="tab-pane fade show active" id="custom-tabs-four-home"
+                                         role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                        ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non
+                                        magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper
+                                        ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis
+                                        aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus
+                                        porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est
+                                        vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus
+                                        rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris
+                                        lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia
+                                        erat eget sapien porta consectetur.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel"
+                                         aria-labelledby="custom-tabs-four-profile-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel"
+                                         aria-labelledby="custom-tabs-four-messages-tab">
+                                        Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris.
+                                        Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget
+                                        condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum
+                                        orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna
+                                        a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam
+                                        vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
+                                        sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum,
+                                        lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem
+                                        eu risus tincidunt eleifend ac ornare magna.
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-four-settings" role="tabpanel"
+                                         aria-labelledby="custom-tabs-four-settings-tab">
+                                        Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis
+                                        tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
+                                        tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
+                                        consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
+                                        pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam.
+                                        Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
+                                        Praesent imperdiet accumsan ex sit amet facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <h4>Nav Tabs Overlay for loading</h4>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="card card-primary card-outline">
-                            <div className="card-header">
-                                <h3 className="card-title">
-                                    <i className="fas fa-edit"></i>
-                                    Outline Buttons
-                                </h3>
-                            </div>
-                            <div className="card-body pad table-responsive">
-                                <p>Various types of buttons. Using the base class <code>.btn</code></p>
-                                <table className="table table-bordered text-center">
-                                    <tr>
-                                        <th>Normal</th>
-                                        <th>Large <code>.btn-lg</code></th>
-                                        <th>Small <code>.btn-sm</code></th>
-                                        <th>Extra Small <code>.btn-xs</code></th>
-                                        <th>Flat <code>.btn-flat</code></th>
-                                        <th>Disabled <code>.disabled</code></th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-primary">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-primary btn-lg">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-primary btn-sm">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-primary btn-xs">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-primary btn-flat">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-primary disabled">Primary
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-secondary">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-secondary btn-lg">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-secondary btn-sm">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-secondary btn-xs">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-secondary btn-flat">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-secondary disabled">Secondary
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-success">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-success btn-lg">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-success btn-sm">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-success btn-xs">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-success btn-flat">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-success disabled">Success
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-outline-info">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-info btn-lg">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-info btn-sm">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-info btn-xs">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-info btn-flat">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-info disabled">Info
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block btn-outline-danger">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-danger btn-lg">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-danger btn-sm">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-danger btn-xs">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-danger btn-flat">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-danger disabled">Danger
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-warning">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-warning btn-lg">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-warning btn-sm">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-warning btn-xs">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-warning btn-flat">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block btn-outline-warning disabled">Warning
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="card card-primary card-outline">
-                            <div className="card-header">
-                                <h3 className="card-title">
-                                    <i className="fas fa-edit"></i>
-                                    Gradient Buttons (bg-gradient-*)
-                                </h3>
-                            </div>
-                            <div className="card-body pad table-responsive">
-                                <p>Various types of buttons. Using the base class <code>.btn</code></p>
-                                <table className="table table-bordered text-center">
-                                    <tr>
-                                        <th>Normal</th>
-                                        <th>Large <code>.btn-lg</code></th>
-                                        <th>Small <code>.btn-sm</code></th>
-                                        <th>Extra Small <code>.btn-xs</code></th>
-                                        <th>Flat <code>.btn-flat</code></th>
-                                        <th>Disabled <code>.disabled</code></th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-primary">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-primary btn-lg">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-primary btn-sm">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-primary btn-xs">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-primary btn-flat">Primary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-primary disabled">Primary
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-secondary">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-secondary btn-lg">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-secondary btn-sm">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-secondary btn-xs">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-secondary btn-flat">Secondary
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-secondary disabled">Secondary
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-success">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-success btn-lg">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-success btn-sm">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-success btn-xs">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-success btn-flat">Success
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-success disabled">Success
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block bg-gradient-info">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-info btn-lg">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-info btn-sm">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-info btn-xs">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-info btn-flat">Info
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-info disabled">Info
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button" className="btn btn-block bg-gradient-danger">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-danger btn-lg">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-danger btn-sm">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-danger btn-xs">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-danger btn-flat">Danger
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-danger disabled">Danger
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-warning">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-warning btn-lg">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-warning btn-sm">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-warning btn-xs">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-warning btn-flat">Warning
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button"
-                                                    className="btn btn-block bg-gradient-warning disabled">Warning
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-header">
-                                <h3 className="card-title">Block Buttons</h3>
+                        <div className="card card-primary card-tabs">
+                            <div className="card-header p-0 pt-1">
+                                <ul className="nav nav-tabs" id="custom-tabs-five-tab" role="tablist">
+                                    <li className="nav-item">
+                                        <a className="nav-link active" id="custom-tabs-five-overlay-tab"
+                                           data-toggle="pill" href="#custom-tabs-five-overlay" role="tab"
+                                           aria-controls="custom-tabs-five-overlay" aria-selected="true">Overlay</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-five-overlay-dark-tab"
+                                           data-toggle="pill" href="#custom-tabs-five-overlay-dark" role="tab"
+                                           aria-controls="custom-tabs-five-overlay-dark" aria-selected="false">Overlay
+                                            Dark</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="custom-tabs-five-normal-tab" data-toggle="pill"
+                                           href="#custom-tabs-five-normal" role="tab"
+                                           aria-controls="custom-tabs-five-normal" aria-selected="false">Normal Tab</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div className="card-body">
-                                <button type="button" className="btn btn-default btn-block">.btn-block</button>
-                                <button type="button" className="btn btn-default btn-block btn-flat">.btn-block
-                                    .btn-flat
-                                </button>
-                                <button type="button" className="btn btn-default btn-block btn-sm">.btn-block .btn-sm
-                                </button>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <h3 className="card-title">Horizontal Button Group</h3>
-                            </div>
-                            <div className="card-body table-responsive pad">
-                                <p>
-                                    Horizontal button groups are easy to create with bootstrap. Just add your buttons
-                                    inside <code>&lt;div class="btn-group"&gt;&lt;/div&gt;</code>
-                                </p>
-                                <table className="table table-bordered">
-                                    <tr>
-                                        <th>Button</th>
-                                        <th>Icons</th>
-                                        <th>Flat</th>
-                                        <th>Dropdown</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-default">Left</button>
-                                                <button type="button" className="btn btn-default">Middle</button>
-                                                <button type="button" className="btn btn-default">Right</button>
+                                <div className="tab-content" id="custom-tabs-five-tabContent">
+                                    <div className="tab-pane fade show active" id="custom-tabs-five-overlay"
+                                         role="tabpanel" aria-labelledby="custom-tabs-five-overlay-tab">
+                                        <div className="overlay-wrapper">
+                                            <div className="overlay"><i className="fas fa-3x fa-sync-alt fa-spin"></i>
+                                                <div className="text-bold pt-2">Loading...</div>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-default"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-default"><i
-                                                    className="fas fa-align-center"></i></button>
-                                                <button type="button" className="btn btn-default"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-default btn-flat"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-default btn-flat"><i
-                                                    className="fas fa-align-center"></i>
-                                                </button>
-                                                <button type="button" className="btn btn-default btn-flat"><i
-                                                    className="fas fa-align-right"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-default">1</button>
-                                                <button type="button" className="btn btn-default">2</button>
-                                                <div className="btn-group">
-                                                    <button type="button"
-                                                            className="btn btn-default dropdown-toggle dropdown-icon"
-                                                            data-toggle="dropdown">
-                                                    </button>
-                                                    <div className="dropdown-menu">
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-info">Left</button>
-                                                <button type="button" className="btn btn-info">Middle</button>
-                                                <button type="button" className="btn btn-info">Right</button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-info"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-info"><i
-                                                    className="fas fa-align-center"></i></button>
-                                                <button type="button" className="btn btn-info"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-info btn-flat"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-info btn-flat"><i
-                                                    className="fas fa-align-center"></i></button>
-                                                <button type="button" className="btn btn-info btn-flat"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-info">1</button>
-                                                <button type="button" className="btn btn-info">2</button>
-                                                <div className="btn-group">
-                                                    <button type="button"
-                                                            className="btn btn-info dropdown-toggle dropdown-icon"
-                                                            data-toggle="dropdown">
-                                                    </button>
-                                                    <div className="dropdown-menu">
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-danger">Left</button>
-                                                <button type="button" className="btn btn-danger">Middle</button>
-                                                <button type="button" className="btn btn-danger">Right</button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-danger"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-danger"><i
-                                                    className="fas fa-align-center"></i></button>
-                                                <button type="button" className="btn btn-danger"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-danger btn-flat"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-danger btn-flat"><i
-                                                    className="fas fa-align-center"></i>
-                                                </button>
-                                                <button type="button" className="btn btn-danger btn-flat"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-danger">1</button>
-                                                <button type="button" className="btn btn-danger">2</button>
-                                                <div className="btn-group">
-                                                    <button type="button"
-                                                            className="btn btn-danger dropdown-toggle dropdown-icon"
-                                                            data-toggle="dropdown">
-                                                    </button>
-                                                    <div className="dropdown-menu">
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-warning">Left</button>
-                                                <button type="button" className="btn btn-warning">Middle</button>
-                                                <button type="button" className="btn btn-warning">Right</button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-warning"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-warning"><i
-                                                    className="fas fa-align-center"></i></button>
-                                                <button type="button" className="btn btn-warning"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-warning btn-flat"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-warning btn-flat"><i
-                                                    className="fas fa-align-center"></i>
-                                                </button>
-                                                <button type="button" className="btn btn-warning btn-flat"><i
-                                                    className="fas fa-align-right"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-warning">1</button>
-                                                <button type="button" className="btn btn-warning">2</button>
-                                                <div className="btn-group">
-                                                    <button type="button"
-                                                            className="btn btn-warning dropdown-toggle dropdown-icon"
-                                                            data-toggle="dropdown">
-                                                    </button>
-                                                    <div className="dropdown-menu">
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-success">Left</button>
-                                                <button type="button" className="btn btn-success">Middle</button>
-                                                <button type="button" className="btn btn-success">Right</button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-success"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-success"><i
-                                                    className="fas fa-align-center"></i></button>
-                                                <button type="button" className="btn btn-success"><i
-                                                    className="fas fa-align-right"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-success btn-flat"><i
-                                                    className="fas fa-align-left"></i></button>
-                                                <button type="button" className="btn btn-success btn-flat"><i
-                                                    className="fas fa-align-center"></i>
-                                                </button>
-                                                <button type="button" className="btn btn-success btn-flat"><i
-                                                    className="fas fa-align-right"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-success">1</button>
-                                                <button type="button" className="btn btn-success">2</button>
-                                                <div className="btn-group">
-                                                    <button type="button"
-                                                            className="btn btn-success dropdown-toggle dropdown-icon"
-                                                            data-toggle="dropdown">
-                                                    </button>
-                                                    <div className="dropdown-menu">
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                        <a className="dropdown-item" href="#">Dropdown link</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <h3 className="card-title">Appended Buttons</h3>
-                            </div>
-                            <div className="card-body">
-                                <strong>With dropdown</strong>
-                                <div className="input-group mb-3">
-                                    <div className="input-group-prepend">
-                                        <button type="button" className="btn btn-default dropdown-toggle"
-                                                data-toggle="dropdown">
-                                            Action
-                                        </button>
-                                        <div className="dropdown-menu">
-                                            <a className="dropdown-item" href="#">Action</a>
-                                            <a className="dropdown-item" href="#">Another action</a>
-                                            <a className="dropdown-item" href="#">Something else here</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#">Separated link</a>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada
+                                            lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam
+                                            ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor
+                                            felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi,
+                                            vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique
+                                            senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu
+                                            lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim
+                                            sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin
+                                            porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus
+                                            pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum
+                                            at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
                                         </div>
                                     </div>
-                                    <input type="text" className="form-control"/>
-                                </div>
-                                <strong>Normal</strong>
-                                <div className="input-group mb-3">
-                                    <div className="input-group-prepend">
-                                        <button type="button" className="btn btn-danger">Action</button>
-                                    </div>
-                                    <input type="text" className="form-control"/>
-                                </div>
-                                <strong>Flat</strong>
-                                <div className="input-group mb-3">
-                                    <input type="text" className="form-control rounded-0"/>
-                                    <span className="input-group-append">
-                    <button type="button" className="btn btn-info btn-flat">Go!</button>
-                  </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <h3 className="card-title">Split buttons</h3>
-                            </div>
-                            <div className="card-body">
-                                <p className="mb-1">Normal split buttons:</p>
-                                <div className="margin">
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-default">Action</button>
-                                        <button type="button" className="btn btn-default dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
+                                    <div className="tab-pane fade" id="custom-tabs-five-overlay-dark" role="tabpanel"
+                                         aria-labelledby="custom-tabs-five-overlay-dark-tab">
+                                        <div className="overlay-wrapper">
+                                            <div className="overlay dark"><i
+                                                className="fas fa-3x fa-sync-alt fa-spin"></i>
+                                                <div className="text-bold pt-2">Loading...</div>
                                             </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-info">Action</button>
-                                        <button type="button" className="btn btn-info dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-danger">Action</button>
-                                        <button type="button" className="btn btn-danger dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-success">Action</button>
-                                        <button type="button" className="btn btn-success dropdown-toggle"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-warning">Action</button>
-                                        <button type="button" className="btn btn-warning dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p className="mt-3 mb-1">Flat split buttons:</p>
-                                <div className="margin">
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-default btn-flat">Action</button>
-                                        <button type="button"
-                                                className="btn btn-default btn-flat dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-info btn-flat">Action</button>
-                                        <button type="button"
-                                                className="btn btn-info btn-flat dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-danger btn-flat">Action</button>
-                                        <button type="button"
-                                                className="btn btn-danger btn-flat dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-success btn-flat">Action</button>
-                                        <button type="button"
-                                                className="btn btn-success btn-flat dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-warning btn-flat">Action</button>
-                                        <button type="button"
-                                                className="btn btn-warning btn-flat dropdown-toggle dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p className="mt-3 mb-1">Hoverable split buttons:</p>
-                                <div className="margin">
-                                    <div className="btn-group">
-                                        <button type="button" className="btn btn-default">Action</button>
-                                        <button type="button"
-                                                className="btn btn-default dropdown-toggle dropdown-hover dropdown-icon"
-                                                data-toggle="dropdown">
-                                            <span className="sr-only">Toggle Dropdown</span>
-                                            <div className="dropdown-menu" role="menu">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
-                                                <div className="dropdown-divider"></div>
-                                                <a className="dropdown-item" href="#">Separated link</a>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="btn-group">
-                                    <button type="button" className="btn btn-info">Action</button>
-                                    <button type="button"
-                                            className="btn btn-info dropdown-toggle dropdown-hover dropdown-icon"
-                                            data-toggle="dropdown">
-                                        <span className="sr-only">Toggle Dropdown</span>
-                                        <div className="dropdown-menu" role="menu">
-                                            <a className="dropdown-item" href="#">Action</a>
-                                            <a className="dropdown-item" href="#">Another action</a>
-                                            <a className="dropdown-item" href="#">Something else here</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#">Separated link</a>
+                                            Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna,
+                                            iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor.
+                                            Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique.
+                                            Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat
+                                            urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at
+                                            consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse
+                                            platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
                                         </div>
-                                    </button>
-                                </div>
-                                <div className="btn-group">
-                                    <button type="button" className="btn btn-danger">Action</button>
-                                    <button type="button"
-                                            className="btn btn-danger dropdown-toggle dropdown-hover dropdown-icon"
-                                            data-toggle="dropdown">
-                                        <span className="sr-only">Toggle Dropdown</span>
-                                        <div className="dropdown-menu" role="menu">
-                                            <a className="dropdown-item" href="#">Action</a>
-                                            <a className="dropdown-item" href="#">Another action</a>
-                                            <a className="dropdown-item" href="#">Something else here</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#">Separated link</a>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div className="btn-group">
-                                    <button type="button" className="btn btn-success">Action</button>
-                                    <button type="button"
-                                            className="btn btn-success dropdown-toggle dropdown-hover dropdown-icon"
-                                            data-toggle="dropdown">
-                                        <span className="sr-only">Toggle Dropdown</span>
-                                        <div className="dropdown-menu" role="menu">
-                                            <a className="dropdown-item" href="#">Action</a>
-                                            <a className="dropdown-item" href="#">Another action</a>
-                                            <a className="dropdown-item" href="#">Something else here</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#">Separated link</a>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div className="btn-group">
-                                    <button type="button" className="btn btn-warning">Action</button>
-                                    <button type="button"
-                                            className="btn btn-warning dropdown-toggle dropdown-hover dropdown-icon"
-                                            data-toggle="dropdown">
-                                        <span className="sr-only">Toggle Dropdown</span>
-                                        <div className="dropdown-menu" role="menu">
-                                            <a className="dropdown-item" href="#">Action</a>
-                                            <a className="dropdown-item" href="#">Another action</a>
-                                            <a className="dropdown-item" href="#">Something else here</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#">Separated link</a>
-                                        </div>
-                                    </button>
+                                    </div>
+                                    <div className="tab-pane fade" id="custom-tabs-five-normal" role="tabpanel"
+                                         aria-labelledby="custom-tabs-five-normal-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6">
-                    <div className="card">
-                        <div className="card-header">
-                            <h3 className="card-title">Application Buttons</h3>
-                        </div>
-                        <div className="card-body">
-                            <p>Add the classes <code>.btn.btn-app</code> to an <code>&lt;a></code> tag to achieve the
-                                following:</p>
-                            <a className="btn btn-app">
-                                <i className="fas fa-edit"></i> Edit
-                            </a>
-                            <a className="btn btn-app">
-                                <i className="fas fa-play"></i> Play
-                            </a>
-                            <a className="btn btn-app">
-                                <i className="fas fa-pause"></i> Pause
-                            </a>
-                            <a className="btn btn-app">
-                                <i className="fas fa-save"></i> Save
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-warning">3</span>
-                                <i className="fas fa-bullhorn"></i> Notifications
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-success">300</span>
-                                <i className="fas fa-barcode"></i> Products
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-purple">891</span>
-                                <i className="fas fa-users"></i> Users
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-teal">67</span>
-                                <i className="fas fa-inbox"></i> Orders
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-info">12</span>
-                                <i className="fas fa-envelope"></i> Inbox
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-danger">531</span>
-                                <i className="fas fa-heart"></i> Likes
-                            </a>
-                        </div>
+                <div className="card card-primary card-outline">
+                    <div className="card-header">
+                        <h3 className="card-title">
+                            <i className="fas fa-edit"></i>
+                            Vertical Tabs Examples
+                        </h3>
                     </div>
-                    <div className="card">
-                        <div className="card-header">
-                            <h3 className="card-title">Vertical Button Group</h3>
-                        </div>
-                        <div className="card-body table-responsive pad">
-                            <p>
-                                Vertical button groups are easy to create with bootstrap. Just add your buttons
-                                inside <code>&lt;div class="btn-group-vertical"&gt;&lt;/div&gt;</code>
-                            </p>
-                            <table className="table table-bordered">
-                                <tr>
-                                    <th>Button</th>
-                                    <th>Icons</th>
-                                    <th>Flat</th>
-                                    <th>Dropdown</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default">Top</button>
-                                            <button type="button" className="btn btn-default">Middle</button>
-                                            <button type="button" className="btn btn-default">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-default"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-default"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-default btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-default btn-flat"><i
-                                                className="fas fa-align-right"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default">1</button>
-                                            <button type="button" className="btn btn-default">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-default dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info">Top</button>
-                                            <button type="button" className="btn btn-info">Middle</button>
-                                            <button type="button" className="btn btn-info">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-info"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-info"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-info btn-flat"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-info btn-flat"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info">1</button>
-                                            <button type="button" className="btn btn-info">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-info dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger">Top</button>
-                                            <button type="button" className="btn btn-danger">Middle</button>
-                                            <button type="button" className="btn btn-danger">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-danger"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-danger"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-danger btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-danger btn-flat"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger">1</button>
-                                            <button type="button" className="btn btn-danger">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-danger dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning">Top</button>
-                                            <button type="button" className="btn btn-warning">Middle</button>
-                                            <button type="button" className="btn btn-warning">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-warning"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-warning"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-warning btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-warning btn-flat"><i
-                                                className="fas fa-align-right"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning">1</button>
-                                            <button type="button" className="btn btn-warning">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-warning dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success">Top</button>
-                                            <button type="button" className="btn btn-success">Middle</button>
-                                            <button type="button" className="btn btn-success">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-success"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-success"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-success btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-success btn-flat"><i
-                                                className="fas fa-align-right"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success">1</button>
-                                            <button type="button" className="btn btn-success">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-success dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-header">
-                            <h3 className="card-title">Radio Button Group</h3>
-                        </div>
-                        <div className="card-body table-responsive pad">
-                            <p className="mb-1">Radio Button Group with <code>.btn-secondary</code></p>
-                            <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label className="btn btn-secondary active">
-                                    <input type="radio" name="options" id="option1" autoComplete="off" checked/> Active
-                                </label>
-                                <label className="btn btn-secondary">
-                                    <input type="radio" name="options" id="option2" autoComplete="off"/> Radio
-                                </label>
-                                <label className="btn btn-secondary">
-                                    <input type="radio" name="options" id="option3" autoComplete="off"/> Radio
-                                </label>
+                    <div className="card-body">
+                        <h4>Left Sided</h4>
+                        <div className="row">
+                            <div className="col-5 col-sm-3">
+                                <div className="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist"
+                                     aria-orientation="vertical">
+                                    <a className="nav-link active" id="vert-tabs-home-tab" data-toggle="pill"
+                                       href="#vert-tabs-home" role="tab" aria-controls="vert-tabs-home"
+                                       aria-selected="true">Home</a>
+                                    <a className="nav-link" id="vert-tabs-profile-tab" data-toggle="pill"
+                                       href="#vert-tabs-profile" role="tab" aria-controls="vert-tabs-profile"
+                                       aria-selected="false">Profile</a>
+                                    <a className="nav-link" id="vert-tabs-messages-tab" data-toggle="pill"
+                                       href="#vert-tabs-messages" role="tab" aria-controls="vert-tabs-messages"
+                                       aria-selected="false">Messages</a>
+                                    <a className="nav-link" id="vert-tabs-settings-tab" data-toggle="pill"
+                                       href="#vert-tabs-settings" role="tab" aria-controls="vert-tabs-settings"
+                                       aria-selected="false">Settings</a>
+                                </div>
                             </div>
-                            <p className="mt-3 mb-1">Radio Button Group with <code>.bg-olive</code></p>
-                            <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label className="btn bg-olive active">
-                                    <input type="radio" name="options" id="option1" autoComplete="off" checked/> Active
-                                </label>
-                                <label className="btn bg-olive">
-                                    <input type="radio" name="options" id="option2" autoComplete="off"/> Radio
-                                </label>
-                                <label className="btn bg-olive">
-                                    <input type="radio" name="options" id="option3" autoComplete="off"/> Radio
-                                </label>
+                            <div className="col-7 col-sm-9">
+                                <div className="tab-content" id="vert-tabs-tabContent">
+                                    <div className="tab-pane text-left fade show active" id="vert-tabs-home"
+                                         role="tabpanel" aria-labelledby="vert-tabs-home-tab">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                        ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non
+                                        magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper
+                                        ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis
+                                        aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus
+                                        porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est
+                                        vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus
+                                        rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris
+                                        lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia
+                                        erat eget sapien porta consectetur.
+                                    </div>
+                                    <div className="tab-pane fade" id="vert-tabs-profile" role="tabpanel"
+                                         aria-labelledby="vert-tabs-profile-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
+                                    <div className="tab-pane fade" id="vert-tabs-messages" role="tabpanel"
+                                         aria-labelledby="vert-tabs-messages-tab">
+                                        Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris.
+                                        Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget
+                                        condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum
+                                        orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna
+                                        a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam
+                                        vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
+                                        sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum,
+                                        lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem
+                                        eu risus tincidunt eleifend ac ornare magna.
+                                    </div>
+                                    <div className="tab-pane fade" id="vert-tabs-settings" role="tabpanel"
+                                         aria-labelledby="vert-tabs-settings-tab">
+                                        Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis
+                                        tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
+                                        tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
+                                        consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
+                                        pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam.
+                                        Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
+                                        Praesent imperdiet accumsan ex sit amet facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 className="mt-4">Right Sided <small>(nav-tabs-right)</small></h4>
+                        <div className="row">
+                            <div className="col-7 col-sm-9">
+                                <div className="tab-content" id="vert-tabs-right-tabContent">
+                                    <div className="tab-pane fade show active" id="vert-tabs-right-home" role="tabpanel"
+                                         aria-labelledby="vert-tabs-right-home-tab">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                        ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non
+                                        magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper
+                                        ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis
+                                        aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                        fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus
+                                        porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est
+                                        vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus
+                                        rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris
+                                        lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia
+                                        erat eget sapien porta consectetur.
+                                    </div>
+                                    <div className="tab-pane fade" id="vert-tabs-right-profile" role="tabpanel"
+                                         aria-labelledby="vert-tabs-right-profile-tab">
+                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris
+                                        pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor
+                                        sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
+                                        orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a
+                                        luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus.
+                                        Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc
+                                        euismod pellentesque diam.
+                                    </div>
+                                    <div className="tab-pane fade" id="vert-tabs-right-messages" role="tabpanel"
+                                         aria-labelledby="vert-tabs-right-messages-tab">
+                                        Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris.
+                                        Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget
+                                        condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum
+                                        orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna
+                                        a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam
+                                        vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
+                                        sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum,
+                                        lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem
+                                        eu risus tincidunt eleifend ac ornare magna.
+                                    </div>
+                                    <div className="tab-pane fade" id="vert-tabs-right-settings" role="tabpanel"
+                                         aria-labelledby="vert-tabs-right-settings-tab">
+                                        Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis
+                                        tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque
+                                        tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum
+                                        consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec
+                                        pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam.
+                                        Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst.
+                                        Praesent imperdiet accumsan ex sit amet facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-5 col-sm-3">
+                                <div className="nav flex-column nav-tabs nav-tabs-right h-100" id="vert-tabs-right-tab"
+                                     role="tablist" aria-orientation="vertical">
+                                    <a className="nav-link active" id="vert-tabs-right-home-tab" data-toggle="pill"
+                                       href="#vert-tabs-right-home" role="tab" aria-controls="vert-tabs-right-home"
+                                       aria-selected="true">Home</a>
+                                    <a className="nav-link" id="vert-tabs-right-profile-tab" data-toggle="pill"
+                                       href="#vert-tabs-right-profile" role="tab"
+                                       aria-controls="vert-tabs-right-profile" aria-selected="false">Profile</a>
+                                    <a className="nav-link" id="vert-tabs-right-messages-tab" data-toggle="pill"
+                                       href="#vert-tabs-right-messages" role="tab"
+                                       aria-controls="vert-tabs-right-messages" aria-selected="false">Messages</a>
+                                    <a className="nav-link" id="vert-tabs-right-settings-tab" data-toggle="pill"
+                                       href="#vert-tabs-right-settings" role="tab"
+                                       aria-controls="vert-tabs-right-settings" aria-selected="false">Settings</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card card-primary card-outline">
+                    <div className="card-header">
+                        <h3 className="card-title">
+                            <i className="fas fa-edit"></i>
+                            Tabs Custom Content Examples
+                        </h3>
+                    </div>
+                    <div className="card-body">
+                        <h4>Custom Content Below</h4>
+                        <ul className="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                            <li className="nav-item">
+                                <a className="nav-link active" id="custom-content-below-home-tab" data-toggle="pill"
+                                   href="#custom-content-below-home" role="tab"
+                                   aria-controls="custom-content-below-home" aria-selected="true">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="custom-content-below-profile-tab" data-toggle="pill"
+                                   href="#custom-content-below-profile" role="tab"
+                                   aria-controls="custom-content-below-profile" aria-selected="false">Profile</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="custom-content-below-messages-tab" data-toggle="pill"
+                                   href="#custom-content-below-messages" role="tab"
+                                   aria-controls="custom-content-below-messages" aria-selected="false">Messages</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="custom-content-below-settings-tab" data-toggle="pill"
+                                   href="#custom-content-below-settings" role="tab"
+                                   aria-controls="custom-content-below-settings" aria-selected="false">Settings</a>
+                            </li>
+                        </ul>
+                        <div className="tab-content" id="custom-content-below-tabContent">
+                            <div className="tab-pane fade show active" id="custom-content-below-home" role="tabpanel"
+                                 aria-labelledby="custom-content-below-home-tab">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna
+                                feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula.
+                                Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque
+                                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin
+                                id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim
+                                sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor
+                                porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non
+                                consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus.
+                                Cras lacinia erat eget sapien porta consectetur.
+                            </div>
+                            <div className="tab-pane fade" id="custom-content-below-profile" role="tabpanel"
+                                 aria-labelledby="custom-content-below-profile-tab">
+                                Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus
+                                ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula
+                                placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet
+                                ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                            </div>
+                            <div className="tab-pane fade" id="custom-content-below-messages" role="tabpanel"
+                                 aria-labelledby="custom-content-below-messages-tab">
+                                Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus
+                                volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce
+                                nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue
+                                ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur
+                                eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur,
+                                ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex
+                                vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus.
+                                Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                            </div>
+                            <div className="tab-pane fade" id="custom-content-below-settings" role="tabpanel"
+                                 aria-labelledby="custom-content-below-settings-tab">
+                                Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus
+                                turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis
+                                vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum
+                                pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget
+                                aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac
+                                habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                            </div>
+                        </div>
+                        <div className="tab-custom-content">
+                            <p className="lead mb-0">Custom Content goes here</p>
+                        </div>
+                        <h4 className="mt-5 ">Custom Content Above</h4>
+                        <ul className="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+                            <li className="nav-item">
+                                <a className="nav-link active" id="custom-content-above-home-tab" data-toggle="pill"
+                                   href="#custom-content-above-home" role="tab"
+                                   aria-controls="custom-content-above-home" aria-selected="true">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="custom-content-above-profile-tab" data-toggle="pill"
+                                   href="#custom-content-above-profile" role="tab"
+                                   aria-controls="custom-content-above-profile" aria-selected="false">Profile</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="custom-content-above-messages-tab" data-toggle="pill"
+                                   href="#custom-content-above-messages" role="tab"
+                                   aria-controls="custom-content-above-messages" aria-selected="false">Messages</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="custom-content-above-settings-tab" data-toggle="pill"
+                                   href="#custom-content-above-settings" role="tab"
+                                   aria-controls="custom-content-above-settings" aria-selected="false">Settings</a>
+                            </li>
+                        </ul>
+                        <div className="tab-custom-content">
+                            <p className="lead mb-0">Custom Content goes here</p>
+                        </div>
+                        <div className="tab-content" id="custom-content-above-tabContent">
+                            <div className="tab-pane fade show active" id="custom-content-above-home" role="tabpanel"
+                                 aria-labelledby="custom-content-above-home-tab">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus
+                                ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna
+                                feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula.
+                                Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque
+                                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin
+                                id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim
+                                sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor
+                                porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non
+                                consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus.
+                                Cras lacinia erat eget sapien porta consectetur.
+                            </div>
+                            <div className="tab-pane fade" id="custom-content-above-profile" role="tabpanel"
+                                 aria-labelledby="custom-content-above-profile-tab">
+                                Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus
+                                ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula
+                                placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet
+                                ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                            </div>
+                            <div className="tab-pane fade" id="custom-content-above-messages" role="tabpanel"
+                                 aria-labelledby="custom-content-above-messages-tab">
+                                Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus
+                                volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce
+                                nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue
+                                ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur
+                                eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur,
+                                ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex
+                                vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus.
+                                Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                            </div>
+                            <div className="tab-pane fade" id="custom-content-above-settings" role="tabpanel"
+                                 aria-labelledby="custom-content-above-settings-tab">
+                                Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus
+                                turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis
+                                vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum
+                                pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget
+                                aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac
+                                habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
                             </div>
                         </div>
                     </div>

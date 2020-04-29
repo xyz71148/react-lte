@@ -143,12 +143,12 @@ export const menus = [
         "icon": "fa-edit",
         "children": [
             {
-                "id": "demo/forms/general_elements",
+                "id": "demo/forms/general",
                 "name": "General Elements",
                 "icon": "fa-circle"
             },
             {
-                "id": "demo/forms/advanced_elements",
+                "id": "demo/forms/advanced",
                 "name": "Advanced Elements",
                 "icon": "fa-circle"
             },

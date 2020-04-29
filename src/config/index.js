@@ -15,6 +15,10 @@ import DemoUiElementsModalsAlerts from "../pages/demo/ui_elements/modals_alerts"
 import DemoUiElementsNavbarTabs from "../pages/demo/ui_elements/navbar_tabs";
 import DemoUiElementsTimeline from "../pages/demo/ui_elements/timeline";
 import DemoUiElementsRibbons from "../pages/demo/ui_elements/ribbons";
+import DemoFormsGeneral from "../pages/demo/forms/general";
+import DemoFormsAdvanced from "../pages/demo/forms/advanced";
+import DemoFormsValidation from "../pages/demo/forms/validation";
+import DemoFormsEditors from "../pages/demo/forms/editors";
 
 
 import {menus} from "./menus"
@@ -40,6 +44,10 @@ export const routes = {
     "demo/ui_elements/navbar_tabs": {children: (<DemoUiElementsNavbarTabs />)},
     "demo/ui_elements/timeline": {children: (<DemoUiElementsTimeline />)},
     "demo/ui_elements/ribbons": {children: (<DemoUiElementsRibbons />)},
+    "demo/forms/general": {children: (<DemoFormsGeneral />)},
+    "demo/forms/advanced": {children: (<DemoFormsAdvanced />)},
+    "demo/forms/validation": {children: (<DemoFormsValidation />)},
+    "demo/forms/editors": {children: (<DemoFormsEditors />)},
 };
 
 
