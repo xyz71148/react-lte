@@ -1,0 +1,14 @@
+.class1{
+    position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(46px, 19px, 0px);
+}
+#salesChart{
+    height: 180px; display: block; width: 711px;
+}
+#pieChart{
+    display: block; height: 124px; width: 248px;
+}
+path.area{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round;
+    stroke-width: 1;
+    stroke-linejoin: round;
+}

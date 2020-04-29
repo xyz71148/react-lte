@@ -17,7 +17,7 @@ export default connect(({route})=>{
         page_close_id:route.page_close_id
     }
 })((props) => {
-    const {children, id, onScrollToEnd,page_close_id,title,dispatch, hideHeader, visible, onClose, onConfirm, onAdd} = props;
+    const {children, id,page_close_id,title,dispatch, showHeader, visible, onClose, onConfirm, onAdd} = props;
 
     window.portal_index += 1
     is_close_btn_closed = false;
@@ -51,7 +51,7 @@ export default connect(({route})=>{
                     page.className = "page";
                 }} id={"page_" + sid}>
                     {
-                        hideHeader === undefined &&
+                        showHeader &&
                         <div className="header">
                             <div className="left">
                                 {

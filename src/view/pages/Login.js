@@ -81,7 +81,7 @@ class Login extends Component {
             loading.hide();
             if (code === 200) {
                 window.weui.toast(msg);
-                const {access_token, user} = body;
+                const {access_token} = body;
                 this.onLoginOk({access_token})
             } else {
                 window.weui.topTips(msg)

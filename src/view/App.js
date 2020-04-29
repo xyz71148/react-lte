@@ -7,7 +7,7 @@ import {fetchMe} from '../store/front/userActions'
 import Page from '../lib/page'
 
 import MainSidebar from "../components/sider-menu/main-sidebar";
-import {routes,authPrefixes,defaultRoute} from "../config"
+import {routes,sidebar,authPrefixes,defaultRoute} from "../config"
 
 class App extends Component {
     state = {
@@ -37,6 +37,27 @@ class App extends Component {
                     page_id = "404"
                 }
             }
+
+            const {menus} = sidebar;
+            const set_breadcrumb = (menu)=>{
+                window.$("#breadcrumb_title").text(menu.name)
+                window.$("#breadcrumb").text(menu.name)
+            }
+            const handle_breadcrumb = (menus)=>{
+                for(let i in menus){
+                    if(menus[i].id === page_id){
+                        return set_breadcrumb(menus[i])
+                    }
+                    if(menus[i].children){
+                        for(let j in menus[i].children){
+                            if(menus[i].children[j].id === page_id){
+                                return set_breadcrumb(menus[i].children[j])
+                            }
+                        }
+                    }
+                }
+            }
+            handle_breadcrumb(menus)
             this.props.dispatch({
                 type: "route/setState",
                 payload: {

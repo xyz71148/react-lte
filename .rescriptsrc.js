@@ -9,4 +9,28 @@ module.exports = [require.resolve('./.webpack.config.js'), {
         }
         return config
     }
-},]
+},
+    [
+        'use-eslint-config',
+        {
+            extends: ['react-app'],
+            plugins: [],
+            "env": {
+                "browser": true,
+                "commonjs": true,
+                "es6": true,
+                "jquery": true
+            },
+            "globals": {
+                "jQuery": true,
+                "Chart": true,
+                "moment":true,
+                "Sparkline":true
+            },
+            "rules": {
+                "jsx-a11y/anchor-is-valid": "off",
+                "jsx-a11y/img-redundant-alt": "off",
+                "jsx-a11y/alt-text": "off"
+            }
+        },
+    ],]

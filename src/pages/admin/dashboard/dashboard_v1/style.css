@@ -1,0 +1,6 @@
+#line-chart{
+    min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;
+}
+#revenue-chart{
+    position: relative; height: 300px;
+}

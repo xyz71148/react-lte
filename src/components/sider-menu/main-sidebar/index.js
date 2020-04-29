@@ -3,7 +3,6 @@ import {connect} from "react-redux"
 import BaseComponent from "../../BaseComponent"
 import classnames from "../../../lib/classnames"
 
-
 export default connect(({sidebar}) => {
     return {
         activeMenu: sidebar.activeMenu,
@@ -12,27 +11,35 @@ export default connect(({sidebar}) => {
         menus: sidebar.menus
     }
 })(({menus, activeMenu, openMenu, clickedMenu, dispatch}) => {
+    console.log({activeMenu, openMenu, clickedMenu})
     return (
         <BaseComponent id="main-sidebar" className="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="#admin/order" className="brand-link">
-                <img src="static/dist/img/AdminLTELogo.png" className="brand-image img-circle elevation-3"
-                     style={{opacity: ".8"}}/>
-                <span className="brand-text font-weight-light">App</span>
+            <a  href="#" className="brand-link">
+                <img src="./static/dist/img/AdminLTELogo.png"
+                     alt="AdminLTE Logo"
+                     className="brand-image img-circle elevation-3"
+                     style={{opacity:".8"}}/>
+                    <span className="brand-text font-weight-light">AdminLTE 3</span>
             </a>
-
             <div className="sidebar">
+                <div className="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div className="image">
+                        <img src="./static/dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+                    </div>
+                    <div className="info">
+                        <a href="#" className="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
                 <nav className="mt-2">
-                    <ul className="nav nav-pills nav-sidebar flex-column text-sm nav-flat nav-compact"
+
+                    <ul className="nav nav-pills nav-sidebar flex-column"
                         data-widget="treeview" role="menu"
                         data-accordion="false">
                         {
                             menus.map(menu => {
                                 const has_tree = !!menu.children;
-                                const active = (activeMenu && clickedMenu) && (activeMenu === menu.id ||
-                                    activeMenu.split("/")[0] === menu.id ||
-                                    menu.id === clickedMenu ||
-                                    clickedMenu.split("/")[0] === menu.id);
-                                const menu_open = openMenu === menu.id || activeMenu.split("/")[0] === menu.id;
+
+                                const menu_open = openMenu === menu.id || activeMenu.indexOf(menu.id) === 0;
                                 const clz = classnames({
                                     "nav-item": true,
                                     "has-treeview": has_tree,
@@ -41,7 +48,7 @@ export default connect(({sidebar}) => {
 
                                 const clz_a = classnames({
                                     "nav-link": true,
-                                    "active": activeMenu === menu.id || activeMenu.split("/")[0] === menu.id
+                                    "active": activeMenu === menu.id ||  activeMenu.indexOf(menu.id) === 0
                                 });
                                 const url = "#" + menu.id;
                                 return (
@@ -64,7 +71,9 @@ export default connect(({sidebar}) => {
                                                 })
                                             }
                                         }}>
-                                            {menu.icon && menu.icon}
+                                            {menu.icon && (
+                                                <i className={"nav-icon fas " + menu.icon}/>
+                                            )}
                                             <p>{menu.name} {has_tree && <i className="right fas fa-angle-left"/>}</p>
                                         </a>
                                         {
@@ -74,7 +83,7 @@ export default connect(({sidebar}) => {
                                                     style={{display: menu_open ? undefined : "none"}}>
                                                     {
                                                         menu.children.map(child => {
-                                                            const url = menu.id + "/" + child.id
+                                                            const url = child.id
                                                             const active1 = activeMenu === url || clickedMenu === url;
 
                                                             const clz_a1 = classnames({
@@ -94,7 +103,9 @@ export default connect(({sidebar}) => {
                                                                                }
                                                                            })
                                                                        }}>
-                                                                        {child.icon && child.icon}
+                                                                        {child.icon && (
+                                                                            <i className={"far nav-icon " + child.icon}/>
+                                                                        )}
                                                                         <p>{child.name} </p>
                                                                     </a>
                                                                 </li>
