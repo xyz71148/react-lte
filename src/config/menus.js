@@ -1,339 +1,339 @@
 export const menus = [
     {
-        "id": "admin/dashboard",
+        "id": "demo/dashboard",
         "name": "Dashboard",
         "icon": "fa-tachometer-alt",
         "children": [
             {
-                "id": "admin/dashboard/dashboard_v1",
+                "id": "demo/dashboard/dashboard_v1",
                 "name": "Dashboard v1",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/dashboard/dashboard_v2",
+                "id": "demo/dashboard/dashboard_v2",
                 "name": "Dashboard v2",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/dashboard/dashboard_v3",
+                "id": "demo/dashboard/dashboard_v3",
                 "name": "Dashboard v3",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/widgetsnew",
+        "id": "demo/widgets",
         "name": "WidgetsNew",
         "icon": "fa-th"
     },
     {
-        "id": "admin/layout options6",
+        "id": "demo/layout options6",
         "name": "Layout Options6",
         "icon": "fa-copy",
         "children": [
             {
-                "id": "admin/layout options6/top_navigation",
+                "id": "demo/layout options6/top_navigation",
                 "name": "Top Navigation",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/layout options6/top_navigation + sidebar",
+                "id": "demo/layout options6/top_navigation + sidebar",
                 "name": "Top Navigation + Sidebar",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/layout options6/boxed",
+                "id": "demo/layout options6/boxed",
                 "name": "Boxed",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/layout options6/fixed_sidebar",
+                "id": "demo/layout options6/fixed_sidebar",
                 "name": "Fixed Sidebar",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/layout options6/fixed_navbar",
+                "id": "demo/layout options6/fixed_navbar",
                 "name": "Fixed Navbar",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/layout options6/fixed_footer",
+                "id": "demo/layout options6/fixed_footer",
                 "name": "Fixed Footer",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/layout options6/collapsed_sidebar",
+                "id": "demo/layout options6/collapsed_sidebar",
                 "name": "Collapsed Sidebar",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/charts",
+        "id": "demo/charts",
         "name": "Charts",
         "icon": "fa-chart-pie",
         "children": [
             {
-                "id": "admin/charts/chartjs",
+                "id": "demo/charts/chartjs",
                 "name": "ChartJS",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/charts/flot",
+                "id": "demo/charts/flot",
                 "name": "Flot",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/charts/inline",
+                "id": "demo/charts/inline",
                 "name": "Inline",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/ui elements",
+        "id": "demo/ui_elements",
         "name": "UI Elements",
         "icon": "fa-tree",
         "children": [
             {
-                "id": "admin/ui elements/general",
+                "id": "demo/ui_elements/general",
                 "name": "General",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/icons",
+                "id": "demo/ui_elements/icons",
                 "name": "Icons",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/buttons",
+                "id": "demo/ui_elements/buttons",
                 "name": "Buttons",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/sliders",
+                "id": "demo/ui_elements/sliders",
                 "name": "Sliders",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/modals_& alerts",
+                "id": "demo/ui_elements/modals_alerts",
                 "name": "Modals & Alerts",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/navbar_& tabs",
+                "id": "demo/ui_elements/navbar_tabs",
                 "name": "Navbar & Tabs",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/timeline",
+                "id": "demo/ui_elements/timeline",
                 "name": "Timeline",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/ui elements/ribbons",
+                "id": "demo/ui_elements/ribbons",
                 "name": "Ribbons",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/forms",
+        "id": "demo/forms",
         "name": "Forms",
         "icon": "fa-edit",
         "children": [
             {
-                "id": "admin/forms/general_elements",
+                "id": "demo/forms/general_elements",
                 "name": "General Elements",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/forms/advanced_elements",
+                "id": "demo/forms/advanced_elements",
                 "name": "Advanced Elements",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/forms/editors",
+                "id": "demo/forms/editors",
                 "name": "Editors",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/forms/validation",
+                "id": "demo/forms/validation",
                 "name": "Validation",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/tables",
+        "id": "demo/tables",
         "name": "Tables",
         "icon": "fa-table",
         "children": [
             {
-                "id": "admin/tables/simple_tables",
+                "id": "demo/tables/simple_tables",
                 "name": "Simple Tables",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/tables/datatables",
+                "id": "demo/tables/datatables",
                 "name": "DataTables",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/tables/jsgrid",
+                "id": "demo/tables/jsgrid",
                 "name": "jsGrid",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/calendar2",
+        "id": "demo/calendar2",
         "name": "Calendar2",
         "icon": "fa-calendar-alt"
     },
     {
-        "id": "admin/gallery",
+        "id": "demo/gallery",
         "name": "Gallery",
         "icon": "fa-image"
     },
     {
-        "id": "admin/mailbox",
+        "id": "demo/mailbox",
         "name": "Mailbox",
         "icon": "fa-envelope",
         "children": [
             {
-                "id": "admin/mailbox/inbox",
+                "id": "demo/mailbox/inbox",
                 "name": "Inbox",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/mailbox/compose",
+                "id": "demo/mailbox/compose",
                 "name": "Compose",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/mailbox/read",
+                "id": "demo/mailbox/read",
                 "name": "Read",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/pages",
+        "id": "demo/pages",
         "name": "Pages",
         "icon": "fa-book",
         "children": [
             {
-                "id": "admin/pages/invoice",
+                "id": "demo/pages/invoice",
                 "name": "Invoice",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/profile",
+                "id": "demo/pages/profile",
                 "name": "Profile",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/e-commerce",
+                "id": "demo/pages/e-commerce",
                 "name": "E-commerce",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/projects",
+                "id": "demo/pages/projects",
                 "name": "Projects",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/project_add",
+                "id": "demo/pages/project_add",
                 "name": "Project Add",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/project_edit",
+                "id": "demo/pages/project_edit",
                 "name": "Project Edit",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/project_detail",
+                "id": "demo/pages/project_detail",
                 "name": "Project Detail",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/pages/contacts",
+                "id": "demo/pages/contacts",
                 "name": "Contacts",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/extras",
+        "id": "demo/extras",
         "name": "Extras",
         "icon": "fa-plus-square",
         "children": [
             {
-                "id": "admin/extras/login",
+                "id": "demo/extras/login",
                 "name": "Login",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/register",
+                "id": "demo/extras/register",
                 "name": "Register",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/forgot_password",
+                "id": "demo/extras/forgot_password",
                 "name": "Forgot Password",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/recover_password",
+                "id": "demo/extras/recover_password",
                 "name": "Recover Password",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/lockscreen",
+                "id": "demo/extras/lockscreen",
                 "name": "Lockscreen",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/legacy_user menu",
+                "id": "demo/extras/legacy_user menu",
                 "name": "Legacy User Menu",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/language_menu",
+                "id": "demo/extras/language_menu",
                 "name": "Language Menu",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/error_404",
+                "id": "demo/extras/error_404",
                 "name": "Error 404",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/error_500",
+                "id": "demo/extras/error_500",
                 "name": "Error 500",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/pace",
+                "id": "demo/extras/pace",
                 "name": "Pace",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/blank_page",
+                "id": "demo/extras/blank_page",
                 "name": "Blank Page",
                 "icon": "fa-circle"
             },
             {
-                "id": "admin/extras/starter_page",
+                "id": "demo/extras/starter_page",
                 "name": "Starter Page",
                 "icon": "fa-circle"
             }
         ]
     },
     {
-        "id": "admin/documentation",
+        "id": "demo/documentation",
         "name": "Documentation",
         "icon": "fa-file"
     },

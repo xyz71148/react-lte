@@ -84,7 +84,7 @@ class App extends Component {
                 document.querySelector("#top-wrap").style.display = "none";
             }
             if(Object.keys(window.globalObject.constant).length === 0) {
-                this.getConstants()
+                //this.getConstants()
             }
             if(authPrefixes.includes(page_id.split("/")[0])){
                 if(access_token === null){
