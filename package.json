@@ -1,6 +1,6 @@
 {
   "name": "react-lte",
-  "homepage" : "https://xyz71148.github.io/react-lte/build",
+  "homepage": "https://xyz71148.github.io/react-lte/build",
   "version": "1.0.1",
   "main": "src/index.js",
   "eslintConfig": {

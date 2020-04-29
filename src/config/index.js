@@ -19,6 +19,9 @@ import DemoFormsGeneral from "../pages/demo/forms/general";
 import DemoFormsAdvanced from "../pages/demo/forms/advanced";
 import DemoFormsValidation from "../pages/demo/forms/validation";
 import DemoFormsEditors from "../pages/demo/forms/editors";
+import DemoTables1 from "../pages/demo/tables/simple_tables";
+import DemoTables2 from "../pages/demo/tables/datatables";
+import DemoTables3 from "../pages/demo/tables/jsgrid";
 
 
 import {menus} from "./menus"
@@ -48,6 +51,9 @@ export const routes = {
     "demo/forms/advanced": {children: (<DemoFormsAdvanced />)},
     "demo/forms/validation": {children: (<DemoFormsValidation />)},
     "demo/forms/editors": {children: (<DemoFormsEditors />)},
+    "demo/tables/simple_tables": {children: (<DemoTables1 />)},
+    "demo/tables/datatables": {children: (<DemoTables2 />)},
+    "demo/tables/jsgrid": {children: (<DemoTables3 />)},
 };
 
 
