@@ -9,7 +9,6 @@ import UsVisitorBox from "./components/UsVisitorBox"
 import Members from "./components/Members"
 import Chart from "./components/Chart"
 import Orders from "./components/Orders"
-import {namespace} from "./store"
 
 export default connect(
     ({route, ...state}) => {
@@ -132,7 +131,7 @@ export default connect(
 
     render() {
         return (
-            <div className={`view_${namespace}`}>
+            <div className={`view`}>
                 <InfoBox/>
                 <MonthlyRecapReport/>
                 <div className="row">

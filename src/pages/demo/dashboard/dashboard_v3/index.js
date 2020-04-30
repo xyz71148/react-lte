@@ -4,7 +4,6 @@ import OnlineStoreVisitors from "./components/OnlineStoreVisitors"
 import Products from "./components/Products"
 import Sales from "./components/Sales"
 import OnlineStoreOverview from "./components/OnlineStoreOverview"
-import {namespace} from "./store"
 import "./style.css"
 
 export default connect(
@@ -159,7 +158,7 @@ export default connect(
 
     render() {
         return (
-            <div className={`view_${namespace}`}>
+            <div className={`view`}>
                 <div className="row">
                     <div className="col-lg-6">
                         <OnlineStoreVisitors/>

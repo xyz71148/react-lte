@@ -180,7 +180,6 @@ const demo_layout = {
     ]
 }
 export const demo_menus = [
-    demo_dashboard,
     {
         "id": "demo/widgets",
         "name": "WidgetsNew",
@@ -304,38 +303,6 @@ export const demo_menus = [
         "header": true
     },
     {
-        "id": "demo/calendar2",
-        "name": "Calendar2",
-        "icon": "fa-calendar-alt"
-    },
-    {
-        "id": "demo/gallery",
-        "name": "Gallery",
-        "icon": "fa-image"
-    },
-    {
-        "id": "demo/mailbox",
-        "name": "Mailbox",
-        "icon": "fa-envelope",
-        "children": [
-            {
-                "id": "demo/mailbox/inbox",
-                "name": "Inbox",
-                "icon": "fa-circle"
-            },
-            {
-                "id": "demo/mailbox/compose",
-                "name": "Compose",
-                "icon": "fa-circle"
-            },
-            {
-                "id": "demo/mailbox/read",
-                "name": "Read",
-                "icon": "fa-circle"
-            }
-        ]
-    },
-    {
         "id": "demo/documentation",
         "name": "Documentation",
         "icon": "fa-file",
@@ -359,19 +326,19 @@ export const navigation = {
             name: "Demo",
             children: demo_menus
         },
-        "demo_extra": {
+        "extra": {
             name: "Extra",
             children: [
                 demo_extra,
             ]
         },
-        "demo_page": {
-            name: "Page",
+        "pages": {
+            name: "Pages",
             children: [
                 demo_page
             ]
         },
-        "demo_layout": {
+        "layout": {
             name: "Layout",
             children: [
                 demo_layout

@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from "react-redux";
 import BaseComponent from "../../components/BaseComponent"
-import classNames from '../classnames';
+import classNames from '../../lib/classnames';
 import "./style.css"
 import {MdChevronLeft, MdAdd, MdCheck} from 'react-icons/md';
-import {get_platform} from "../utils";
+import {get_platform} from "../../lib/utils";
 export default connect(({route})=>{
     return {
         page_close_id:route.page_close_id

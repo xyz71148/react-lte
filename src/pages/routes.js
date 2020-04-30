@@ -1,4 +1,6 @@
 import React from 'react';
+
+
 import DemoDashboardDashboardV1 from "./demo/dashboard/dashboard_v1";
 import DemoDashboardDashboardV2 from "./demo/dashboard/dashboard_v2";
 import DemoDashboardDashboardV3 from "./demo/dashboard/dashboard_v3";
@@ -29,8 +31,10 @@ import DemoInvoice from "./demo/pages/invoice";
 import DemoEcommerce from "./demo/pages/e-commerce";
 import DemoContacts from "./demo/pages/contacts";
 
+
 export const routes = {
     "index": {children: (<div>home</div>)},
+
     "demo/dashboard/dashboard_v1": {children: (<DemoDashboardDashboardV1/>)},
     "demo/dashboard/dashboard_v2": {children: (<DemoDashboardDashboardV2/>)},
     "demo/dashboard/dashboard_v3": {children: (<DemoDashboardDashboardV3/>)},
@@ -60,6 +64,8 @@ export const routes = {
     "demo/pages/invoice": {children: (<DemoInvoice/>)},
     "demo/pages/e-commerce": {children: (<DemoEcommerce/>)},
     "demo/pages/contacts": {children: (<DemoContacts/>)},
+
 };
+
 export const authPrefixes = ["admin", "user"];
 export const defaultRoute = "demo/dashboard/dashboard_v1";

@@ -7,7 +7,6 @@ import Todo from "./components/Todo"
 import Visitors from "./components/Visitors"
 import SaleGraph from "./components/SaleGraph"
 import Calendar from "./components/Calendar"
-import {namespace} from "./store"
 import "./style.css"
 
 export default connect(
@@ -276,7 +275,7 @@ export default connect(
 
     render() {
         return (
-            <div className={`view_${namespace}`}>
+            <div className={`view`}>
                 <SmallBox/>
                 <div className="row">
                     <section className="col-lg-7 connectedSortable">

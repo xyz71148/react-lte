@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {namespace} from "./store"
 import ChartBox from "./components/Chart"
 import "./style.css"
 
@@ -159,7 +158,7 @@ export default connect(
 
     render() {
         return (
-            <div className={`view_${namespace}`}>
+            <div className={`view`}>
                 <ChartBox/>
             </div>
         )

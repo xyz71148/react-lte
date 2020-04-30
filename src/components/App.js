@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {get_access_token, getZoneTree, parse_url, set_access_token} from "../lib/utils"
 import '../style/App.css';
 import {fetchMe} from '../store/app/user'
-import Page from '../lib/page'
+import Page from '../components/page'
 import MainSidebar from "../components/sider-menu/main-sidebar";
 import Footer from "../components/footer";
 import Header from "../components/header";
