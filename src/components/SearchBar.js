@@ -1,6 +1,6 @@
 import React from 'react';
 import "./components.css"
-import {MdChevronLeft, MdAdd, MdCheck} from 'react-icons/md';
+import {MdAdd, MdCheck, MdChevronLeft} from 'react-icons/md';
 import {connect} from "react-redux";
 
 const size = "1.8em"
@@ -9,10 +9,7 @@ const Icons = {
     "add": (<MdAdd size={size}/>),
     "check": (<MdCheck size={size}/>),
 };
-
-
-
-export default connect()(({focused,value,onChange,onCancel,onFocus}) => {
+export default connect()(({focused, value, onChange, onCancel, onFocus}) => {
     return (
         <div className={
             focused ?

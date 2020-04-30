@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style.css"
+
 export default () => {
     return (
         <div className="card">
@@ -14,7 +15,6 @@ export default () => {
                     </button>
                 </div>
             </div>
-
             <div className="card-body p-0">
                 <div className="table-responsive">
                     <table className="table m-0">
@@ -93,14 +93,11 @@ export default () => {
                         </tbody>
                     </table>
                 </div>
-
             </div>
-
             <div className="card-footer clearfix">
                 <a href="#" className="btn btn-sm btn-info float-left">Place New Order</a>
                 <a href="#" className="btn btn-sm btn-secondary float-right">View All Orders</a>
             </div>
-
         </div>
     )
 }

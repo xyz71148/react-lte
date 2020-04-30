@@ -2,16 +2,13 @@ import React from 'react';
 
 export default () => {
     return (
-
         <div className="card bg-gradient-success">
             <div className="card-header border-0">
                 <h3 className="card-title">
                     <i className="far fa-calendar-alt"></i>
                     Calendar
                 </h3>
-
                 <div className="card-tools">
-
                     <div className="btn-group">
                         <button type="button" className="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
                             <i className="fas fa-bars"></i></button>
@@ -29,13 +26,10 @@ export default () => {
                         <i className="fas fa-times"></i>
                     </button>
                 </div>
-
             </div>
-
             <div className="card-body pt-0">
                 <div id="calendar" className={"width_percent_100"}></div>
             </div>
-
         </div>
     )
 }

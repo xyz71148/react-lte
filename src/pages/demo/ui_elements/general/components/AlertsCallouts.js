@@ -4,7 +4,6 @@ import "../style.css"
 export default () => {
     return (
         <div>
-
             <h5 className="mt-4 mb-2">Alerts and Callouts</h5>
             <div className="row">
                 <div className="col-md-6">

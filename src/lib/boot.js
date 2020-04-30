@@ -1,11 +1,8 @@
 import axios from "axios";
-
 import {go_login} from "./utils";
-
 export const initApp = ()=>{
     set_axios_default();
 };
-
 const set_axios_default = ()=>{
     axios.defaults.timeout = 15000;
     axios.interceptors.request.use(request => {
@@ -21,8 +18,7 @@ const set_axios_default = ()=>{
         console.error("request",error);
         return Promise.reject(error);
     })
-
-    axios.interceptors.response.use((response) => {
+axios.interceptors.response.use((response) => {
         //console.log(response)
         return response;
     }, error => {
@@ -36,5 +32,4 @@ const set_axios_default = ()=>{
             return Promise.reject(error);
         }
     });
-
 }

@@ -7,7 +7,6 @@ export default connect(({navigation}) => {
         menus: navigation.menus
     }
 })(({menus}) => {
-
     const keys = Object.keys(menus);
     return (
         <BaseComponent id="top-header" className={"top-header"}>
@@ -15,14 +14,15 @@ export default connect(({navigation}) => {
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <a className="nav-link" data-widget="pushmenu" href="#" role="button">
-                            <i className="fas fa-bars" />
+                            <i className="fas fa-bars"/>
                         </a>
                     </li>
                     {
                         keys.map(key => {
                             return (
                                 <li key={key} className="nav-item d-none d-sm-inline-block">
-                                    <a href={menus[key].href ? menus[key] : "?m=" + key} className="nav-link">{menus[key].name}</a>
+                                    <a href={menus[key].href ? menus[key] : "?m=" + key}
+                                       className="nav-link">{menus[key].name}</a>
                                 </li>
                             )
                         })
@@ -153,18 +153,18 @@ export default connect(({navigation}) => {
                     <li className="nav-item dropdown user-menu">
                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <img src="./static/dist/img/user2-160x160.jpg"
-                                 className="user-image img-circle elevation-2" alt="User Image" />
-                                <span className="d-none d-md-inline">Alexander Pierce</span>
+                                 className="user-image img-circle elevation-2" alt="User Image"/>
+                            <span className="d-none d-md-inline">Alexander Pierce</span>
                         </a>
                         <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right"
                             style={{left: "inherit", right: 0}}>
                             <li className="user-header bg-primary">
                                 <img src="./static/dist/img/user2-160x160.jpg" className="img-circle elevation-2"
-                                     alt="User Image" />
-                                    <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
-                                    </p>
+                                     alt="User Image"/>
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
                             </li>
                             <li className="user-body">
                                 <div className="row">
@@ -180,15 +180,13 @@ export default connect(({navigation}) => {
                                 </div>
                             </li>
                             <li className="user-footer">
-                                <a  className="btn btn-default btn-flat">Profile</a>
-                                <a href="login.html" onClick={()=>{
+                                <a className="btn btn-default btn-flat">Profile</a>
+                                <a href="login.html" onClick={() => {
                                     localStorage.removeItem("access_token")
                                 }} className="btn btn-default btn-flat float-right">Sign out</a>
                             </li>
                         </ul>
                     </li>
-
-
                 </ul>
             </nav>
         </BaseComponent>

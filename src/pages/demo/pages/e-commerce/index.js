@@ -8,18 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="card card-solid">
                     <div className="card-body">
                         <div className="row">
@@ -32,15 +29,15 @@ export default connect(
                                 </div>
                                 <div className="col-12 product-image-thumbs">
                                     <div className="product-image-thumb active"><img src="static/dist/img/prod-1.jpg"
-                                                                                     alt="Product Image" /></div>
+                                                                                     alt="Product Image"/></div>
                                     <div className="product-image-thumb"><img src="static/dist/img/prod-2.jpg"
-                                                                              alt="Product Image" /></div>
+                                                                              alt="Product Image"/></div>
                                     <div className="product-image-thumb"><img src="static/dist/img/prod-3.jpg"
-                                                                              alt="Product Image" /></div>
+                                                                              alt="Product Image"/></div>
                                     <div className="product-image-thumb"><img src="static/dist/img/prod-4.jpg"
-                                                                              alt="Product Image" /></div>
+                                                                              alt="Product Image"/></div>
                                     <div className="product-image-thumb"><img src="static/dist/img/prod-5.jpg"
-                                                                              alt="Product Image" /></div>
+                                                                              alt="Product Image"/></div>
                                 </div>
                             </div>
                             <div className="col-12 col-sm-6">
@@ -50,110 +47,109 @@ export default connect(
                                     aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui
                                     irure
                                     terr.</p>
-                                <hr />
-                                    <h4>Available Colors</h4>
-                                    <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label className="btn btn-default text-center active">
-                                            <input type="radio" name="color_option" id="color_option1"
-                                                   autoComplete="off"
-                                                   checked=""/>
-                                            Green
-                                            <br />
-                                                <i className="fas fa-circle fa-2x text-green"></i>
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option2"
-                                                   autoComplete="off"/>
-                                            Blue
-                                            <br />
-                                                <i className="fas fa-circle fa-2x text-blue"></i>
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option3"
-                                                   autoComplete="off"/>
-                                            Purple
-                                            <br />
-                                                <i className="fas fa-circle fa-2x text-purple"></i>
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option4"
-                                                   autoComplete="off"/>
-                                            Red
-                                            <br />
-                                                <i className="fas fa-circle fa-2x text-red"></i>
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option5"
-                                                   autoComplete="off"/>
-                                            Orange
-                                            <br />
-                                                <i className="fas fa-circle fa-2x text-orange"></i>
-                                        </label>
+                                <hr/>
+                                <h4>Available Colors</h4>
+                                <div className="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label className="btn btn-default text-center active">
+                                        <input type="radio" name="color_option" id="color_option1"
+                                               autoComplete="off"
+                                               checked=""/>
+                                        Green
+                                        <br/>
+                                        <i className="fas fa-circle fa-2x text-green"></i>
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option2"
+                                               autoComplete="off"/>
+                                        Blue
+                                        <br/>
+                                        <i className="fas fa-circle fa-2x text-blue"></i>
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option3"
+                                               autoComplete="off"/>
+                                        Purple
+                                        <br/>
+                                        <i className="fas fa-circle fa-2x text-purple"></i>
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option4"
+                                               autoComplete="off"/>
+                                        Red
+                                        <br/>
+                                        <i className="fas fa-circle fa-2x text-red"></i>
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option5"
+                                               autoComplete="off"/>
+                                        Orange
+                                        <br/>
+                                        <i className="fas fa-circle fa-2x text-orange"></i>
+                                    </label>
+                                </div>
+                                <h4 className="mt-3">Size <small>Please select one</small></h4>
+                                <div className="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option1"
+                                               autoComplete="off"/>
+                                        <span className="text-xl">S</span>
+                                        <br/>
+                                        Small
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option1"
+                                               autoComplete="off"/>
+                                        <span className="text-xl">M</span>
+                                        <br/>
+                                        Medium
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option1"
+                                               autoComplete="off"/>
+                                        <span className="text-xl">L</span>
+                                        <br/>
+                                        Large
+                                    </label>
+                                    <label className="btn btn-default text-center">
+                                        <input type="radio" name="color_option" id="color_option1"
+                                               autoComplete="off"/>
+                                        <span className="text-xl">XL</span>
+                                        <br/>
+                                        Xtra-Large
+                                    </label>
+                                </div>
+                                <div className="bg-gray py-2 px-3 mt-4">
+                                    <h2 className="mb-0">
+                                        $80.00
+                                    </h2>
+                                    <h4 className="mt-0">
+                                        <small>Ex Tax: $80.00 </small>
+                                    </h4>
+                                </div>
+                                <div className="mt-4">
+                                    <div className="btn btn-primary btn-lg btn-flat">
+                                        <i className="fas fa-cart-plus fa-lg mr-2"></i>
+                                        Add to Cart
                                     </div>
-                                    <h4 className="mt-3">Size <small>Please select one</small></h4>
-                                    <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option1"
-                                                   autoComplete="off"/>
-                                            <span className="text-xl">S</span>
-                                            <br />
-                                                Small
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option1"
-                                                   autoComplete="off"/>
-                                            <span className="text-xl">M</span>
-                                            <br />
-                                                Medium
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option1"
-                                                   autoComplete="off"/>
-                                            <span className="text-xl">L</span>
-                                            <br />
-                                                Large
-                                        </label>
-                                        <label className="btn btn-default text-center">
-                                            <input type="radio" name="color_option" id="color_option1"
-                                                   autoComplete="off"/>
-                                            <span className="text-xl">XL</span>
-                                            <br />
-                                                Xtra-Large
-                                        </label>
+                                    <div className="btn btn-default btn-lg btn-flat">
+                                        <i className="fas fa-heart fa-lg mr-2"></i>
+                                        Add to Wishlist
                                     </div>
-                                    <div className="bg-gray py-2 px-3 mt-4">
-                                        <h2 className="mb-0">
-                                            $80.00
-                                        </h2>
-                                        <h4 className="mt-0">
-                                            <small>Ex Tax: $80.00 </small>
-                                        </h4>
-                                    </div>
-                                    <div className="mt-4">
-                                        <div className="btn btn-primary btn-lg btn-flat">
-                                            <i className="fas fa-cart-plus fa-lg mr-2"></i>
-                                            Add to Cart
-                                        </div>
-                                        <div className="btn btn-default btn-lg btn-flat">
-                                            <i className="fas fa-heart fa-lg mr-2"></i>
-                                            Add to Wishlist
-                                        </div>
-                                    </div>
-                                    <div className="mt-4 product-share">
-                                        <a href="#" className="text-gray">
-                                            <i className="fab fa-facebook-square fa-2x"></i>
-                                        </a>
-                                        <a href="#" className="text-gray">
-                                            <i className="fab fa-twitter-square fa-2x"></i>
-                                        </a>
-                                        <a href="#" className="text-gray">
-                                            <i className="fas fa-envelope-square fa-2x"></i>
-                                        </a>
-                                        <a href="#" className="text-gray">
-                                            <i className="fas fa-rss-square fa-2x"></i>
-                                        </a>
-                                    </div>
-                                    
+                                </div>
+                                <div className="mt-4 product-share">
+                                    <a href="#" className="text-gray">
+                                        <i className="fab fa-facebook-square fa-2x"></i>
+                                    </a>
+                                    <a href="#" className="text-gray">
+                                        <i className="fab fa-twitter-square fa-2x"></i>
+                                    </a>
+                                    <a href="#" className="text-gray">
+                                        <i className="fas fa-envelope-square fa-2x"></i>
+                                    </a>
+                                    <a href="#" className="text-gray">
+                                        <i className="fas fa-rss-square fa-2x"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div className="row mt-4">

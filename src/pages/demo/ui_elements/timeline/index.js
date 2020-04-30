@@ -8,12 +8,10 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
@@ -90,7 +88,7 @@ export default connect(
                                     <h3 className="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
                                     <div className="timeline-body">
                                         <div className="embed-responsive embed-responsive-16by9">
-                                            <iframe className="embed-responsive-item"
+                                            <iframe title={"iframe"} className="embed-responsive-item"
                                                     src="https://www.youtube.com/embed/tMWkeBIohBs" frameBorder="0"
                                                     allowFullScreen=""></iframe>
                                         </div>

@@ -23,7 +23,6 @@ export default () => {
                         <span className="text-muted">Since last month</span>
                     </p>
                 </div>
-
                 <div className="position-relative mb-4">
                     <canvas id="sales-chart" height="200"></canvas>
                 </div>

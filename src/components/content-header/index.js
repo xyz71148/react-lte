@@ -11,7 +11,7 @@ export default connect(({navigation}) => {
         menus: navigation.menus
     }
 })(({menus, module, activeMenu, clickedMenu, dispatch}) => {
-    const get_menu = (menus,clickedMenu) => {
+    const get_menu = (menus, clickedMenu) => {
         const t = clickedMenu.split("/")
         t.pop()
         for (let i in menus) {
@@ -21,7 +21,7 @@ export default connect(({navigation}) => {
         }
         return null
     }
-    const get_menu1 = (menus,clickedMenu) => {
+    const get_menu1 = (menus, clickedMenu) => {
         for (let i in menus) {
             for (let i in menus) {
                 if (menus[i].id === clickedMenu) {
@@ -38,12 +38,11 @@ export default connect(({navigation}) => {
         }
         return null
     }
-
-    const openMenu1 = get_menu(menus[module].children,activeMenu);
-    const clickedMenu1 = get_menu1(menus[module].children,clickedMenu);
-    console.log({clickedMenu1,clickedMenu,openMenu1,activeMenu})
-    if(!clickedMenu1) return null;
-    if(!openMenu1) return null;
+    const openMenu1 = get_menu(menus[module].children, activeMenu);
+    const clickedMenu1 = get_menu1(menus[module].children, clickedMenu);
+    console.log({clickedMenu1, clickedMenu, openMenu1, activeMenu})
+    if (!clickedMenu1) return null;
+    if (!openMenu1) return null;
     return (
         <BaseComponent id="content-header" className={"content-header"}>
             <div className="container-fluid">

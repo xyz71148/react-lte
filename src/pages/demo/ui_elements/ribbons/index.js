@@ -8,18 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="row">
                     <div className="col-12">
                         <div className="card card-primary">
@@ -29,7 +26,7 @@ export default connect(
                             <div className="card-body">
                                 <div className="row">
                                     <div className="col-sm-4">
-                                        <div className="position-relative p-3 bg-gray" style={{height:180}}>
+                                        <div className="position-relative p-3 bg-gray" style={{height: 180}}>
                                             <div className="ribbon-wrapper">
                                                 <div className="ribbon bg-primary">
                                                     Ribbon
@@ -40,7 +37,7 @@ export default connect(
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
-                                        <div className="position-relative p-3 bg-gray" style={{height:180}}>
+                                        <div className="position-relative p-3 bg-gray" style={{height: 180}}>
                                             <div className="ribbon-wrapper ribbon-lg">
                                                 <div className="ribbon bg-info">
                                                     Ribbon Large
@@ -51,7 +48,7 @@ export default connect(
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
-                                        <div className="position-relative p-3 bg-gray" style={{height:180}}>
+                                        <div className="position-relative p-3 bg-gray" style={{height: 180}}>
                                             <div className="ribbon-wrapper ribbon-xl">
                                                 <div className="ribbon bg-secondary">
                                                     Ribbon Extra Large
@@ -64,7 +61,7 @@ export default connect(
                                 </div>
                                 <div className="row mt-4">
                                     <div className="col-sm-4">
-                                        <div className="position-relative p-3 bg-gray" style={{height:180}}>
+                                        <div className="position-relative p-3 bg-gray" style={{height: 180}}>
                                             <div className="ribbon-wrapper ribbon-lg">
                                                 <div className="ribbon bg-success text-lg">
                                                     Ribbon
@@ -75,7 +72,7 @@ export default connect(
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
-                                        <div className="position-relative p-3 bg-gray" style={{height:180}}>
+                                        <div className="position-relative p-3 bg-gray" style={{height: 180}}>
                                             <div className="ribbon-wrapper ribbon-xl">
                                                 <div className="ribbon bg-warning text-lg">
                                                     Ribbon
@@ -86,7 +83,7 @@ export default connect(
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
-                                        <div className="position-relative p-3 bg-gray" style={{height:180}}>
+                                        <div className="position-relative p-3 bg-gray" style={{height: 180}}>
                                             <div className="ribbon-wrapper ribbon-xl">
                                                 <div className="ribbon bg-danger text-xl">
                                                     Ribbon

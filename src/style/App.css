@@ -5,12 +5,10 @@
 }
 #main-content{
     /*height:100vh;*/
-
 }
 #root {
   position: relative;
 }
-
 .empty_record{
   height: 60vh;
   display: flex;

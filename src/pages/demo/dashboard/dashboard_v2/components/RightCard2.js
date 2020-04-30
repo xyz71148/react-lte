@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style.css"
+
 export default () => {
     return (
         <div className="card">
@@ -14,12 +15,11 @@ export default () => {
                     </button>
                 </div>
             </div>
-
             <div className="card-body p-0">
                 <ul className="products-list product-list-in-card pl-2 pr-2">
                     <li className="item">
                         <div className="product-img">
-                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50" />
+                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50"/>
                         </div>
                         <div className="product-info">
                             <a href="#" className="product-title">Samsung TV
@@ -29,10 +29,9 @@ export default () => {
                       </span>
                         </div>
                     </li>
-
                     <li className="item">
                         <div className="product-img">
-                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50" />
+                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50"/>
                         </div>
                         <div className="product-info">
                             <a href="#" className="product-title">Bicycle
@@ -42,10 +41,9 @@ export default () => {
                       </span>
                         </div>
                     </li>
-
                     <li className="item">
                         <div className="product-img">
-                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50" />
+                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50"/>
                         </div>
                         <div className="product-info">
                             <a href="#" className="product-title">
@@ -58,10 +56,9 @@ export default () => {
                       </span>
                         </div>
                     </li>
-
                     <li className="item">
                         <div className="product-img">
-                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50" />
+                            <img src="static/dist/img/default-150x150.png" alt="Product Image" className="img-size-50"/>
                         </div>
                         <div className="product-info">
                             <a href="#" className="product-title">PlayStation 4
@@ -71,15 +68,11 @@ export default () => {
                       </span>
                         </div>
                     </li>
-
                 </ul>
             </div>
-
             <div className="card-footer text-center">
                 <a href="#" className="uppercase">View All Products</a>
             </div>
         </div>
     )
 }
-
-

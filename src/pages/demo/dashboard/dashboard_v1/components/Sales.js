@@ -21,12 +21,11 @@ export default () => {
             </div>
             <div className="card-body">
                 <div className="tab-content p-0">
-
                     <div className="chart tab-pane active" id="revenue-chart">
-                        <canvas id="revenue-chart-canvas" height="300" style={{height:300}}></canvas>
+                        <canvas id="revenue-chart-canvas" height="300" style={{height: 300}}></canvas>
                     </div>
-                    <div className="chart tab-pane" id="sales-chart" style={{height:300,position:"relative"}}>
-                        <canvas id="sales-chart-canvas" height="300" style={{height:300}}></canvas>
+                    <div className="chart tab-pane" id="sales-chart" style={{height: 300, position: "relative"}}>
+                        <canvas id="sales-chart-canvas" height="300" style={{height: 300}}></canvas>
                     </div>
                 </div>
             </div>

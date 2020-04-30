@@ -3,20 +3,22 @@ import {connect} from "react-redux";
 import {namespace} from "./store"
 import ChartBox from "./components/Chart"
 import "./style.css"
+
 export default connect(
     ({route, ...state}) => {
         return {
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
+
     componentDidMount() {
         setTimeout(() => {
             this.handleCharts()
         }, 800)
     }
+
     handleCharts() {
         var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
         var areaChartData = {
@@ -65,7 +67,7 @@ export default connect(
                 }]
             }
         }
-        var areaChart = new Chart(areaChartCanvas, {
+        new Chart(areaChartCanvas, {
             type: 'line',
             data: areaChartData,
             options: areaChartOptions
@@ -76,7 +78,7 @@ export default connect(
         lineChartData.datasets[0].fill = false;
         lineChartData.datasets[1].fill = false;
         lineChartOptions.datasetFill = false
-        var lineChart = new Chart(lineChartCanvas, {
+        new Chart(lineChartCanvas, {
             type: 'line',
             data: lineChartData,
             options: lineChartOptions
@@ -102,7 +104,7 @@ export default connect(
             maintainAspectRatio: false,
             responsive: true,
         }
-        var donutChart = new Chart(donutChartCanvas, {
+        new Chart(donutChartCanvas, {
             type: 'doughnut',
             data: donutData,
             options: donutOptions
@@ -113,7 +115,7 @@ export default connect(
             maintainAspectRatio: false,
             responsive: true,
         }
-        var pieChart = new Chart(pieChartCanvas, {
+        new Chart(pieChartCanvas, {
             type: 'pie',
             data: pieData,
             options: pieOptions
@@ -129,7 +131,7 @@ export default connect(
             maintainAspectRatio: false,
             datasetFill: false
         }
-        var barChart = new Chart(barChartCanvas, {
+        new Chart(barChartCanvas, {
             type: 'bar',
             data: barChartData,
             options: barChartOptions
@@ -148,16 +150,17 @@ export default connect(
                 }]
             }
         }
-        var stackedBarChart = new Chart(stackedBarChartCanvas, {
+        new Chart(stackedBarChartCanvas, {
             type: 'bar',
             data: stackedBarChartData,
             options: stackedBarChartOptions
         })
     }
+
     render() {
         return (
             <div className={`view_${namespace}`}>
-                <ChartBox />
+                <ChartBox/>
             </div>
         )
     }

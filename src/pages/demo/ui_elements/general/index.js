@@ -3,7 +3,6 @@ import {connect} from "react-redux";
 import ColorPalette from "./components/ColorPalette"
 import AlertsCallouts from "./components/AlertsCallouts"
 import TabsInCard from "./components/TabsInCard"
-
 import "./style.css"
 
 export default connect(
@@ -12,12 +11,10 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
@@ -26,8 +23,6 @@ export default connect(
                 <ColorPalette/>
                 <AlertsCallouts/>
                 <TabsInCard/>
-
-
                 <h5 className="mt-4 mb-2">Progress Bars</h5>
                 <div className="row">
                     <div className="col-md-6">
@@ -39,21 +34,21 @@ export default connect(
                                 <p><code>.progress</code></p>
                                 <div className="progress">
                                     <div className="progress-bar bg-primary progress-bar-striped" role="progressbar"
-                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{width:40}}>
+                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{width: 40}}>
                                         <span className="sr-only">40% Complete (success)</span>
                                     </div>
                                 </div>
                                 <p><code>.progress-sm</code></p>
                                 <div className="progress progress-sm active">
                                     <div className="progress-bar bg-success progress-bar-striped" role="progressbar"
-                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style={{width:20}}>
+                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style={{width: 20}}>
                                         <span className="sr-only">20% Complete</span>
                                     </div>
                                 </div>
                                 <p><code>.progress-xs</code></p>
                                 <div className="progress progress-xs">
                                     <div className="progress-bar bg-warning progress-bar-striped" role="progressbar"
-                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{width:60}}>
+                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{width: 60}}>
                                         <span className="sr-only">60% Complete (warning)</span>
                                     </div>
                                 </div>
@@ -61,7 +56,7 @@ export default connect(
                                 <div className="progress progress-xxs">
                                     <div className="progress-bar progress-bar-danger progress-bar-striped"
                                          role="progressbar"
-                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{width:60}}>
+                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{width: 60}}>
                                         <span className="sr-only">60% Complete (warning)</span>
                                     </div>
                                 </div>
@@ -77,28 +72,28 @@ export default connect(
                                 <div className="progress mb-3">
                                     <div className="progress-bar bg-success" role="progressbar" aria-valuenow="40"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{width:40}}>
+                                         aria-valuemax="100" style={{width: 40}}>
                                         <span className="sr-only">40% Complete (success)</span>
                                     </div>
                                 </div>
                                 <div className="progress mb-3">
                                     <div className="progress-bar bg-info" role="progressbar" aria-valuenow="20"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{width:20}}>
+                                         aria-valuemax="100" style={{width: 20}}>
                                         <span className="sr-only">20% Complete</span>
                                     </div>
                                 </div>
                                 <div className="progress mb-3">
                                     <div className="progress-bar bg-warning" role="progressbar" aria-valuenow="60"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{width:60}}>
+                                         aria-valuemax="100" style={{width: 60}}>
                                         <span className="sr-only">60% Complete (warning)</span>
                                     </div>
                                 </div>
                                 <div className="progress mb-3">
                                     <div className="progress-bar bg-danger" role="progressbar" aria-valuenow="80"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{width:80}}>
+                                         aria-valuemax="100" style={{width: 80}}>
                                         <span className="sr-only">80% Complete</span>
                                     </div>
                                 </div>
@@ -119,27 +114,27 @@ export default connect(
                                     <code>.progress-xxs</code> we achieve:</p>
                                 <div className="progress vertical active">
                                     <div className="progress-bar bg-primary progress-bar-striped" role="progressbar"
-                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{height:40}}>
+                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{height: 40}}>
                                         <span className="sr-only">40%</span>
                                     </div>
                                 </div>
                                 <div className="progress vertical progress-sm">
                                     <div className="progress-bar bg-success" role="progressbar" aria-valuenow="20"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{height:100}}>
+                                         aria-valuemax="100" style={{height: 100}}>
                                         <span className="sr-only">100%</span>
                                     </div>
                                 </div>
                                 <div className="progress vertical progress-xs">
                                     <div className="progress-bar bg-warning progress-bar-striped" role="progressbar"
-                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{height:60}}>
+                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{height: 60}}>
                                         <span className="sr-only">60%</span>
                                     </div>
                                 </div>
                                 <div className="progress vertical progress-xxs">
                                     <div className="progress-bar bg-info progress-bar-striped" role="progressbar"
                                          aria-valuenow="60"
-                                         aria-valuemin="0" aria-valuemax="100" style={{height:60}}>
+                                         aria-valuemin="0" aria-valuemax="100" style={{height: 60}}>
                                         <span className="sr-only">60%</span>
                                     </div>
                                 </div>
@@ -156,28 +151,28 @@ export default connect(
                                 <div className="progress vertical">
                                     <div className="progress-bar bg-success" role="progressbar" aria-valuenow="40"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{height:40}}>
+                                         aria-valuemax="100" style={{height: 40}}>
                                         <span className="sr-only">40%</span>
                                     </div>
                                 </div>
                                 <div className="progress vertical">
                                     <div className="progress-bar bg-info" role="progressbar" aria-valuenow="20"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{height:20}}>
+                                         aria-valuemax="100" style={{height: 20}}>
                                         <span className="sr-only">20%</span>
                                     </div>
                                 </div>
                                 <div className="progress vertical">
                                     <div className="progress-bar bg-warning" role="progressbar" aria-valuenow="60"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{height:60}}>
+                                         aria-valuemax="100" style={{height: 60}}>
                                         <span className="sr-only">60%</span>
                                     </div>
                                 </div>
                                 <div className="progress vertical">
                                     <div className="progress-bar bg-danger" role="progressbar" aria-valuenow="80"
                                          aria-valuemin="0"
-                                         aria-valuemax="100" style={{height:80}}>
+                                         aria-valuemax="100" style={{height: 80}}>
                                         <span className="sr-only">80%</span>
                                     </div>
                                 </div>
@@ -185,7 +180,6 @@ export default connect(
                         </div>
                     </div>
                 </div>
-
                 <h5 className="mt-4 mb-2">Bootstrap Accordion & Carousel</h5>
                 <div className="row">
                     <div className="col-md-6">
@@ -335,7 +329,6 @@ export default connect(
                         </div>
                     </div>
                 </div>
-
                 <h5 className="mt-4 mb-2">Typography</h5>
                 <div className="row">
                     <div className="col-md-6">

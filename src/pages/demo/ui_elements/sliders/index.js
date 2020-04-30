@@ -8,8 +8,7 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
@@ -17,50 +16,50 @@ export default connect(
         // $('.slider').bootstrapSlider()
         /* ION SLIDER */
         $('#range_1').ionRangeSlider({
-            min     : 0,
-            max     : 5000,
-            from    : 1000,
-            to      : 4000,
-            type    : 'double',
-            step    : 1,
-            prefix  : '$',
+            min: 0,
+            max: 5000,
+            from: 1000,
+            to: 4000,
+            type: 'double',
+            step: 1,
+            prefix: '$',
             prettify: false,
-            hasGrid : true
+            hasGrid: true
         })
         $('#range_2').ionRangeSlider()
         $('#range_5').ionRangeSlider({
-            min     : 0,
-            max     : 10,
-            type    : 'single',
-            step    : 0.1,
-            postfix : ' mm',
+            min: 0,
+            max: 10,
+            type: 'single',
+            step: 0.1,
+            postfix: ' mm',
             prettify: false,
-            hasGrid : true
+            hasGrid: true
         })
         $('#range_6').ionRangeSlider({
-            min     : -50,
-            max     : 50,
-            from    : 0,
-            type    : 'single',
-            step    : 1,
-            postfix : '°',
+            min: -50,
+            max: 50,
+            from: 0,
+            type: 'single',
+            step: 1,
+            postfix: '°',
             prettify: false,
-            hasGrid : true
+            hasGrid: true
         })
         $('#range_4').ionRangeSlider({
-            type      : 'single',
-            step      : 100,
-            postfix   : ' light years',
-            from      : 55000,
+            type: 'single',
+            step: 100,
+            postfix: ' light years',
+            from: 55000,
             hideMinMax: true,
             hideFromTo: false
         })
         $('#range_3').ionRangeSlider({
-            type    : 'double',
-            postfix : ' miles',
-            step    : 10000,
-            from    : 25000000,
-            to      : 35000000,
+            type: 'double',
+            postfix: ' miles',
+            step: 10000,
+            from: 25000000,
+            to: 35000000,
             onChange: function (obj) {
                 var t = ''
                 for (var prop in obj) {
@@ -68,7 +67,7 @@ export default connect(
                 }
                 $('#result').html(t)
             },
-            onLoad  : function (obj) {
+            onLoad: function (obj) {
                 //
             }
         })
@@ -77,7 +76,6 @@ export default connect(
     render() {
         return (
             <div className={`view`}>
-
                 <div className="row">
                     <div className="col-12">
                         <div className="card card-primary">
@@ -93,7 +91,7 @@ export default connect(
                                         <input readOnly id="range_2" type="text" name="range_2" value="1000;100000"
                                                data-type="double"
                                                data-step="500" data-postfix=" &euro;" data-from="30000" data-to="90000"
-                                               data-hasgrid="true" />
+                                               data-hasgrid="true"/>
                                     </div>
                                 </div>
                                 <div className="row margin">
@@ -127,7 +125,7 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="horizontal"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <p>.slider-red input readOnly.slider</p>
                                         <div className="slider-blue">
@@ -135,7 +133,7 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="horizontal"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <p>.slider-blue input readOnly.slider</p>
                                         <div className="slider-green">
@@ -143,7 +141,7 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="horizontal"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <p>.slider-green input readOnly.slider</p>
                                         <div className="slider-yellow">
@@ -151,7 +149,7 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="horizontal"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <p>.slider-yellow input readOnly.slider</p>
                                         <div className="slider-teal">
@@ -159,7 +157,7 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="horizontal"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <p>.slider-teal input readOnly.slider</p>
                                         <div className="slider-purple">
@@ -167,7 +165,7 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="horizontal"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <p>.slider-purple input readOnly.slider</p>
                                     </div>
@@ -177,42 +175,42 @@ export default connect(
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="vertical"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <div className="slider-blue mx-3">
                                             <input readOnly type="text" value="" className="slider form-control"
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="vertical"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <div className="slider-green mx-3">
                                             <input readOnly type="text" value="" className="slider form-control"
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="vertical"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <div className="slider-yellow mx-3">
                                             <input readOnly type="text" value="" className="slider form-control"
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="vertical"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <div className="slider-teal mx-3">
                                             <input readOnly type="text" value="" className="slider form-control"
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="vertical"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                         <div className="slider-purple mx-3">
                                             <input readOnly type="text" value="" className="slider form-control"
                                                    data-slider-min="-200" data-slider-max="200"
                                                    data-slider-step="5" data-slider-value="[-100,100]"
                                                    data-slider-orientation="vertical"
-                                                   data-slider-selection="before" data-slider-tooltip="show" />
+                                                   data-slider-selection="before" data-slider-tooltip="show"/>
                                         </div>
                                     </div>
                                 </div>

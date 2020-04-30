@@ -8,18 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="row">
                     <div className="col-md-3">
                         <div className="card card-primary card-outline">

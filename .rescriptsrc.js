@@ -32,7 +32,9 @@ module.exports = [require.resolve('./.webpack.config.js'), {
             "rules": {
                 "jsx-a11y/anchor-is-valid": "off",
                 "jsx-a11y/img-redundant-alt": "off",
-                "jsx-a11y/alt-text": "off"
+                "jsx-a11y/alt-text": "off",
+                "jsx-a11y/aria-props":"off",
+                "jsx-a11y/anchor-has-content":"off"
             }
         },
     ],]

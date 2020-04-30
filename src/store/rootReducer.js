@@ -1,12 +1,6 @@
 import { combineReducers } from "redux";
-import app from "./front/appReducer";
-import route from "./front/routeReducer";
-import user from "./front/userReducer";
 import navigation from "../pages/navigation"
-
+import route from "./app/route"
 export default combineReducers({
-  user,
-  route,
-  navigation,
-  app,
+  navigation,route
 });

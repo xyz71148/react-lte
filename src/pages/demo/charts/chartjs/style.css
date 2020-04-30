@@ -1,3 +1,6 @@
-#donutChart,#areaChart,#barChart,#pieChart,#lineChart,#stackedBarChart{
-    min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;
+#donutChart, #areaChart, #barChart, #pieChart, #lineChart, #stackedBarChart {
+    min-height: 250px;
+    height: 250px;
+    max-height: 250px;
+    max-width: 100%;
 }

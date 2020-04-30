@@ -1,7 +1,22 @@
 import axios from "axios";
-
-import {namespace} from "./userReducer"
-
+export const namespace = "user";
+const initialState = {
+    me: null,
+};
+export default function defaultReducer(
+    state = initialState,
+    action
+) {
+    switch (action.type) {
+        case namespace + "/setState":
+            return {
+                ...state,
+                ...action.payload
+            };
+        default:
+            return state;
+    }
+}
 export function fetchMe(ok, fail) {
     return dispatch => {
         const loading = window.weui.loading("加载中...")

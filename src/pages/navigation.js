@@ -30,34 +30,34 @@ const demo_extra = {
             "href": "login.html",
             "name": "Login",
             "icon": "fa-circle",
-            "target":"_blank"
+            "target": "_blank"
         },
         {
             "id": "demo/extras/register",
             "href": "register.html",
             "name": "Register",
             "icon": "fa-circle",
-            "target":"_blank"
+            "target": "_blank"
         },
         {
             "id": "demo/extras/forgot_password",
             "name": "Forgot Password",
             "href": "forgot-password.html",
             "icon": "fa-circle",
-            "target":"_blank"
+            "target": "_blank"
         },
         {
             "id": "demo/extras/recover_password",
             "name": "Recover Password",
             "icon": "fa-circle",
             "href": "recover-password.html",
-            "target":"_blank"
+            "target": "_blank"
         },
         {
             "id": "demo/extras/lockscreen",
             "name": "Lockscreen",
             "icon": "fa-circle",
-            "target":"_blank",
+            "target": "_blank",
             "href": "pages/lockscreen.html",
         },
         {
@@ -65,113 +65,120 @@ const demo_extra = {
             "name": "Error 404",
             "icon": "fa-circle",
             "href": "pages/404.html",
-            "target":"_blank"
+            "target": "_blank"
         },
         {
             "id": "demo/extras/error_500",
             "name": "Error 500",
             "href": "pages/500.html",
             "icon": "fa-circle",
-            "target":"_blank"
+            "target": "_blank"
         }
     ]
 }
 const demo_page = {
-        "id": "demo/pages",
-        "name": "Pages",
-        "icon": "fa-book",
-        "children": [
-            {
-                "id": "demo/pages/invoice",
-                "name": "Invoice",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/profile",
-                "name": "Profile",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/e-commerce",
-                "name": "E-commerce",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/projects",
-                "name": "Projects",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/project_add",
-                "name": "Project Add",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/project_edit",
-                "name": "Project Edit",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/project_detail",
-                "name": "Project Detail",
-                "icon": "fa-circle",
-            },
-            {
-                "id": "demo/pages/contacts",
-                "name": "Contacts",
-                "icon": "fa-circle",
-            }
-        ]
-    };
-const demo_layout = {
-            "id": "demo/layout options6",
-            "name": "Layout Options6",
-            "icon": "fa-copy",
-            "children": [
-                {
-                    "id": "demo/layout options6/top_navigation",
-                    "name": "Top Navigation",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                },
-                {
-                    "id": "demo/layout options6/top_navigation + sidebar",
-                    "name": "Top Navigation + Sidebar",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                },
-                {
-                    "id": "demo/layout options6/boxed",
-                    "name": "Boxed",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                },
-                {
-                    "id": "demo/layout options6/fixed_sidebar",
-                    "name": "Fixed Sidebar",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                },
-                {
-                    "id": "demo/layout options6/fixed_navbar",
-                    "name": "Fixed Navbar",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                },
-                {
-                    "id": "demo/layout options6/fixed_footer",
-                    "name": "Fixed Footer",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                },
-                {
-                    "id": "demo/layout options6/collapsed_sidebar",
-                    "name": "Collapsed Sidebar",
-                    "icon": "fa-circle",
-                    "target":"_blank"
-                }
-            ]
+    "id": "demo/pages",
+    "name": "Pages",
+    "icon": "fa-book",
+    "children": [
+        {
+            "id": "demo/pages/invoice",
+            "name": "Invoice",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/profile",
+            "name": "Profile",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/e-commerce",
+            "name": "E-commerce",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/projects",
+            "name": "Projects",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/project_add",
+            "name": "Project Add",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/project_edit",
+            "name": "Project Edit",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/project_detail",
+            "name": "Project Detail",
+            "icon": "fa-circle",
+        },
+        {
+            "id": "demo/pages/contacts",
+            "name": "Contacts",
+            "icon": "fa-circle",
         }
+    ]
+};
+const demo_layout = {
+    "id": "demo/layout",
+    "name": "Layout",
+    "icon": "fa-copy",
+    "children": [
+        {
+            "id": "demo/layout/top_navigation",
+            "name": "Top Navigation",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/top-nav.html"
+        },
+        {
+            "id": "demo/layout/top_navigation_sidebar",
+            "name": "Top Navigation",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/top-nav-sidebar.html"
+        },
+        {
+            "id": "demo/layout/boxed",
+            "name": "Boxed",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/boxed.html"
+        },
+        {
+            "id": "demo/layout/fixed_sidebar",
+            "name": "Fixed Sidebar",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/fixed-sidebar.html"
+        },
+        {
+            "id": "demo/layout/fixed_navbar",
+            "name": "Fixed Navbar",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/fixed-navbar.html"
+        },
+        {
+            "id": "demo/layout/fixed_footer",
+            "name": "Fixed Footer",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/fixed-footer.html"
+        },
+        {
+            "id": "demo/layout/collapsed_sidebar",
+            "name": "Collapsed Sidebar",
+            "icon": "fa-circle",
+            "target": "_blank",
+            "href": "layout/collapsed-sidebar.html"
+        }
+    ]
+}
 export const demo_menus = [
     demo_dashboard,
     {
@@ -332,19 +339,19 @@ export const demo_menus = [
         "id": "demo/documentation",
         "name": "Documentation",
         "icon": "fa-file",
-        "href":"https://adminlte.io",
-        "target":"_blank"
+        "href": "https://adminlte.io",
+        "target": "_blank"
     },
 ];
 export const navigation = {
-    activeMenu:"",
-    clickedMenu:"",
-    openMenu:"",
-    module:"home",
-    menus:{
-        "home":{
-            name:"Home",
-            children:[
+    activeMenu: "",
+    clickedMenu: "",
+    openMenu: "",
+    module: "home",
+    menus: {
+        "home": {
+            name: "Home",
+            children: [
                 demo_dashboard
             ]
         },
@@ -372,12 +379,10 @@ export const navigation = {
         }
     }
 };
-
 export const namespace = "navigation";
 const initialState = {
     ...navigation
 };
-
 export default function defaultReducer(
     state = initialState,
     action

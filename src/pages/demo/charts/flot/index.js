@@ -3,29 +3,33 @@ import {connect} from "react-redux";
 import {namespace} from "./store"
 import Chart from "./components/Chart"
 import "./style.css"
+
 function labelFormatter(label, series) {
     return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
         + label
         + '<br>'
         + Math.round(series.percent) + '%</div>'
 }
+
 export default connect(
     ({route, ...state}) => {
         return {
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
+
     componentDidMount() {
         setTimeout(() => {
             this.handleCharts()
         }, 800)
     }
+
     handleCharts() {
         var data = [],
             totalPoints = 100
+
         function getRandomData() {
             if (data.length > 0) {
                 data = data.slice(1)
@@ -46,6 +50,7 @@ export default connect(
             }
             return res
         }
+
         var interactive_plot = $.plot('#interactive', [
                 {
                     data: getRandomData(),
@@ -77,6 +82,7 @@ export default connect(
         )
         var updateInterval = 500
         var realtime = 'on'
+
         function update() {
             interactive_plot.setData([getRandomData()])
             interactive_plot.draw()
@@ -84,6 +90,7 @@ export default connect(
                 setTimeout(update, updateInterval)
             }
         }
+
         if (realtime === 'on') {
             update()
         }
@@ -232,6 +239,7 @@ export default connect(
             }
         })
     }
+
     render() {
         return (
             <div className={`view_${namespace}`}>

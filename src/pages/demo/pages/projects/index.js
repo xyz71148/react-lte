@@ -8,18 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">Projects</h3>
@@ -38,22 +35,22 @@ export default connect(
                         <table className="table table-striped projects">
                             <thead>
                             <tr>
-                                <th style={{width:"1%"}}>
+                                <th style={{width: "1%"}}>
                                     #
                                 </th>
-                                <th style={{width:"20%"}}>
+                                <th style={{width: "20%"}}>
                                     Project Name
                                 </th>
-                                <th style={{width:"30%"}}>
+                                <th style={{width: "30%"}}>
                                     Team Members
                                 </th>
                                 <th>
                                     Project Progress
                                 </th>
-                                <th style={{width:"8%"}} className="text-center">
+                                <th style={{width: "8%"}} className="text-center">
                                     Status
                                 </th>
-                                <th style={{width:254}}>
+                                <th style={{width: 254}}>
                                 </th>
                             </tr>
                             </thead>
@@ -75,26 +72,26 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar2.png" />
+                                                 src="static/dist/img/avatar2.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar3.png" />
+                                                 src="static/dist/img/avatar3.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="57"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"57%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "57%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -139,18 +136,18 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar2.png" />
+                                                 src="static/dist/img/avatar2.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="47"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"47%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "47%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -195,22 +192,22 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar2.png" />
+                                                 src="static/dist/img/avatar2.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar3.png" />
+                                                 src="static/dist/img/avatar3.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="77"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"77%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "77%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -255,26 +252,26 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar2.png" />
+                                                 src="static/dist/img/avatar2.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar3.png" />
+                                                 src="static/dist/img/avatar3.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="60"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"60%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "60%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -319,22 +316,22 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar5.png" />
+                                                 src="static/dist/img/avatar5.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="12"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"12%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "12%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -379,26 +376,26 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar2.png" />
+                                                 src="static/dist/img/avatar2.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar3.png" />
+                                                 src="static/dist/img/avatar3.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="35"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"35%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "35%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -443,18 +440,18 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar5.png" />
+                                                 src="static/dist/img/avatar5.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="87"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"87%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "87%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -499,22 +496,22 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar3.png" />
+                                                 src="static/dist/img/avatar3.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="77"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"77%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "77%"}}>
                                         </div>
                                     </div>
                                     <small>
@@ -559,26 +556,26 @@ export default connect(
                                     <ul className="list-inline">
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar.png" />
+                                                 src="static/dist/img/avatar.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar3.png" />
+                                                 src="static/dist/img/avatar3.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar04.png" />
+                                                 src="static/dist/img/avatar04.png"/>
                                         </li>
                                         <li className="list-inline-item">
                                             <img alt="Avatar" className="table-avatar"
-                                                 src="static/dist/img/avatar5.png" />
+                                                 src="static/dist/img/avatar5.png"/>
                                         </li>
                                     </ul>
                                 </td>
                                 <td className="project_progress">
                                     <div className="progress progress-sm">
                                         <div className="progress-bar bg-green" role="progressbar" aria-volumenow="77"
-                                             aria-volumemin="0" aria-volumemax="100" style={{width:"77%"}}>
+                                             aria-volumemin="0" aria-volumemax="100" style={{width: "77%"}}>
                                         </div>
                                     </div>
                                     <small>

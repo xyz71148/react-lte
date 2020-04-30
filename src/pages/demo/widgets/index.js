@@ -5,7 +5,6 @@ import SmallBox from "./components/SmallBox"
 import Cards from "./components/Cards"
 import Chat from "./components/Chat"
 import Social from "./components/Social"
-
 import "./style.css"
 
 export default connect(
@@ -14,21 +13,19 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view_${namespace}`}>
-                <SmallBox />
-                <Cards />
-                <Chat />
-                <Social />
+                <SmallBox/>
+                <Cards/>
+                <Chat/>
+                <Social/>
             </div>
         )
     }

@@ -8,12 +8,10 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
@@ -25,15 +23,14 @@ export default connect(
                             <div className="card-header">
                                 <h3 className="card-title">Bordered Table</h3>
                             </div>
-
                             <div className="card-body">
                                 <table className="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th  style={{width:"10px"}}>#</th>
+                                        <th style={{width: "10px"}}>#</th>
                                         <th>Task</th>
                                         <th>Progress</th>
-                                        <th  style={{width:"40px"}}>Label</th>
+                                        <th style={{width: "40px"}}>Label</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -43,7 +40,7 @@ export default connect(
                                         <td>
                                             <div className="progress progress-xs">
                                                 <div className="progress-bar progress-bar-danger"
-                                                     style={{width:"55%"}}></div>
+                                                     style={{width: "55%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-danger">55%</span></td>
@@ -53,7 +50,7 @@ export default connect(
                                         <td>Clean database</td>
                                         <td>
                                             <div className="progress progress-xs">
-                                                <div className="progress-bar bg-warning" style={{width:"70%"}}></div>
+                                                <div className="progress-bar bg-warning" style={{width: "70%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-warning">70%</span></td>
@@ -63,7 +60,7 @@ export default connect(
                                         <td>Cron job running</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-primary" style={{width:"30%"}}></div>
+                                                <div className="progress-bar bg-primary" style={{width: "30%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-primary">30%</span></td>
@@ -73,7 +70,7 @@ export default connect(
                                         <td>Fix and squish bugs</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-success" style={{width:"90%"}}></div>
+                                                <div className="progress-bar bg-success" style={{width: "90%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-success">90%</span></td>
@@ -81,7 +78,6 @@ export default connect(
                                     </tbody>
                                 </table>
                             </div>
-
                             <div className="card-footer clearfix">
                                 <ul className="pagination pagination-sm m-0 float-right">
                                     <li className="page-item"><a className="page-link" href="#">&laquo;</a></li>
@@ -92,21 +88,18 @@ export default connect(
                                 </ul>
                             </div>
                         </div>
-
-
                         <div className="card">
                             <div className="card-header">
                                 <h3 className="card-title">Condensed Full Width Table</h3>
                             </div>
-
                             <div className="card-body p-0">
                                 <table className="table table-sm">
                                     <thead>
                                     <tr>
-                                        <th  style={{width:"10px"}}>#</th>
+                                        <th style={{width: "10px"}}>#</th>
                                         <th>Task</th>
                                         <th>Progress</th>
-                                        <th  style={{width:"40px"}}>Label</th>
+                                        <th style={{width: "40px"}}>Label</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -116,7 +109,7 @@ export default connect(
                                         <td>
                                             <div className="progress progress-xs">
                                                 <div className="progress-bar progress-bar-danger"
-                                                     style={{width:"55%"}}></div>
+                                                     style={{width: "55%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-danger">55%</span></td>
@@ -126,7 +119,7 @@ export default connect(
                                         <td>Clean database</td>
                                         <td>
                                             <div className="progress progress-xs">
-                                                <div className="progress-bar bg-warning" style={{width:"70%"}}></div>
+                                                <div className="progress-bar bg-warning" style={{width: "70%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-warning">70%</span></td>
@@ -136,7 +129,7 @@ export default connect(
                                         <td>Cron job running</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-primary" style={{width:"30%"}}></div>
+                                                <div className="progress-bar bg-primary" style={{width: "30%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-primary">30%</span></td>
@@ -146,7 +139,7 @@ export default connect(
                                         <td>Fix and squish bugs</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-success" style={{width:"90%"}}></div>
+                                                <div className="progress-bar bg-success" style={{width: "90%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-success">90%</span></td>
@@ -154,16 +147,12 @@ export default connect(
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
-
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
                                 <h3 className="card-title">Simple Full Width Table</h3>
-
                                 <div className="card-tools">
                                     <ul className="pagination pagination-sm float-right">
                                         <li className="page-item"><a className="page-link" href="#">&laquo;</a></li>
@@ -174,15 +163,14 @@ export default connect(
                                     </ul>
                                 </div>
                             </div>
-
                             <div className="card-body p-0">
                                 <table className="table">
                                     <thead>
                                     <tr>
-                                        <th  style={{width:"10px"}}>#</th>
+                                        <th style={{width: "10px"}}>#</th>
                                         <th>Task</th>
                                         <th>Progress</th>
-                                        <th  style={{width:"40px"}}>Label</th>
+                                        <th style={{width: "40px"}}>Label</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -192,7 +180,7 @@ export default connect(
                                         <td>
                                             <div className="progress progress-xs">
                                                 <div className="progress-bar progress-bar-danger"
-                                                     style={{width:"55%"}}></div>
+                                                     style={{width: "55%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-danger">55%</span></td>
@@ -202,7 +190,7 @@ export default connect(
                                         <td>Clean database</td>
                                         <td>
                                             <div className="progress progress-xs">
-                                                <div className="progress-bar bg-warning" style={{width:"70%"}}></div>
+                                                <div className="progress-bar bg-warning" style={{width: "70%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-warning">70%</span></td>
@@ -212,7 +200,7 @@ export default connect(
                                         <td>Cron job running</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-primary" style={{width:"30%"}}></div>
+                                                <div className="progress-bar bg-primary" style={{width: "30%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-primary">30%</span></td>
@@ -222,7 +210,7 @@ export default connect(
                                         <td>Fix and squish bugs</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-success" style={{width:"90%"}}></div>
+                                                <div className="progress-bar bg-success" style={{width: "90%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-success">90%</span></td>
@@ -230,23 +218,19 @@ export default connect(
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
-
                         <div className="card">
                             <div className="card-header">
                                 <h3 className="card-title">Striped Full Width Table</h3>
                             </div>
-
                             <div className="card-body p-0">
                                 <table className="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th  style={{width:"10px"}}>#</th>
+                                        <th style={{width: "10px"}}>#</th>
                                         <th>Task</th>
                                         <th>Progress</th>
-                                        <th  style={{width:"40px"}}>Label</th>
+                                        <th style={{width: "40px"}}>Label</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -256,7 +240,7 @@ export default connect(
                                         <td>
                                             <div className="progress progress-xs">
                                                 <div className="progress-bar progress-bar-danger"
-                                                     style={{width:"55%"}}></div>
+                                                     style={{width: "55%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-danger">55%</span></td>
@@ -266,7 +250,7 @@ export default connect(
                                         <td>Clean database</td>
                                         <td>
                                             <div className="progress progress-xs">
-                                                <div className="progress-bar bg-warning" style={{width:"70%"}}></div>
+                                                <div className="progress-bar bg-warning" style={{width: "70%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-warning">70%</span></td>
@@ -276,7 +260,7 @@ export default connect(
                                         <td>Cron job running</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-primary" style={{width:"30%"}}></div>
+                                                <div className="progress-bar bg-primary" style={{width: "30%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-primary">30%</span></td>
@@ -286,7 +270,7 @@ export default connect(
                                         <td>Fix and squish bugs</td>
                                         <td>
                                             <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-success" style={{width:"90%"}}></div>
+                                                <div className="progress-bar bg-success" style={{width: "90%"}}></div>
                                             </div>
                                         </td>
                                         <td><span className="badge bg-success">90%</span></td>
@@ -294,24 +278,18 @@ export default connect(
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
                 <div className="row">
                     <div className="col-12">
                         <div className="card">
                             <div className="card-header">
                                 <h3 className="card-title">Responsive Hover Table</h3>
-
                                 <div className="card-tools">
-                                    <div className="input-group input-group-sm" style={{width:"150px"}}>
+                                    <div className="input-group input-group-sm" style={{width: "150px"}}>
                                         <input type="text" name="table_search" className="form-control float-right"
                                                placeholder="Search"/>
-
                                         <div className="input-group-append">
                                             <button type="submit" className="btn btn-default"><i
                                                 className="fas fa-search"></i></button>
@@ -319,7 +297,6 @@ export default connect(
                                     </div>
                                 </div>
                             </div>
-
                             <div className="card-body table-responsive p-0">
                                 <table className="table table-hover text-nowrap">
                                     <thead>
@@ -363,23 +340,18 @@ export default connect(
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-
                 <div className="row">
                     <div className="col-12">
                         <div className="card">
                             <div className="card-header">
                                 <h3 className="card-title">Fixed Header Table</h3>
-
                                 <div className="card-tools">
-                                    <div className="input-group input-group-sm" style={{width:"150px"}}>
+                                    <div className="input-group input-group-sm" style={{width: "150px"}}>
                                         <input type="text" name="table_search" className="form-control float-right"
                                                placeholder="Search"/>
-
                                         <div className="input-group-append">
                                             <button type="submit" className="btn btn-default"><i
                                                 className="fas fa-search"></i></button>
@@ -387,8 +359,7 @@ export default connect(
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="card-body table-responsive p-0" style={{height:"300px"}}>
+                            <div className="card-body table-responsive p-0" style={{height: "300px"}}>
                                 <table className="table table-head-fixed text-nowrap">
                                     <thead>
                                     <tr>
@@ -459,12 +430,9 @@ export default connect(
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-
             </div>
         )
     }

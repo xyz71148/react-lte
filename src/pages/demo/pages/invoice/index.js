@@ -8,18 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="row">
                     <div className="col-12">
                         <div className="callout callout-info">

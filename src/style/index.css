@@ -7,10 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ededed
-
 }
 ::-webkit-scrollbar { display: none; }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -55,24 +53,19 @@ code {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-moz-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-webkit-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-o-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-

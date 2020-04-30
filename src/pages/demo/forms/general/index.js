@@ -8,29 +8,22 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="row">
-
                     <div className="col-md-6">
-
                         <div className="card card-primary">
                             <div className="card-header">
                                 <h3 className="card-title">Quick Example</h3>
                             </div>
-
-
-                            <form role="form">
+                            <form>
                                 <div className="card-body">
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Email address</label>
@@ -60,15 +53,11 @@ export default connect(
                                         <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                                     </div>
                                 </div>
-
-
                                 <div className="card-footer">
                                     <button type="submit" className="btn btn-primary">Submit</button>
                                 </div>
                             </form>
                         </div>
-
-
                         <div className="card card-success">
                             <div className="card-header">
                                 <h3 className="card-title">Different Height</h3>
@@ -76,16 +65,13 @@ export default connect(
                             <div className="card-body">
                                 <input className="form-control form-control-lg" type="text"
                                        placeholder=".form-control-lg"/>
-                                <br />
-                                    <input className="form-control" type="text" placeholder="Default input"/>
-                                    <br />
-                                        <input className="form-control form-control-sm" type="text"
-                                               placeholder=".form-control-sm" />
+                                <br/>
+                                <input className="form-control" type="text" placeholder="Default input"/>
+                                <br/>
+                                <input className="form-control form-control-sm" type="text"
+                                       placeholder=".form-control-sm"/>
                             </div>
-
                         </div>
-
-
                         <div className="card card-danger">
                             <div className="card-header">
                                 <h3 className="card-title">Different Width</h3>
@@ -103,10 +89,7 @@ export default connect(
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
                         <div className="card card-info">
                             <div className="card-header">
                                 <h3 className="card-title">Input Addon</h3>
@@ -118,14 +101,12 @@ export default connect(
                                     </div>
                                     <input type="text" className="form-control" placeholder="Username"/>
                                 </div>
-
                                 <div className="input-group mb-3">
                                     <input type="text" className="form-control"/>
                                     <div className="input-group-append">
                                         <span className="input-group-text">.00</span>
                                     </div>
                                 </div>
-
                                 <div className="input-group">
                                     <div className="input-group-prepend">
                                         <span className="input-group-text">$</span>
@@ -135,23 +116,19 @@ export default connect(
                                         <span className="input-group-text">.00</span>
                                     </div>
                                 </div>
-
                                 <h4>With icons</h4>
-
                                 <div className="input-group mb-3">
                                     <div className="input-group-prepend">
                                         <span className="input-group-text"><i className="fas fa-envelope"></i></span>
                                     </div>
                                     <input type="email" className="form-control" placeholder="Email"/>
                                 </div>
-
                                 <div className="input-group mb-3">
                                     <input type="text" className="form-control"/>
                                     <div className="input-group-append">
                                         <span className="input-group-text"><i className="fas fa-check"></i></span>
                                     </div>
                                 </div>
-
                                 <div className="input-group">
                                     <div className="input-group-prepend">
                     <span className="input-group-text">
@@ -163,9 +140,7 @@ export default connect(
                                         <div className="input-group-text"><i className="fas fa-ambulance"></i></div>
                                     </div>
                                 </div>
-
                                 <h5 className="mt-4 mb-2">With checkbox and radio inputs</h5>
-
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="input-group">
@@ -176,9 +151,7 @@ export default connect(
                                             </div>
                                             <input type="text" className="form-control"/>
                                         </div>
-
                                     </div>
-
                                     <div className="col-lg-6">
                                         <div className="input-group">
                                             <div className="input-group-prepend">
@@ -186,16 +159,10 @@ export default connect(
                                             </div>
                                             <input type="text" className="form-control"/>
                                         </div>
-
                                     </div>
-
                                 </div>
-
-
                                 <h5 className="mt-4 mb-2">With buttons</h5>
-
                                 <p>Large: <code>.input-group.input-group-lg</code></p>
-
                                 <div className="input-group input-group-lg mb-3">
                                     <div className="input-group-prepend">
                                         <button type="button" className="btn btn-warning dropdown-toggle"
@@ -210,21 +177,15 @@ export default connect(
                                             <li className="dropdown-item"><a href="#">Separated link</a></li>
                                         </ul>
                                     </div>
-
                                     <input type="text" className="form-control"/>
                                 </div>
-
-
                                 <p>Normal</p>
                                 <div className="input-group mb-3">
                                     <div className="input-group-prepend">
                                         <button type="button" className="btn btn-danger">Action</button>
                                     </div>
-
                                     <input type="text" className="form-control"/>
                                 </div>
-
-
                                 <p>Small <code>.input-group.input-group-sm</code></p>
                                 <div className="input-group input-group-sm">
                                     <input type="text" className="form-control"/>
@@ -232,18 +193,12 @@ export default connect(
                     <button type="button" className="btn btn-info btn-flat">Go!</button>
                   </span>
                                 </div>
-
                             </div>
-
                         </div>
-
-
                         <div className="card card-info">
                             <div className="card-header">
                                 <h3 className="card-title">Horizontal Form</h3>
                             </div>
-
-
                             <form className="form-horizontal">
                                 <div className="card-body">
                                     <div className="form-group row">
@@ -271,31 +226,22 @@ export default connect(
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="card-footer">
                                     <button type="submit" className="btn btn-info">Sign in</button>
                                     <button type="submit" className="btn btn-default float-right">Cancel</button>
                                 </div>
-
                             </form>
                         </div>
-
-
                     </div>
-
-
                     <div className="col-md-6">
-
                         <div className="card card-warning">
                             <div className="card-header">
                                 <h3 className="card-title">General Elements</h3>
                             </div>
-
                             <div className="card-body">
-                                <form role="form">
+                                <form>
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <label>Text</label>
                                                 <input type="text" className="form-control" placeholder="Enter ..."/>
@@ -311,7 +257,6 @@ export default connect(
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <label>Textarea</label>
                                                 <textarea className="form-control" rows="3"
@@ -326,8 +271,6 @@ export default connect(
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div className="form-group">
                                         <label className="col-form-label" htmlFor="inputSuccess"><i
                                             className="fas fa-check"></i> Input with
@@ -349,10 +292,8 @@ export default connect(
                                         <input type="text" className="form-control is-invalid" id="inputError"
                                                placeholder="Enter ..."/>
                                     </div>
-
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="checkbox"/>
@@ -369,7 +310,6 @@ export default connect(
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <div className="form-check">
                                                     <input className="form-check-input" type="radio" name="radio1"/>
@@ -387,10 +327,8 @@ export default connect(
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <label>Select</label>
                                                 <select className="form-control">
@@ -415,10 +353,8 @@ export default connect(
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <label>Select Multiple</label>
                                                 <select multiple className="form-control">
@@ -445,20 +381,15 @@ export default connect(
                                     </div>
                                 </form>
                             </div>
-
                         </div>
-
-
                         <div className="card card-secondary">
                             <div className="card-header">
                                 <h3 className="card-title">Custom Elements</h3>
                             </div>
-
                             <div className="card-body">
-                                <form role="form">
+                                <form>
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <div className="custom-control custom-checkbox">
                                                     <input className="custom-control-input" type="checkbox"
@@ -481,7 +412,6 @@ export default connect(
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <div className="custom-control custom-radio">
                                                     <input className="custom-control-input" type="radio"
@@ -504,10 +434,8 @@ export default connect(
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <label>Custom Select</label>
                                                 <select className="custom-select">
@@ -532,10 +460,8 @@ export default connect(
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="row">
                                         <div className="col-sm-6">
-
                                             <div className="form-group">
                                                 <label>Custom Select Multiple</label>
                                                 <select multiple className="custom-select">
@@ -560,7 +486,6 @@ export default connect(
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="form-group">
                                         <div className="custom-control custom-switch">
                                             <input type="checkbox" className="custom-control-input" id="customSwitch1"/>
@@ -599,8 +524,6 @@ export default connect(
                                                id="customRange1"/>
                                     </div>
                                     <div className="form-group">
-
-
                                         <div className="custom-file">
                                             <input type="file" className="custom-file-input" id="customFile"/>
                                             <label className="custom-file-label" htmlFor="customFile">Choose
@@ -611,11 +534,8 @@ export default connect(
                                     </div>
                                 </form>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
             </div>
         )

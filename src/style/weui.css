@@ -20,7 +20,6 @@
 .weui-custom .weui-mask{
     z-index: 11000 !important;
 }
-
 .weui-custom .weui-half-screen-dialog{
     z-index: 15000 !important;
 }
@@ -33,11 +32,9 @@
 .weui-loading_toast .weui-mask_transparent,.weui-loading_toast .weui-toast {
     z-index: 18000 !important;
 }
-
 .weui-toptips {
     z-index: 19000 !important;
 }
-
 .weui-badge-green{
     background-color: #0bb20c!important;
 }

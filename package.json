@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "rescripts start",
-    "serve": "serve ./build -l 3001",
+    "serve": "serve ./ -l 3001",
     "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map ",
     "test": "rescripts test",
     "eject": "react-scripts eject"

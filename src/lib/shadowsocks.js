@@ -1,6 +1,5 @@
 import {base64encode} from "nodejs-base64";
 import {get_platform, open_url} from "./utils";
-
 const get_download_url = () => {
     const platform = get_platform();
     return window.globalObject.constant.download_urls[platform]
@@ -44,12 +43,10 @@ export const onConnectServer = ({host, port, pwd, name, password, ip, id}, dispa
                     type: "route/hidePage"
                 })
             }
-
-        })
+})
     } else {
         open_url(accessKey)
     }
-
 }
 export const onConnect = (item, menus, dispatch) => {
     const {ip} = item;
@@ -66,8 +63,7 @@ export const onConnect = (item, menus, dispatch) => {
                 open_url("http://ping.chinaz.com/" + ip, "_blank")
             }
         }
-
-    ];
+];
     if (get_platform() !== "cordova") {
         m.push({
             label: "下载客户端",
@@ -80,8 +76,7 @@ export const onConnect = (item, menus, dispatch) => {
         ...m,
         ...menus
     ], [], {title: ""});
-
-    // axios.get("http://127.0.0.1:1270/shadowsocks", {timeout: 1000}).then((data) => {
+// axios.get("http://127.0.0.1:1270/shadowsocks", {timeout: 1000}).then((data) => {
     //     if (data.data.ok) {
     //         const items = data.data.data
     //         let label = "连接"

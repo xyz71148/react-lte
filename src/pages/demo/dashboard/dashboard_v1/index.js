@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import SmallBox from "./components/SmallBox"
-
 import Sales from "./components/Sales"
 import Charts from "./components/Charts"
 import Todo from "./components/Todo"
 import Visitors from "./components/Visitors"
 import SaleGraph from "./components/SaleGraph"
 import Calendar from "./components/Calendar"
-
 import {namespace} from "./store"
 import "./style.css"
 
@@ -18,55 +16,51 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
+
     componentDidMount() {
-        setTimeout(()=>{
+        setTimeout(() => {
             this.handleChart()
-        },500)
+        }, 500)
     }
-    handleChart(){
+
+    handleChart() {
         // Make the dashboard widgets sortable Using jquery UI
         $('.connectedSortable').sortable({
-            placeholder         : 'sort-highlight',
-            connectWith         : '.connectedSortable',
-            handle              : '.card-header, .nav-tabs',
+            placeholder: 'sort-highlight',
+            connectWith: '.connectedSortable',
+            handle: '.card-header, .nav-tabs',
             forcePlaceholderSize: true,
-            zIndex              : 999999
+            zIndex: 999999
         })
         $('.connectedSortable .card-header, .connectedSortable .nav-tabs-custom').css('cursor', 'move')
-
-        // jQuery UI sortable for the todo list
+// jQuery UI sortable for the todo list
         $('.todo-list').sortable({
-            placeholder         : 'sort-highlight',
-            handle              : '.handle',
+            placeholder: 'sort-highlight',
+            handle: '.handle',
             forcePlaceholderSize: true,
-            zIndex              : 999999
+            zIndex: 999999
         })
-
-        // bootstrap WYSIHTML5 - text editor
+// bootstrap WYSIHTML5 - text editor
         $('.textarea').summernote()
-
         $('.daterange').daterangepicker({
-            ranges   : {
-                'Today'       : [moment(), moment()],
-                'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-                'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
             },
             startDate: moment().subtract(29, 'days'),
-            endDate  : moment()
+            endDate: moment()
         }, function (start, end) {
             window.alert('You chose: ' + start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
         })
-
         /* jQueryKnob */
         $('.knob').knob()
-
-        // jvectormap data
+// jvectormap data
         var visitorsData = {
             'US': 398, //USA
             'SA': 400, //Saudi Arabia
@@ -82,21 +76,21 @@ export default connect(
         }
         // World map by jvectormap
         $('#world-map').vectorMap({
-            map              : 'usa_en',
-            backgroundColor  : 'transparent',
-            regionStyle      : {
+            map: 'usa_en',
+            backgroundColor: 'transparent',
+            regionStyle: {
                 initial: {
-                    fill            : 'rgba(255, 255, 255, 0.7)',
-                    'fill-opacity'  : 1,
-                    stroke          : 'rgba(0,0,0,.2)',
-                    'stroke-width'  : 1,
+                    fill: 'rgba(255, 255, 255, 0.7)',
+                    'fill-opacity': 1,
+                    stroke: 'rgba(0,0,0,.2)',
+                    'stroke-width': 1,
                     'stroke-opacity': 1
                 }
             },
-            series           : {
+            series: {
                 regions: [{
-                    values           : visitorsData,
-                    scale            : ['#ffffff', '#0154ad'],
+                    values: visitorsData,
+                    scale: ['#ffffff', '#0154ad'],
                     normalizeFunction: 'polynomial'
                 }]
             },
@@ -105,91 +99,97 @@ export default connect(
                     el.html(el.html() + ': ' + visitorsData[code] + ' new visitors')
             }
         })
-
-        // Sparkline charts
-        var sparkline1 = new Sparkline($("#sparkline-1")[0], {width: 80, height: 50, lineColor: '#92c1dc', endColor: '#ebf4f9'});
-        var sparkline2 = new Sparkline($("#sparkline-2")[0], {width: 80, height: 50, lineColor: '#92c1dc', endColor: '#ebf4f9'});
-        var sparkline3 = new Sparkline($("#sparkline-3")[0], {width: 80, height: 50, lineColor: '#92c1dc', endColor: '#ebf4f9'});
-
+// Sparkline charts
+        var sparkline1 = new Sparkline($("#sparkline-1")[0], {
+            width: 80,
+            height: 50,
+            lineColor: '#92c1dc',
+            endColor: '#ebf4f9'
+        });
+        var sparkline2 = new Sparkline($("#sparkline-2")[0], {
+            width: 80,
+            height: 50,
+            lineColor: '#92c1dc',
+            endColor: '#ebf4f9'
+        });
+        var sparkline3 = new Sparkline($("#sparkline-3")[0], {
+            width: 80,
+            height: 50,
+            lineColor: '#92c1dc',
+            endColor: '#ebf4f9'
+        });
         sparkline1.draw([1000, 1200, 920, 927, 931, 1027, 819, 930, 1021]);
         sparkline2.draw([515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921]);
         sparkline3.draw([15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21]);
-
-        // The Calender
+// The Calender
         $('#calendar').datetimepicker({
             format: 'L',
             inline: true
         })
-
-        // SLIMSCROLL FOR CHAT WIDGET
+// SLIMSCROLL FOR CHAT WIDGET
         $('#chat-box').overlayScrollbars({
             height: '250px'
         })
-
         /* Chart.js Charts */
         // Sales chart
         var salesChartCanvas = document.getElementById('revenue-chart-canvas').getContext('2d');
         //$('#revenue-chart').get(0).getContext('2d');
-
         var salesChartData = {
-            labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
                 {
-                    label               : 'Digital Goods',
-                    backgroundColor     : 'rgba(60,141,188,0.9)',
-                    borderColor         : 'rgba(60,141,188,0.8)',
-                    pointRadius          : false,
-                    pointColor          : '#3b8bba',
-                    pointStrokeColor    : 'rgba(60,141,188,1)',
-                    pointHighlightFill  : '#fff',
+                    label: 'Digital Goods',
+                    backgroundColor: 'rgba(60,141,188,0.9)',
+                    borderColor: 'rgba(60,141,188,0.8)',
+                    pointRadius: false,
+                    pointColor: '#3b8bba',
+                    pointStrokeColor: 'rgba(60,141,188,1)',
+                    pointHighlightFill: '#fff',
                     pointHighlightStroke: 'rgba(60,141,188,1)',
-                    data                : [28, 48, 40, 19, 86, 27, 90]
+                    data: [28, 48, 40, 19, 86, 27, 90]
                 },
                 {
-                    label               : 'Electronics',
-                    backgroundColor     : 'rgba(210, 214, 222, 1)',
-                    borderColor         : 'rgba(210, 214, 222, 1)',
-                    pointRadius         : false,
-                    pointColor          : 'rgba(210, 214, 222, 1)',
-                    pointStrokeColor    : '#c1c7d1',
-                    pointHighlightFill  : '#fff',
+                    label: 'Electronics',
+                    backgroundColor: 'rgba(210, 214, 222, 1)',
+                    borderColor: 'rgba(210, 214, 222, 1)',
+                    pointRadius: false,
+                    pointColor: 'rgba(210, 214, 222, 1)',
+                    pointStrokeColor: '#c1c7d1',
+                    pointHighlightFill: '#fff',
                     pointHighlightStroke: 'rgba(220,220,220,1)',
-                    data                : [65, 59, 80, 81, 56, 55, 40]
+                    data: [65, 59, 80, 81, 56, 55, 40]
                 },
             ]
         }
-
         var salesChartOptions = {
-            maintainAspectRatio : false,
-            responsive : true,
+            maintainAspectRatio: false,
+            responsive: true,
             legend: {
                 display: false
             },
             scales: {
                 xAxes: [{
-                    gridLines : {
-                        display : false,
+                    gridLines: {
+                        display: false,
                     }
                 }],
                 yAxes: [{
-                    gridLines : {
-                        display : false,
+                    gridLines: {
+                        display: false,
                     }
                 }]
             }
         }
-
-        // This will get the first returned node in the jQuery collection.
-        var salesChart = new Chart(salesChartCanvas, {
+// This will get the first returned node in the jQuery collection.
+        new Chart(salesChartCanvas, {
                 type: 'line',
                 data: salesChartData,
                 options: salesChartOptions
             }
         )
-
-        // Donut Chart
+// Donut Chart
         var pieChartCanvas = $('#sales-chart-canvas').get(0).getContext('2d')
-        var pieData        = {
+        var pieData = {
             labels: [
                 'Instore Sales',
                 'Download Sales',
@@ -197,8 +197,8 @@ export default connect(
             ],
             datasets: [
                 {
-                    data: [30,12,20],
-                    backgroundColor : ['#f56954', '#00a65a', '#f39c12'],
+                    data: [30, 12, 20],
+                    backgroundColor: ['#f56954', '#00a65a', '#f39c12'],
                 }
             ]
         }
@@ -206,91 +206,88 @@ export default connect(
             legend: {
                 display: false
             },
-            maintainAspectRatio : false,
-            responsive : true,
+            maintainAspectRatio: false,
+            responsive: true,
         }
-        var pieChart = new Chart(pieChartCanvas, {
+        new Chart(pieChartCanvas, {
             type: 'doughnut',
             data: pieData,
             options: pieOptions
         });
-
-        // Sales graph chart
+// Sales graph chart
         var salesGraphChartCanvas = $('#line-chart').get(0).getContext('2d');
         //$('#revenue-chart').get(0).getContext('2d');
-
         var salesGraphChartData = {
-            labels  : ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4', '2013 Q1', '2013 Q2'],
+            labels: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4', '2013 Q1', '2013 Q2'],
             datasets: [
                 {
-                    label               : 'Digital Goods',
-                    fill                : false,
-                    borderWidth         : 2,
-                    lineTension         : 0,
-                    spanGaps : true,
-                    borderColor         : '#efefef',
-                    pointRadius         : 3,
-                    pointHoverRadius    : 7,
-                    pointColor          : '#efefef',
+                    label: 'Digital Goods',
+                    fill: false,
+                    borderWidth: 2,
+                    lineTension: 0,
+                    spanGaps: true,
+                    borderColor: '#efefef',
+                    pointRadius: 3,
+                    pointHoverRadius: 7,
+                    pointColor: '#efefef',
                     pointBackgroundColor: '#efefef',
-                    data                : [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432]
+                    data: [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432]
                 }
             ]
         }
-
         var salesGraphChartOptions = {
-            maintainAspectRatio : false,
-            responsive : true,
+            maintainAspectRatio: false,
+            responsive: true,
             legend: {
                 display: false,
             },
             scales: {
                 xAxes: [{
-                    ticks : {
+                    ticks: {
                         fontColor: '#efefef',
                     },
-                    gridLines : {
-                        display : false,
+                    gridLines: {
+                        display: false,
                         color: '#efefef',
                         drawBorder: false,
                     }
                 }],
                 yAxes: [{
-                    ticks : {
+                    ticks: {
                         stepSize: 5000,
                         fontColor: '#efefef',
                     },
-                    gridLines : {
-                        display : true,
+                    gridLines: {
+                        display: true,
                         color: '#efefef',
                         drawBorder: false,
                     }
                 }]
             }
         }
-
-        // This will get the first returned node in the jQuery collection.
-        var salesGraphChart = new Chart(salesGraphChartCanvas, {
+// This will get the first returned node in the jQuery collection.
+        new Chart(salesGraphChartCanvas, {
                 type: 'line',
                 data: salesGraphChartData,
                 options: salesGraphChartOptions
             }
         )
     }
+
     render() {
         return (
             <div className={`view_${namespace}`}>
-                <SmallBox />
+                <SmallBox/>
                 <div className="row">
                     <section className="col-lg-7 connectedSortable">
-                        <Sales />
-                        <Charts />
-                        <Todo />
+                        <Sales/>
+                        <Charts/>
+                        <Todo/>
                     </section>
                     <section className="col-lg-5 connectedSortable">
-                        <Visitors />
-                        <SaleGraph />
-                        <Calendar />
+                        <Visitors/>
+                        <SaleGraph/>
+                        <Calendar/>
                     </section>
                 </div>
             </div>

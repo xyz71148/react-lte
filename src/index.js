@@ -7,26 +7,21 @@ import {applyMiddleware, createStore} from "redux";
 import {initApp}  from  "./lib/boot";
 import * as serviceWorker from './serviceWorker';
 import App from './components/App';
-
 import './style/index.css';
 import './lib/weui/weui.css';
 import './style/weui.css';
-
-initApp()
-
+initApp();
 const store = createStore(
     rootReducer,
     applyMiddleware(thunk)
 );
-
 const startApp = () => {
     ReactDOM.render(
         <Provider store={store}>
             <App />
         </Provider>
         , document.getElementById('root'));
-
-    serviceWorker.unregister();
+serviceWorker.unregister();
 };
 if (window.cordova) {
     document.addEventListener('deviceready', startApp, false);

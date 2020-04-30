@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style.css"
+
 export default () => {
     return (
         <div>
@@ -27,11 +28,10 @@ export default () => {
                                         <div className=""></div>
                                     </div>
                                 </div>
-                                <canvas style={{display: "block", height: 127, width: 254}} id="pieChart" height="248" width="496" className="chartjs-render-monitor"></canvas>
+                                <canvas style={{display: "block", height: 127, width: 254}} id="pieChart" height="248"
+                                        width="496" className="chartjs-render-monitor"></canvas>
                             </div>
-
                         </div>
-
                         <div className="col-md-4">
                             <ul className="chart-legend clearfix">
                                 <li><i className="far fa-circle text-danger"></i> Chrome</li>
@@ -42,15 +42,13 @@ export default () => {
                                 <li><i className="far fa-circle text-secondary"></i> Navigator</li>
                             </ul>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div className="card-footer bg-white p-0">
                     <ul className="nav nav-pills flex-column">
                         <li className="nav-item">
-                            <a onClick={()=>{}} className="nav-link">
+                            <a onClick={() => {
+                            }} className="nav-link">
                                 United States of America
                                 <span className="float-right text-danger">
                         <i className="fas fa-arrow-down text-sm"></i>
@@ -58,7 +56,8 @@ export default () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a onClick={()=>{}} className="nav-link">
+                            <a onClick={() => {
+                            }} className="nav-link">
                                 India
                                 <span className="float-right text-success">
                         <i className="fas fa-arrow-up text-sm"></i> 4%
@@ -66,7 +65,8 @@ export default () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a onClick={()=>{}} className="nav-link">
+                            <a onClick={() => {
+                            }} className="nav-link">
                                 China
                                 <span className="float-right text-warning">
                         <i className="fas fa-arrow-left text-sm"></i> 0%
@@ -75,7 +75,6 @@ export default () => {
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     )

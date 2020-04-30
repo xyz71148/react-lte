@@ -3,9 +3,7 @@ import "../style.css"
 
 export default () => {
     return (
-
         <div>
-
             <div className="row">
                 <div className="col-12">
                     <div className="card card-primary card-outline">
@@ -26,9 +24,8 @@ export default () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <div id="interactive" style={{height:300}}></div>
+                            <div id="interactive" style={{height: 300}}></div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -50,9 +47,8 @@ export default () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <div id="line-chart" style={{height:300}}></div>
+                            <div id="line-chart" style={{height: 300}}></div>
                         </div>
-
                     </div>
                     <div className="card card-primary card-outline">
                         <div className="card-header">
@@ -70,9 +66,8 @@ export default () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <div id="area-chart" style={{height:338}} className="full-width-chart"></div>
+                            <div id="area-chart" style={{height: 338}} className="full-width-chart"></div>
                         </div>
-
                     </div>
                 </div>
                 <div className="col-md-6">
@@ -92,9 +87,8 @@ export default () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <div id="bar-chart" style={{height:300}}></div>
+                            <div id="bar-chart" style={{height: 300}}></div>
                         </div>
-
                     </div>
                     <div className="card card-primary card-outline">
                         <div className="card-header">
@@ -112,9 +106,8 @@ export default () => {
                             </div>
                         </div>
                         <div className="card-body">
-                            <div id="donut-chart" style={{height:300}}></div>
+                            <div id="donut-chart" style={{height: 300}}></div>
                         </div>
-
                     </div>
                 </div>
             </div>

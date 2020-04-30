@@ -5,7 +5,6 @@ import Chart from "./components/Chart"
 import "./style.css"
 
 function drawDocSparklines() {
-    return
     $('#compositebar').sparkline('html', {
         type: 'bar',
         barColor: '#aaf'
@@ -99,14 +98,12 @@ function drawDocSparklines() {
     $('.clickdemo').bind('sparklineClick', function (ev) {
         var sparkline = ev.sparklines[0],
             region = sparkline.getCurrentRegionFields()
-        var value = region.y
         alert('Clicked on x=' + region.x + ' y=' + region.y)
     })
     $('.mouseoverdemo').sparkline()
     $('.mouseoverdemo').bind('sparklineRegionChange', function (ev) {
         var sparkline = ev.sparklines[0],
             region = sparkline.getCurrentRegionFields()
-        var value = region.y
         $('.mouseoverregion').text('x=' + region.x + ' y=' + region.y)
     }).bind('mouseleave', function () {
         $('.mouseoverregion').text('')
@@ -138,10 +135,9 @@ function drawMouseSpeedDemo() {
         lastmousey = mousey
     })
     var mdraw = function () {
-        return
         var md = new Date()
         var timenow = md.getTime()
-        if (lastmousetime && lastmousetime != timenow) {
+        if (lastmousetime && lastmousetime !== timenow) {
             var pps = Math.round(mousetravel / (timenow - lastmousetime) * 1000)
             mpoints.push(pps)
             if (mpoints.length > mpoints_max) {
@@ -165,8 +161,7 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
@@ -188,7 +183,7 @@ export default connect(
              console.log("cancel : " + this.value);
              },*/
             draw: function () {
-                if (this.$.data('skin') == 'tron') {
+                if (this.$.data('skin') === 'tron') {
                     var a = this.angle(this.cv)
                         ,
                         sa = this.startAngle

@@ -1,9 +1,7 @@
 export const namespace = "demo_chartjs";
-
 const initialState = {
     fetching: false,
 };
-
 export default function defaultReducer(
     state = initialState,
     action

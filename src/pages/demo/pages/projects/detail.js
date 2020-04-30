@@ -8,18 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
-            <div className={`view`} style={{marginBottom:16}}>
-
+            <div className={`view`} style={{marginBottom: 16}}>
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">Projects Detail</h3>
@@ -72,7 +69,7 @@ export default connect(
                                         <div className="post">
                                             <div className="user-block">
                                                 <img className="img-circle img-bordered-sm"
-                                                     src="../static/dist/img/user1-128x128.jpg" alt="user image"/>
+                                                     src="static/dist/img/user1-128x128.jpg" alt="user image"/>
                                                 <span className="username">
                           <a href="#">Jonathan Burke Jr.</a>
                         </span>
@@ -92,7 +89,7 @@ export default connect(
                                         <div className="post clearfix">
                                             <div className="user-block">
                                                 <img className="img-circle img-bordered-sm"
-                                                     src="../static/dist/img/user7-128x128.jpg" alt="user image"/>
+                                                     src="static/dist/img/user7-128x128.jpg" alt="user image"/>
                                                 <span className="username">
                           <a href="#">Sarah Ross</a>
                         </span>
@@ -112,7 +109,7 @@ export default connect(
                                         <div className="post">
                                             <div className="user-block">
                                                 <img className="img-circle img-bordered-sm"
-                                                     src="../static/dist/img/user1-128x128.jpg" alt="user image"/>
+                                                     src="static/dist/img/user1-128x128.jpg" alt="user image"/>
                                                 <span className="username">
                           <a href="#">Jonathan Burke Jr.</a>
                         </span>

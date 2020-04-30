@@ -3,14 +3,12 @@ import axios from 'axios'
 import {connect} from "react-redux";
 import {get_access_token, getZoneTree, parse_url, set_access_token} from "../lib/utils"
 import '../style/App.css';
-import {fetchMe} from '../store/front/userActions'
+import {fetchMe} from '../store/app/user'
 import Page from '../lib/page'
-
 import MainSidebar from "../components/sider-menu/main-sidebar";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import ContentHeader from "../components/content-header";
-
 import {authPrefixes, defaultRoute, routes} from "../pages/routes"
 import {navigation} from "../pages/navigation"
 
@@ -33,7 +31,6 @@ class App extends Component {
             window.location.href = `${urlObject.protocol}//${urlObject.host}`
             window.location.reload()
         } else {
-
             const module = urlObject.query.m ? urlObject.query.m : "home";
             let page_id = "404";
             const id = urlObject.hash.replace("#", "");
@@ -46,32 +43,33 @@ class App extends Component {
                     page_id = "404"
                 }
             }
-
             const {menus} = navigation;
             let module_ = module
-            if(!Object.keys(menus).includes(module)){
+            if (!Object.keys(menus).includes(module)) {
                 module_ = "home";
             }
             const menus_ = menus[module_].children;
-
-
             this.props.dispatch({
                 type: "route/setState",
                 payload: {
                     page_id
                 }
             });
-
             let openMenu;
             for (let i in menus_) {
                 if (menus_[i].id === page_id) {
                     openMenu = menus_[i].id
                 }
             }
-            if(!openMenu){
+            if (!openMenu) {
                 const t = page_id.split("/");
                 t.pop()
                 openMenu = t.join("/")
+            }
+            console.log("===>>>",openMenu,page_id);
+
+            if(menus[module_].children.length === 1){
+                openMenu = menus[module_].children[0].id
             }
 
             this.props.dispatch({
@@ -118,7 +116,6 @@ class App extends Component {
         this.setState({
             loading: false
         });
-
         setTimeout(() => {
             document.querySelector(".global-loading").style.display = "none";
         }, 700)
@@ -166,8 +163,8 @@ class App extends Component {
         if (this.state.loading) return null;
         return (
             <div className={"App"}>
-                <Header />
-                <ContentHeader />
+                <Header/>
+                <ContentHeader/>
                 {
                     Object.keys(routes).map(id => {
                         return (
@@ -176,18 +173,14 @@ class App extends Component {
                     })
                 }
                 <MainSidebar/>
-                <Footer />
+                <Footer/>
             </div>
         );
     }
 }
 
 export default connect(({app, route}) => ({
-    toastState: app.toastState,
     page: route.page,
     page_id: route.page_id,
-    index: route.index,
-    actionSheetState: app.actionSheetState,
-    halfScreenDialogState: app.halfScreenDialogState,
-    loading: app.loading,
+    index: route.index
 }))(App);

@@ -9,27 +9,21 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
-
-
         const header = [
-            { title: 'Username (filterable)', prop: 'username', filterable: true },
-            { title: 'Name', prop: 'realname', sortable: true },
-            { title: 'Location', prop: 'location' },
-            { title: 'Last Updated', prop: 'date', sortable: true }
+            {title: 'Username (filterable)', prop: 'username', filterable: true},
+            {title: 'Name', prop: 'realname', sortable: true},
+            {title: 'Location', prop: 'location'},
+            {title: 'Last Updated', prop: 'date', sortable: true}
         ];
-
         const body = Array.from(new Array(57), () => {
             const rd = (Math.random() * 10).toFixed(1);
-
             if (rd > 0.5) {
                 return {
                     username: 'i-am-billy',
@@ -40,7 +34,6 @@ export default connect(
                         .format('Do MMMM YYYY')
                 };
             }
-
             return {
                 username: 'john-nhoj',
                 realname: `John ${rd}`,
@@ -50,7 +43,6 @@ export default connect(
                     .format('Do MMMM YYYY')
             };
         });
-
         return (
             <div className={`view`}>
                 <div className="row">

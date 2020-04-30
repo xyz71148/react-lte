@@ -1,32 +1,18 @@
 import React from 'react';
-
 import {connect} from "react-redux";
 import BaseComponent from "../../components/BaseComponent"
 import classNames from '../classnames';
 import "./style.css"
-
 import {MdChevronLeft, MdAdd, MdCheck} from 'react-icons/md';
 import {get_platform} from "../utils";
-
-let is_close_btn_closed = false;
-let page_id_btn_closed = null;
-window.page_cache = {}
-
 export default connect(({route})=>{
     return {
         page_close_id:route.page_close_id
     }
 })((props) => {
     const {children, id,page_close_id,title,dispatch, showHeader, visible, onClose, onConfirm, onAdd} = props;
-
-    window.portal_index += 1
-    is_close_btn_closed = false;
-    window.page_cache[id] = {
-        onClose
-    }
-    if (!id) return null;
+if (!id) return null;
     const sid = id.replace(/-/g, "_").replace(/\//g, "_")
-    page_id_btn_closed = null
     const clz = classNames({
         "page": true,
         "slideIn": visible,
@@ -57,10 +43,8 @@ export default connect(({route})=>{
                                 {
                                     onClose &&
                                     <div className={"icon"} onClick={() => {
-                                        page_id_btn_closed = sid
                                         const page = document.querySelector("#page_" + sid)
                                         page.className = "page slideOut";
-                                        is_close_btn_closed = true
                                     }}>
                                         <MdChevronLeft size={"1.8em"}/>
                                     </div>
@@ -87,12 +71,9 @@ export default connect(({route})=>{
                             </div>
                         </div>
                     }
-
-
-                    <div className="body">
+<div className="body">
                         {children}
-
-                        {
+{
                             get_platform() === "android" && <div style={{height: 60}}/>
                         }
                     </div>

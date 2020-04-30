@@ -8,17 +8,15 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
-            <div className={`view`} style={{marginBottom:16}}>
+            <div className={`view`} style={{marginBottom: 16}}>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="card card-primary">

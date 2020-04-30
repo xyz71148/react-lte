@@ -13,8 +13,7 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
@@ -28,12 +27,10 @@ export default connect(
             fontColor: '#495057',
             fontStyle: 'bold'
         }
-
         var mode = 'index'
         var intersect = true
-
         var $salesChart = $('#sales-chart')
-        var salesChart = new Chart($salesChart, {
+        new Chart($salesChart, {
             type: 'bar',
             data: {
                 labels: ['JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
@@ -74,8 +71,7 @@ export default connect(
                         },
                         ticks: $.extend({
                             beginAtZero: true,
-
-                            // Include a dollar sign in the ticks
+// Include a dollar sign in the ticks
                             callback: function (value, index, values) {
                                 if (value >= 1000) {
                                     value /= 1000
@@ -95,9 +91,8 @@ export default connect(
                 }
             }
         })
-
         var $visitorsChart = $('#visitors-chart')
-        var visitorsChart = new Chart($visitorsChart, {
+        new Chart($visitorsChart, {
             data: {
                 labels: ['18th', '20th', '22nd', '24th', '26th', '28th', '30th'],
                 datasets: [{

@@ -1,9 +1,7 @@
 export const namespace = "admin_dashboard";
-
 const initialState = {
     fetching: false,
 };
-
 export default function defaultReducer(
     state = initialState,
     action

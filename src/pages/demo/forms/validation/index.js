@@ -8,25 +8,22 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-
     }
 
     render() {
         return (
             <div className={`view`}>
-
                 <div className="row">
                     <div className="col-md-12">
                         <div className="card card-primary">
                             <div className="card-header">
                                 <h3 className="card-title">Quick Example <small>jQuery Validation</small></h3>
                             </div>
-                            <form role="form" id="quickForm" className={"is-invalid"}>
+                            <form id="quickForm" className={"is-invalid"}>
                                 <div className="card-body">
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Email address</label>
@@ -56,10 +53,8 @@ export default connect(
                             </form>
                         </div>
                     </div>
-
                     <div className="col-md-6">
                     </div>
-
                 </div>
             </div>
         )

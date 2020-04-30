@@ -8,22 +8,20 @@ export default connect(
             page: route.page
         }
     }
-)
-(class extends Component {
+)(class extends Component {
     state = {};
 
     componentDidMount() {
-        setTimeout(()=>{
+        setTimeout(() => {
             // eslint-disable-next-line no-undef
             $('#textarea').summernote()
-        },500)
+        }, 500)
     }
 
     render() {
         console.log("==>>")
         return (
             <div className={`view`}>
-
                 <div className="row">
                     <div className="col-md-12">
                         <div className="card card-outline card-info">
@@ -55,7 +53,6 @@ export default connect(
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         )

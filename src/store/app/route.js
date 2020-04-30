@@ -5,9 +5,7 @@ const initialState = {
     page_close_id:null,
     keys: [],
     page_id:"index"
-
 };
-
 export default function defaultReducer(
     state = initialState,
     action

@@ -3,7 +3,6 @@ import "../style.css"
 
 export default () => {
     return (
-
         <div className="card card-default color-palette-box">
             <div className="card-header">
                 <h3 className="card-title">

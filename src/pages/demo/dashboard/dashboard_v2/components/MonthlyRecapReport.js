@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style.css"
+
 export default () => {
     return (
         <div className="row">
@@ -28,14 +29,13 @@ export default () => {
                             </button>
                         </div>
                     </div>
-
                     <div className="card-body">
                         <div className="row">
                             <div className="col-md-8">
                                 <p className="text-center">
                                     <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
                                 </p>
-                                <div className="chart" style={{height:180,position:"relative"}}>
+                                <div className="chart" style={{height: 180, position: "relative"}}>
                                     <div className="chartjs-size-monitor">
                                         <div className="chartjs-size-monitor-expand">
                                             <div className=""></div>
@@ -44,10 +44,10 @@ export default () => {
                                             <div className=""></div>
                                         </div>
                                     </div>
-                                    <canvas id="salesChart1" className="chartjs-size-monitor" height="180" style={{height:180}}></canvas>
+                                    <canvas id="salesChart1" className="chartjs-size-monitor" height="180"
+                                            style={{height: 180}}></canvas>
                                 </div>
                             </div>
-
                             <div className="col-md-4">
                                 <p className="text-center">
                                     <strong>Goal Completion</strong>
@@ -59,7 +59,6 @@ export default () => {
                                         <div className="progress-bar bg-primary width_percent_80"></div>
                                     </div>
                                 </div>
-
                                 <div className="progress-group">
                                     Complete Purchase
                                     <span className="float-right"><b>310</b>/400</span>
@@ -67,7 +66,6 @@ export default () => {
                                         <div className="progress-bar bg-danger width_percent_75"></div>
                                     </div>
                                 </div>
-
                                 <div className="progress-group">
                                     <span className="progress-text">Visit Premium Page</span>
                                     <span className="float-right"><b>480</b>/800</span>
@@ -75,7 +73,6 @@ export default () => {
                                         <div className="progress-bar bg-success width_percent_60"></div>
                                     </div>
                                 </div>
-
                                 <div className="progress-group">
                                     Send Inquiries
                                     <span className="float-right"><b>250</b>/500</span>
@@ -83,13 +80,9 @@ export default () => {
                                         <div className="progress-bar bg-warning width_percent_50"></div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     <div className="card-footer">
                         <div className="row">
                             <div className="col-sm-3 col-6">
@@ -99,9 +92,7 @@ export default () => {
                                     <h5 className="description-header">$35,210.43</h5>
                                     <span className="description-text">TOTAL REVENUE</span>
                                 </div>
-
                             </div>
-
                             <div className="col-sm-3 col-6">
                                 <div className="description-block border-right">
                                     <span className="description-percentage text-warning"><i
@@ -109,9 +100,7 @@ export default () => {
                                     <h5 className="description-header">$10,390.90</h5>
                                     <span className="description-text">TOTAL COST</span>
                                 </div>
-
                             </div>
-
                             <div className="col-sm-3 col-6">
                                 <div className="description-block border-right">
                                     <span className="description-percentage text-success"><i
@@ -119,9 +108,7 @@ export default () => {
                                     <h5 className="description-header">$24,813.53</h5>
                                     <span className="description-text">TOTAL PROFIT</span>
                                 </div>
-
                             </div>
-
                             <div className="col-sm-3 col-6">
                                 <div className="description-block">
                                     <span className="description-percentage text-danger"><i
@@ -129,16 +116,11 @@ export default () => {
                                     <h5 className="description-header">1200</h5>
                                     <span className="description-text">GOAL COMPLETIONS</span>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     )
 }
