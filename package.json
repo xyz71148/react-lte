@@ -2,7 +2,7 @@
   "name": "react-lte",
   "homepage": "https://xyz71148.github.io/react-lte/build",
   "version": "1.0.1",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -17,6 +17,7 @@
     "axios": "^0.19.2",
     "bootstrap-sass": "^3.4.1",
     "font-awesome": "^4.7.0",
+    "lodash.clonedeep": "^4.5.0",
     "mustache": "4.0.1",
     "nodejs-base64": "^1.0.3",
     "qrcode": "^1.4.4",
