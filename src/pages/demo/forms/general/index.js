@@ -13,7 +13,7 @@ export default connect(
     state = {};
 
     componentDidMount() {
-        window.bsCustomFileInput.init();
+
     }
 
     render() {

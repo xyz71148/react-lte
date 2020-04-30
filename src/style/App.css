@@ -4,7 +4,8 @@
   background-color: #f7f7f7;
 }
 #main-content{
-    height:100vh
+    /*height:100vh;*/
+
 }
 #root {
   position: relative;

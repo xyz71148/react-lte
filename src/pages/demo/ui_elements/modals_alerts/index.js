@@ -167,7 +167,7 @@ export default connect(
 
     render() {
         return (
-            <div className={`view`}>
+            <div className={`view_modals_alerts`}>
 
                     <div className="row">
                         <div className="col-md-12">

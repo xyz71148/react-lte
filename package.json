@@ -8,17 +8,21 @@
   },
   "scripts": {
     "start": "rescripts start",
+    "serve": "serve ./build -l 3001",
     "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map ",
     "test": "rescripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "bootstrap-sass": "^3.4.1",
+    "font-awesome": "^4.7.0",
     "mustache": "4.0.1",
     "nodejs-base64": "^1.0.3",
     "qrcode": "^1.4.4",
     "query-string": "^6.12.1",
     "react": "^16.8.3",
+    "react-bs-datatable": "^2.1.0",
     "react-dom": "^16.8.3",
     "react-icons": "^3.9.0",
     "react-redux": "5.1.0",

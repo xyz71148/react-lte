@@ -3,15 +3,17 @@ import {connect} from "react-redux"
 import BaseComponent from "../../BaseComponent"
 import classnames from "../../../lib/classnames"
 
-export default connect(({sidebar}) => {
+export default connect(({navigation}) => {
     return {
-        activeMenu: sidebar.activeMenu,
-        clickedMenu: sidebar.clickedMenu,
-        openMenu: sidebar.openMenu,
-        menus: sidebar.menus
+        activeMenu: navigation.activeMenu,
+        module: navigation.module,
+        clickedMenu: navigation.clickedMenu,
+        openMenu: navigation.openMenu,
+        menus_1: navigation.menus
     }
-})(({menus, activeMenu, openMenu, clickedMenu, dispatch}) => {
-    console.log({activeMenu, openMenu, clickedMenu})
+})(({menus_1, activeMenu, module,openMenu, clickedMenu, dispatch}) => {
+    const menus = menus_1[module].children;
+    // console.log({activeMenu, openMenu, clickedMenu,module})
     return (
         <BaseComponent id="main-sidebar" className="main-sidebar sidebar-dark-primary elevation-4">
             <a  href="#" className="brand-link">
@@ -37,6 +39,11 @@ export default connect(({sidebar}) => {
                         data-accordion="false">
                         {
                             menus.map(menu => {
+                                if(menu.header){
+                                    return (
+                                        <li className="nav-header">{menu.name}</li>
+                                    )
+                                }
                                 const has_tree = !!menu.children;
 
                                 const menu_open = openMenu === menu.id || activeMenu.indexOf(menu.id) === 0;
@@ -50,10 +57,17 @@ export default connect(({sidebar}) => {
                                     "nav-link": true,
                                     "active": activeMenu === menu.id ||  activeMenu.indexOf(menu.id) === 0
                                 });
-                                const url = "#" + menu.id;
+                                const url = menu.href ? menu.href : "#" + menu.id;
+
+                                let target1 = undefined
+                                if(menu.target){
+                                    target1 = {
+                                        target : menu.target
+                                    }
+                                }
                                 return (
                                     <li key={menu.id} className={clz}>
-                                        <a href={url} className={clz_a} onClick={() => {
+                                        <a {...target1} href={url} className={clz_a} onClick={() => {
                                             const payload = {
                                                 clickedMenu: menu.id,
                                             }
@@ -66,7 +80,7 @@ export default connect(({sidebar}) => {
                                                 payload.activeMenu = menu.id
                                             }else{
                                                 dispatch({
-                                                    type: "sidebar/setState",
+                                                    type: "navigation/setState",
                                                     payload
                                                 })
                                             }
@@ -83,9 +97,15 @@ export default connect(({sidebar}) => {
                                                     style={{display: menu_open ? undefined : "none"}}>
                                                     {
                                                         menu.children.map(child => {
-                                                            const url = child.id
-                                                            const active1 = activeMenu === url || clickedMenu === url;
+                                                            const url = child.href ? child.href : "#" + child.id;
+                                                            const active1 = activeMenu === child.id || clickedMenu === child.id;
 
+                                                            let target = undefined
+                                                            if(child.target){
+                                                                target = {
+                                                                    target : child.target
+                                                                }
+                                                            }
                                                             const clz_a1 = classnames({
                                                                 "nav-link": true,
                                                                 "active": active1
@@ -93,10 +113,10 @@ export default connect(({sidebar}) => {
 
                                                             return (
                                                                 <li key={child.id} className="nav-item">
-                                                                    <a href={"#" + url} className={clz_a1}
+                                                                    <a href={url} {...{target}} className={clz_a1}
                                                                        onClick={() => {
                                                                            dispatch({
-                                                                               type: "sidebar/setState",
+                                                                               type: "navigation/setState",
                                                                                payload: {
                                                                                    activeMenu: url,
                                                                                    clickedMenu: url

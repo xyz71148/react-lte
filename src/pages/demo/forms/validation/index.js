@@ -13,48 +13,7 @@ export default connect(
     state = {};
 
     componentDidMount() {
-        $.validator.setDefaults({
-            submitHandler: function () {
-                alert( "Form successful submitted!" );
-            }
-        });
-        $('#quickForm').validate({
-            rules: {
-                email: {
-                    required: true,
-                    email: true,
-                },
-                password: {
-                    required: true,
-                    minlength: 5
-                },
-                terms: {
-                    required: true
-                },
-            },
-            messages: {
-                email: {
-                    required: "Please enter a email address",
-                    email: "Please enter a vaild email address"
-                },
-                password: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long"
-                },
-                terms: "Please accept our terms"
-            },
-            errorElement: 'span',
-            errorPlacement: function (error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function (element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            },
-            unhighlight: function (element, errorClass, validClass) {
-                $(element).removeClass('is-invalid');
-            }
-        });
+
     }
 
     render() {
@@ -67,24 +26,27 @@ export default connect(
                             <div className="card-header">
                                 <h3 className="card-title">Quick Example <small>jQuery Validation</small></h3>
                             </div>
-                            <form role="form" id="quickForm">
+                            <form role="form" id="quickForm" className={"is-invalid"}>
                                 <div className="card-body">
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Email address</label>
-                                        <input type="email" name="email" className="form-control"
-                                               id="exampleInputEmail1" placeholder="Enter email" />
+                                        <input type="email" name="email" className="form-control is-invalid"
+                                               id="exampleInputEmail1" placeholder="Enter email"/>
+                                        <span id="exampleInputPassword1-error" className="error invalid-feedback">
+                                            error msg
+                                        </span>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="exampleInputPassword1">Password</label>
                                         <input type="password" name="password" className="form-control"
-                                               id="exampleInputPassword1" placeholder="Password" />
+                                               id="exampleInputPassword1" placeholder="Password"/>
                                     </div>
                                     <div className="form-group mb-0">
                                         <div className="custom-control custom-checkbox">
                                             <input type="checkbox" name="terms" className="custom-control-input"
-                                                   id="exampleCheck1" />
-                                                <label className="custom-control-label" htmlFor="exampleCheck1">I agree
-                                                    to the <a href="#">terms of service</a>.</label>
+                                                   id="exampleCheck1"/>
+                                            <label className="custom-control-label" htmlFor="exampleCheck1">I agree
+                                                to the <a href="#">terms of service</a>.</label>
                                         </div>
                                     </div>
                                 </div>

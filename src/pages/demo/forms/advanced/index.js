@@ -13,74 +13,74 @@ export default connect(
     state = {};
 
     componentDidMount() {
+        setTimeout(()=>{
+            $('.select2').select2()
 
-    }
-    onReady(){
-        //Initialize Select2 Elements
-        $('.select2').select2()
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
 
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
-        })
+            $('.duallistbox').bootstrapDualListbox()
 
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-        //Datemask2 mm/dd/yyyy
-        $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
-        //Money Euro
-        $('[data-mask]').inputmask()
 
-        //Date range picker
-        $('#reservation').daterangepicker()
-        //Date range picker with time picker
-        $('#reservationtime').daterangepicker({
-            timePicker: true,
-            timePickerIncrement: 30,
-            locale: {
-                format: 'MM/DD/YYYY hh:mm A'
-            }
-        })
-        //Date range as a button
-        $('#daterange-btn').daterangepicker(
-            {
-                ranges   : {
-                    'Today'       : [moment(), moment()],
-                    'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                    'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                    'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-                    'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            //Datemask dd/mm/yyyy
+            $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+            //Datemask2 mm/dd/yyyy
+            $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+            //Money Euro
+            $('[data-mask]').inputmask()
+
+
+            //Date range picker
+            $('#reservation').daterangepicker()
+            //Date range picker with time picker
+            $('#reservationtime').daterangepicker({
+                timePicker: true,
+                timePickerIncrement: 30,
+                locale: {
+                    format: 'MM/DD/YYYY hh:mm A'
+                }
+            })
+            //Date range as a button
+            $('#daterange-btn').daterangepicker(
+                {
+                    ranges   : {
+                        'Today'       : [moment(), moment()],
+                        'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    startDate: moment().subtract(29, 'days'),
+                    endDate  : moment()
                 },
-                startDate: moment().subtract(29, 'days'),
-                endDate  : moment()
-            },
-            function (start, end) {
-                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-            }
-        )
+                function (start, end) {
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+                }
+            )
 
-        //Timepicker
-        $('#timepicker').datetimepicker({
-            format: 'LT'
-        })
 
-        //Bootstrap Duallistbox
-        $('.duallistbox').bootstrapDualListbox()
+            //Timepicker
+            $('#timepicker').datetimepicker({
+                format: 'LT'
+            })
 
-        //Colorpicker
-        $('.my-colorpicker1').colorpicker()
-        //color picker with addon
-        $('.my-colorpicker2').colorpicker()
 
-        $('.my-colorpicker2').on('colorpickerChange', function(event) {
-            $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
-        });
+            //Colorpicker
+            $('.my-colorpicker1').colorpicker()
+            //color picker with addon
+            $('.my-colorpicker2').colorpicker()
 
-        $("input[data-bootstrap-switch]").each(function(){
-            $(this).bootstrapSwitch('state', $(this).prop('checked'));
-        });
+            $('.my-colorpicker2').on('colorpickerChange', function(event) {
+                $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+            });
 
+            // $("input[data-bootstrap-switch]").each(function(){
+            //     $(this).bootstrapSwitch('state', $(this).prop('checked'));
+            // });
+
+        },500)
     }
 
     render() {
@@ -106,7 +106,7 @@ export default connect(
                                 <div className="col-md-6">
                                     <div className="form-group">
                                         <label>Minimal</label>
-                                        <select className="form-control select2" style={{width:100}}>
+                                        <select className="form-control select2" style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -120,7 +120,7 @@ export default connect(
                                     <div className="form-group">
                                         <label>Disabled</label>
                                         <select className="form-control select2" disabled="disabled"
-                                                style={{width:100}}>
+                                                style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -137,7 +137,7 @@ export default connect(
                                     <div className="form-group">
                                         <label>Multiple</label>
                                         <select className="select2" multiple="multiple"
-                                                data-placeholder="Select a State" style={{width:100}}>
+                                                data-placeholder="Select a State" style={{width:"100%"}}>
                                             <option>Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -150,7 +150,7 @@ export default connect(
 
                                     <div className="form-group">
                                         <label>Disabled Result</label>
-                                        <select className="form-control select2" style={{width:100}}>
+                                        <select className="form-control select2" style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option disabled="disabled">California (disabled)</option>
@@ -172,7 +172,7 @@ export default connect(
                                     <div className="form-group">
                                         <label>Minimal (.select2-danger)</label>
                                         <select className="form-control select2 select2-danger"
-                                                data-dropdown-css-class="select2-danger" style={{width:100}}>
+                                                data-dropdown-css-class="select2-danger" style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -191,7 +191,7 @@ export default connect(
                                         <div className="select2-purple">
                                             <select className="select2" multiple="multiple"
                                                     data-placeholder="Select a State"
-                                                    data-dropdown-css-class="select2-purple" style={{width:100}}>
+                                                    data-dropdown-css-class="select2-purple" style={{width:"100%"}}>
                                                 <option>Alabama</option>
                                                 <option>Alaska</option>
                                                 <option>California</option>
@@ -234,7 +234,7 @@ export default connect(
                                 <div className="col-md-6">
                                     <div className="form-group">
                                         <label>Minimal</label>
-                                        <select className="form-control select2bs4" style={{width:100}}>
+                                        <select className="form-control select2bs4" style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -248,7 +248,7 @@ export default connect(
                                     <div className="form-group">
                                         <label>Disabled</label>
                                         <select className="form-control select2bs4" disabled="disabled"
-                                                style={{width:100}}>
+                                                style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -266,7 +266,7 @@ export default connect(
                                         <label>Multiple</label>
                                         <select className="select2bs4" multiple="multiple"
                                                 data-placeholder="Select a State"
-                                                style={{width:100}}>
+                                                style={{width:"100%"}}>
                                             <option>Alabama</option>
                                             <option>Alaska</option>
                                             <option>California</option>
@@ -279,7 +279,7 @@ export default connect(
 
                                     <div className="form-group">
                                         <label>Disabled Result</label>
-                                        <select className="form-control select2bs4" style={{width:100}}>
+                                        <select className="form-control select2bs4" style={{width:"100%"}}>
                                             <option selected="selected">Alabama</option>
                                             <option>Alaska</option>
                                             <option disabled="disabled">California (disabled)</option>

@@ -13,10 +13,14 @@ export default connect(
     state = {};
 
     componentDidMount() {
-        $('.textarea').summernote()
+        setTimeout(()=>{
+            // eslint-disable-next-line no-undef
+            $('#textarea').summernote()
+        },500)
     }
 
     render() {
+        console.log("==>>")
         return (
             <div className={`view`}>
 
