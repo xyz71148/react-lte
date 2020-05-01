@@ -1,16 +1,17 @@
 const {join} = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const root_dir = process.cwd();
 const webpackHotDevClient = join(root_dir, "node_modules", "react-dev-utils", "webpackHotDevClient.js");
+
 module.exports = config => {
     console.log('NODE_ENV: ', process.env.NODE_ENV);
     config.entry = {
         main: [
             join(root_dir, "src", "index.js")
         ],
-        app1: [
-            join(root_dir, "src", "app1.js")
+        gcp: [
+            join(root_dir, "src", "apps","gcp","index.js")
         ]
     };
 
@@ -32,7 +33,6 @@ module.exports = config => {
         }
     }
 
-
     if (process.env.NODE_ENV === 'production') {
         config.output.publicPath = "./";
     } else {
@@ -49,29 +49,3 @@ module.exports = config => {
     //console.log(config)
     return config;
 }
-/**
- HtmlWebpackPlugin {
-    options:
-     { template: '/Users/barry/data/projects/react-lte/public/index.html',
-       templateContent: false,
-       templateParameters: [Function: templateParametersGenerator],
-       filename: 'index.html',
-       hash: false,
-       inject: true,
-       compile: true,
-       favicon: false,
-       minify: false,
-       cache: true,
-       showErrors: true,
-       chunks: 'all',
-       excludeChunks: [],
-       chunksSortMode: 'auto',
-       meta: {},
-       title: 'Webpack App',
-       xhtml: false },
-    childCompilerHash: undefined,
-    childCompilationOutputName: undefined,
-    assetJson: undefined,
-    hash: undefined,
-    version: 4 },
- */

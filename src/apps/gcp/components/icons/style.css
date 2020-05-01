@@ -1,0 +1,21 @@
+
+.icons{
+    height:22px;
+    width:22px;
+    display:inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icons_ovpn{
+    background-image: url(../../img/ovpn.png);
+}
+.icons_paypal{
+    background-image: url(../../img/paypal.png);
+}
+
+.icons_eth{
+    background-image: url(../../img/eth.jpeg);
+}
+.icons_ss{
+    background-image: url(../../img/ss.png);
+}

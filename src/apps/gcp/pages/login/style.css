@@ -1,0 +1,20 @@
+.Login .weui-label {
+    width: 60px;
+}
+
+.oauth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    margin-top: 0
+}
+
+.oauth .google {
+    display: block;
+    width: 153px;
+    height: 37px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../../img/btn_google_signin_dark_normal_web@2x.png");
+}
