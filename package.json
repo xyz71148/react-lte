@@ -9,7 +9,7 @@
   "scripts": {
     "start": "rescripts start",
     "serve": "serve ./ -l 3001",
-    "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map ",
+    "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map && cp build/index.html build/index_cordova.html &&  sed -i '' 's/\\<\\/title\\>/\\<\\/title\\>\\<script type=\\\"text\\/javascript\\\" src=\\\"cordova.js\\\"\\>\\<\\/script\\>/g' build/index_cordova.html && rm -rf www && mv build www",
     "test": "rescripts test",
     "eject": "react-scripts eject"
   },

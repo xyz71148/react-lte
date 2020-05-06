@@ -3,7 +3,8 @@ const initialState = {
     page: {},
     index: true,
     page_close_id:null,
-    keys: [],
+    pages_history:[],
+    go_1:false,
     page_id:"index"
 };
 export default function defaultReducer(
@@ -30,11 +31,6 @@ export default function defaultReducer(
                 visible: false,
                 id: page_id
             }
-            // if (keys.length > 0)
-            //     window.location.href = "#" + keys[keys.length - 1];
-            // else {
-            //     window.location.href = "#";
-            // }
             return {
                 ...state,
                 page: {
@@ -50,7 +46,6 @@ export default function defaultReducer(
             const {id} = payload
             const page = {}
             console.log("showPage", keys, id)
-            keys.push(id)
             page[id] = {
                 visible: true,
                 id,

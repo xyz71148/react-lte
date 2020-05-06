@@ -25,6 +25,9 @@ code {
 .width_percent_80{
   width: 80%;
 }
+.overflow_hidden{
+  overflow: hidden;
+}
 .width_percent_60{
   width: 60%;
 }
@@ -43,6 +46,10 @@ code {
 .ml16{
   margin-left: 16px;
 }
+.user_select_text{
+  user-select: text;
+}
+
 .fade-in {
   animation: fadeIn ease .5s;
   -webkit-animation: fadeIn ease.6s;

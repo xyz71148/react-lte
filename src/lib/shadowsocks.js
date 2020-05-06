@@ -25,12 +25,12 @@ export const onConnectServer = ({host, port, pwd, name, password, ip, id}, dispa
                 current_connect_id: connect_id
             }
         });
-        const loading = window.weui.loading("连接中...");
+        const loading = weui.loading("连接中...");
         window.ss_server.start(connect_id, ({status,msg}) => {
             loading.hide();
             console.log(JSON.stringify({status,msg}));
             if(status === "ERROR"){
-                window.weui.toast(msg)
+                weui.toast(msg)
             }else{
                 dispatch({
                     type: "ss_server/setState",
@@ -72,7 +72,7 @@ export const onConnect = (item, menus, dispatch) => {
             }
         })
     }
-    return window.weui.actionSheet([
+    return weui.actionSheet([
         ...m,
         ...menus
     ], [], {title: ""});
@@ -84,7 +84,7 @@ export const onConnect = (item, menus, dispatch) => {
     //             label = "取消连接"
     //         }
     //
-    //         window.weui.actionSheet([
+    //         weui.actionSheet([
     //             {
     //                 label,
     //                 onClick: () => {
@@ -94,12 +94,12 @@ export const onConnect = (item, menus, dispatch) => {
     //                     if (items.includes(qr_code_org)) {
     //                         axios.delete("http://127.0.0.1:1270/shadowsocks?" + data).then((data) => {
     //                             console.log("delete", data)
-    //                             window.weui.toast("取消连接成功")
+    //                             weui.toast("取消连接成功")
     //                         })
     //                     } else {
     //                         axios.post("http://127.0.0.1:1270/shadowsocks?clean=1", data).then((data) => {
     //                             console.log("post", data)
-    //                             window.weui.toast("连接成功")
+    //                             weui.toast("连接成功")
     //                         })
     //                     }
     //

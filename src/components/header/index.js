@@ -7,6 +7,7 @@ export default connect(({navigation}) => {
         menus: navigation.menus
     }
 })(({menus}) => {
+    
     const keys = Object.keys(menus);
     return (
         <BaseComponent id="top-header" className={"top-header"}>

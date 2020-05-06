@@ -29,7 +29,7 @@
 .weui-custom .weui-dialog{
     z-index: 17000 !important;
 }
-.weui-loading_toast .weui-mask_transparent,.weui-loading_toast .weui-toast {
+.weui-loading_toast .weui-mask_transparent,.weui-loading_toast .weui-toast,.weui-toast {
     z-index: 18000 !important;
 }
 .weui-toptips {
@@ -65,4 +65,11 @@
 }
 .weui-cells__group_form .weui-cell{
     padding:16px 12px;
+}
+#main-content .weui-icon-clear{
+    top:25px;
+    right:8px;
+}
+.weui-loading_toast p{
+    margin-bottom: 0;
 }

@@ -7,7 +7,7 @@ const webpackHotDevClient = join(root_dir, "node_modules", "react-dev-utils", "w
 module.exports = config => {
     console.log('NODE_ENV: ', process.env.NODE_ENV);
     config.entry = {
-        main: [
+        index: [
             join(root_dir, "src", "index.js")
         ],
         gcp: [
@@ -44,8 +44,13 @@ module.exports = config => {
     config.output.filename = "static/js/[name].bundle.js";
     config.output.chunkFilename = "static/js/[name].chunk.js";
     config.output.path = join(root_dir, "build");
-    console.log(config.entry)
-    console.log(config.output)
-    //console.log(config)
+    config.resolve.alias = {
+        "lib":join(root_dir,"src","lib"),
+        "store":join(root_dir,"src","store"),
+        "components":join(root_dir,"src","components"),
+        "apps":join(root_dir,"src","apps"),
+        "pages":join(root_dir,"src","pages"),
+        "style":join(root_dir,"src","style")
+    }
     return config;
 }

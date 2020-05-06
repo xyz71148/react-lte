@@ -1,14 +1,14 @@
 import React from 'react';
-import "./components.css"
-import {MdAdd, MdCheck, MdChevronLeft} from 'react-icons/md';
+import "./page/components.css"
+// import {MdAdd, MdCheck, MdChevronLeft} from 'react-icons/md';
 import {connect} from "react-redux";
 
-const size = "1.8em"
-const Icons = {
-    "close": (<MdChevronLeft size={size}/>),
-    "add": (<MdAdd size={size}/>),
-    "check": (<MdCheck size={size}/>),
-};
+// const size = "1.8em"
+// const Icons = {
+//     "close": (<MdChevronLeft size={size}/>),
+//     "add": (<MdAdd size={size}/>),
+//     "check": (<MdCheck size={size}/>),
+// };
 export default connect()(({focused, value, onChange, onCancel, onFocus}) => {
     return (
         <div className={

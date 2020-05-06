@@ -20,15 +20,19 @@ const set_axios_default = ()=>{
     })
 axios.interceptors.response.use((response) => {
         //console.log(response)
+
+        if(response.data && response.data.code && response.data.code === 403){
+            return weui.alert("没有权限")
+        }
         return response;
     }, error => {
         console.error("response",error.message);
         if(error.message.indexOf("401") > 0 || (error.response && error.response.status === 401)){
             localStorage.removeItem("access_token");
-            return window.weui.alert("请先登陆", () => go_login())
+            return weui.alert("请先登陆", () => go_login())
             //return Promise.reject(error);
         }else{
-            //window.weui.topTips(error.message)
+            //weui.topTips(error.message)
             return Promise.reject(error);
         }
     });

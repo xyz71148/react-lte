@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import rootReducer from "./store/rootReducer";
+import rootReducer from "pages/root-store";
 import thunk from "redux-thunk";
 import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
-import {initApp}  from  "./lib/boot";
+import {initApp}  from  "lib/boot";
 import * as serviceWorker from './serviceWorker';
-import App from './components/App';
-import './style/index.css';
-import './lib/weui/weui.css';
-import './style/weui.css';
+import App from './App';
+import 'style/index.css';
+import 'lib/weui/weui.css';
+import 'style/weui.css';
 initApp();
 const store = createStore(
     rootReducer,
     applyMiddleware(thunk)
 );
 const startApp = () => {
+    window.pages_history = []
     ReactDOM.render(
         <Provider store={store}>
             <App />

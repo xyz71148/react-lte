@@ -33,7 +33,17 @@ npm start
 npm run build
 ```
 
+### cordova
 
+    cordova create tutorial com.example.tutorial Tutorial
+    cp tutorial/config.xml ./
+    rm -rf tutorial
+                    
+    cordova platform add ios
+    cordova platform add android
+    cordova run ios
+    cordova run android
+    
 ### 贡献
 
 如果你有好的意见或建议，欢迎给我们提issue或pull request。

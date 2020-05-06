@@ -19,7 +19,7 @@ export default function defaultReducer(
 }
 export function fetchMe(ok, fail) {
     return dispatch => {
-        const loading = window.weui.loading("加载中...")
+        const loading = weui.loading("加载中...")
         return axios.get("/me")
             .then(({data}) => {
                 loading.hide()

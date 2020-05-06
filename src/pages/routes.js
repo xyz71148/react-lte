@@ -34,6 +34,7 @@ import DemoContacts from "./demo/pages/contacts";
 
 export const routes = {
     "index": {children: (<div>home</div>)},
+    "404": {children: (<div><h1>404</h1></div>)},
 
     "demo/dashboard/dashboard_v1": {children: (<DemoDashboardDashboardV1/>)},
     "demo/dashboard/dashboard_v2": {children: (<DemoDashboardDashboardV2/>)},

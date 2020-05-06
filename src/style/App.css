@@ -15,3 +15,15 @@
   align-items: center;
   justify-content: center;
 }
+.topGlobal{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: white;
+  z-index: 10000;
+}
+.content-header{
+  padding: 3px .5rem!important;
+}

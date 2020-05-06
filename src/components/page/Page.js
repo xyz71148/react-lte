@@ -1,40 +1,52 @@
 import React from 'react';
 import {connect} from "react-redux";
-import BaseComponent from "../../components/BaseComponent"
-import classNames from '../../lib/classnames';
+import BaseComponent from "components/BaseComponent"
+import classNames from 'lib/classnames';
 import "./style.css"
-import {MdChevronLeft, MdAdd, MdCheck} from 'react-icons/md';
-import {get_platform} from "../../lib/utils";
-export default connect(({route})=>{
+import {MdAdd, MdCheck, MdChevronLeft} from 'react-icons/md';
+import {get_platform,body_overflow_hidden} from "lib/utils";
+
+export default connect(({route}) => {
     return {
-        page_close_id:route.page_close_id
+        go_1: route.go_1,
+        pages_history: route.pages_history
     }
 })((props) => {
-    const {children, id,page_close_id,title,dispatch, showHeader, visible, onClose, onConfirm, onAdd} = props;
-if (!id) return null;
-    const sid = id.replace(/-/g, "_").replace(/\//g, "_")
+    const {children, go_1,topGlobal, className , pages_history, id, title, showHeader, visible, onClose, onConfirm, onAdd} = props;
+    if (!id) return null;
+    const sid = id.replace(/-/g, "_").replace(/\//g, "_");
+    //console.log(window.go_1,go_1,sid,visible,window.page_close_id)
     const clz = classNames({
+        "topGlobal":topGlobal,
         "page": true,
-        "slideIn": visible,
-        "slideOut": page_close_id && sid === page_close_id,
-    })
-    function scrolled(e)
-    {
-        const o = e.target
-        //visible height + pixel scrolled = total height
-        window.is_scroll_end = o.offsetHeight + o.scrollTop === o.scrollHeight
+        "slideIn": (visible && go_1) ? false : visible,
+        "slideOut": window.page_close_id && sid === window.page_close_id,
+    });
+
+    if(topGlobal && visible){
+        body_overflow_hidden()
     }
+
+    function scrolled(e) {
+        const o = document.body
+        window.is_scroll_end = o.offsetHeight + o.scrollTop === o.scrollHeight;
+        console.log(window.is_scroll_end,o.offsetHeight , o.scrollTop , o.scrollHeight)
+    }
+    window.document.body.onscroll = scrolled
     return (
         visible ?
-            <BaseComponent onScroll={(e)=>{scrolled(e)}} >
+            <BaseComponent className={className? className:"portal"} onScroll={(e) => {scrolled(e)}}>
                 <div className={clz} onAnimationEnd={() => {
-                    if (page_close_id && page_close_id === sid) {
-                        dispatch({
-                            type:"route/hidePage"
-                        })
+                    if (window.page_close_id && window.page_close_id === sid) {
+                        window.page_close_id = null;
+                        if (pages_history.length === 0) {
+                            window.location.href = "#"
+                        } else {
+                            window.history.go(-1)
+                        }
                     }
                     const page = document.querySelector("#page_" + sid)
-                    page.className = "page";
+                    page.className = topGlobal ? "topGlobal page" : "page"
                 }} id={"page_" + sid}>
                     {
                         showHeader &&
@@ -42,9 +54,8 @@ if (!id) return null;
                             <div className="left">
                                 {
                                     onClose &&
-                                    <div className={"icon"} onClick={() => {
-                                        const page = document.querySelector("#page_" + sid)
-                                        page.className = "page slideOut";
+                                    <div className={"icon"} onClick={({target}) => {
+                                        onClose()
                                     }}>
                                         <MdChevronLeft size={"1.8em"}/>
                                     </div>
@@ -71,9 +82,9 @@ if (!id) return null;
                             </div>
                         </div>
                     }
-<div className="body">
+                    <div className="body">
                         {children}
-{
+                        {
                             get_platform() === "android" && <div style={{height: 60}}/>
                         }
                     </div>

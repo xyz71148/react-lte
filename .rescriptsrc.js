@@ -1,4 +1,6 @@
 let target = "http://0.0.0.0:8080";
+target = "https://jie8.cc";
+
 module.exports = [require.resolve('./.webpack.config.js'), {
     devServer: config => {
         config.proxy = {
@@ -6,7 +8,7 @@ module.exports = [require.resolve('./.webpack.config.js'), {
             //     target,
             //     changeOrigin: true,
             // }
-        }
+        };
         return config
     }
 },
@@ -27,14 +29,16 @@ module.exports = [require.resolve('./.webpack.config.js'), {
                 "moment":true,
                 "Sparkline":true,
                 "Swal":true,
-                "toastr":true
+                "toastr":true,
+                "weui":true
             },
             "rules": {
                 "jsx-a11y/anchor-is-valid": "off",
                 "jsx-a11y/img-redundant-alt": "off",
                 "jsx-a11y/alt-text": "off",
                 "jsx-a11y/aria-props":"off",
-                "jsx-a11y/anchor-has-content":"off"
+                "jsx-a11y/anchor-has-content":"off",
+                "array-callback-return":"off"
             }
         },
     ],]

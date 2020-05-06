@@ -314,9 +314,9 @@ export const navigation = {
     activeMenu: "",
     clickedMenu: "",
     openMenu: "",
-    module: "home",
+    module: "admin",
     menus: {
-        "home": {
+        "admin": {
             name: "Home",
             children: [
                 demo_dashboard
