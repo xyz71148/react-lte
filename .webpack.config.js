@@ -15,9 +15,10 @@ module.exports = config => {
         index:  [src_index_dir],
         app:    [src_app_dir],
         simple: get_app_path("simple"),
-        gcp:    get_app_path("gcp")
+        gcp:    get_app_path("gcp"),
+        weui:   get_app_path("weui")
     };
-
+    console.log(config.entry)
     for (let i in config.plugins) {
         const plugin = config.plugins[i];
         if (plugin.options && plugin.options.inject) {

@@ -1,0 +1,19 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+}
+.weui-tabbar__item>div{
+    display: inline-block; position: relative;
+}
+.tabbar{
+    height:100vh
+}
+.tabbar_body{
+    height:2000px;
+    background-color:red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
