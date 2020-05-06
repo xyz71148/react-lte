@@ -11,9 +11,9 @@
 
 ### 手机预览
 
-![qrcode](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fxyz71148.github.io%2Freact-lte%2Fbuild%2Findex.html)
+![qrcode](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fxyz71148.github.io%2Freact-lte%2Fwww%2Findex.html)
 
-[预览](https://xyz71148.github.io/react-lte/build/index.html)
+[预览](https://xyz71148.github.io/react-lte/www/index.html)
 
 
 ### 开发
