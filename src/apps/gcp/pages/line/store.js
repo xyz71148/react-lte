@@ -23,7 +23,7 @@ export default function defaultReducer(
 
 export function fetchRows() {
     return dispatch => {
-        const loading = window.weui.loading("加载中...")
+        const loading = weui.loading("加载中...")
         return axios.get("/compute/lines")
             .then(({data}) => {
                 dispatch({
@@ -33,10 +33,10 @@ export function fetchRows() {
                     }
                 });
                 loading.hide()
-                clear_time_id()
-                fetchInstancePortStatus(dispatch,data.body)
+                //clear_time_id()
+                //fetchInstancePortStatus(dispatch,data.body)
                 window.__time_id_fetch_instance = setInterval(() => {
-                    fetchInstancePortStatus(dispatch,data.body);
+                    //fetchInstancePortStatus(dispatch,data.body);
                 }, 3000)
             })
             .catch(error => {

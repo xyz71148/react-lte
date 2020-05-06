@@ -11,15 +11,15 @@ import {
     removeInstance,
     noteInstance
 } from "./store"
-import {get_zone_name, download_file, open_url} from "../../../../lib/utils";
-import {onConnectServer} from "../../../../lib/shadowsocks";
+import {get_zone_name, download_file, open_url} from "lib/utils";
+import {onConnectServer} from "lib/shadowsocks";
 import IconSs from "../../components/icons/IconSs"
 import IconOvpn from "../../components/icons/IconOvpn"
 import "./style.css";
 
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon"
+import PageTopActionIcon from "components/page/PageTopActionIcon"
 
-class VipLines extends Component {
+class Instance extends Component {
     state = {
         visiblePort: false,
         titlePort: null
@@ -45,7 +45,7 @@ class VipLines extends Component {
     }
 
     onSelectCell1(instance) {
-        const {id, zone, server_type, note, ovpn_config, name, status, port_status, ip, port} = instance;
+        const {id, server_type, note, ovpn_config, name, status, port_status, ip, port} = instance;
         let menus = []
         console.log(status)
         if (status === "TERMINATED") {
@@ -54,7 +54,7 @@ class VipLines extends Component {
                     label: '启动',
                     onClick: () => {
                         let msg = "确定要启动么"
-                        window.weui.confirm(msg, () => {
+                        weui.confirm(msg, () => {
                             this.props.dispatch(startInstance(id, () => {
                                 this.props.dispatch(fetchInstances())
                             }))
@@ -69,7 +69,7 @@ class VipLines extends Component {
                     label: '停止',
                     onClick: () => {
                         let msg = "确定要停止么"
-                        window.weui.confirm(msg, () => {
+                        weui.confirm(msg, () => {
                             this.props.dispatch(stopInstance(id, () => {
                                 this.props.dispatch(fetchInstances())
                             }))
@@ -83,7 +83,7 @@ class VipLines extends Component {
                         if (window.location.host === `${ip}:${port}`) {
                             msg += ",当前网址所在线路跟需要重启的线路在同一个服务器,重启之后此网址不能再访问,因此,请关注您的邮箱新获取访问地址";
                         }
-                        window.weui.confirm(msg, () => {
+                        weui.confirm(msg, () => {
                             this.props.dispatch(resetInstance(id, () => {
                                 this.props.dispatch(fetchInstances())
                             }))
@@ -104,7 +104,7 @@ class VipLines extends Component {
                     if (ovpn_config && ovpn_config.length > 0) {
                         download_file(name + ".ovpn", ovpn_config);
                     } else {
-                        window.weui.alert("导出OVPN错误")
+                        weui.alert("导出OVPN错误")
                     }
                 }
             })
@@ -114,7 +114,7 @@ class VipLines extends Component {
         menus.unshift({
             label: '备注',
             onClick: () => {
-                window.weui.prompt("请输入", (note) => {
+                weui.prompt("请输入", (note) => {
                     this.props.dispatch(noteInstance(id, "note", note, () => {
                         this.props.dispatch(fetchInstances())
                     }))
@@ -125,8 +125,6 @@ class VipLines extends Component {
                 })
             }
         })
-        const t = name.split("-");
-        const ii = t[t.length - 1]
         const {me} = this.props;
 
         if (ip) {
@@ -146,25 +144,12 @@ class VipLines extends Component {
                 }
             })
         }
+        console.log(me)
         if (me && me.level === 0) {
             menus.unshift({
                 label: "查看详情",
                 onClick: () => {
-                    this.props.dispatch({type: "instance/setState", payload: {item: instance}})
-                    this.props.dispatch({
-                        type: "route/showPage", payload: {
-                            id: "instance",
-                            onAdd: server_type === "shadowsocks" ? () => {
-                                this.props.dispatch({
-                                    type: "route/showPage", payload: {
-                                        id: "instance_port_add",
-                                        title: "添加端口"
-                                    }
-                                })
-                            } : undefined,
-                            title: (<span style={{marginRight: 8}}>{ii} {get_zone_name(zone)}</span>)
-                        }
-                    })
+                    window.location.href = "#instance/detail?id="+id
                 }
             })
         }
@@ -180,7 +165,7 @@ class VipLines extends Component {
                         msg = "确认要删除此线路?"
                     }
 
-                    window.weui.confirm(msg, () => {
+                    weui.confirm(msg, () => {
                         this.props.dispatch(removeInstance(id, () => {
                             this.props.dispatch(removeInstance(id, () => {
                                 this.props.dispatch(fetchInstances())
@@ -190,7 +175,7 @@ class VipLines extends Component {
                 }
             }
         ]
-        window.weui.actionSheet([...menus, ...actions], [], {
+        weui.actionSheet([...menus, ...actions], [], {
             title: ""
         });
 
@@ -283,4 +268,4 @@ export default connect(({app, user, instance}) => ({
     timestamp: app.timestamp,
     me: user.me,
     showVipLinesActionSheet: instance.showVipLinesActionSheet,
-}))(VipLines);
+}))(Instance);

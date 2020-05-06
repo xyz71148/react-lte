@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import axios from 'axios'
 import {connect} from "react-redux";
-import {get_access_token,go_login, getZoneTree, parse_url, set_access_token} from "lib/utils"
+import {get_access_token,go_login, parse_url, set_access_token} from "lib/utils"
 import 'style/App.css';
 import Page from 'components/page'
 import {routes,authPrefixes,defaultRoute} from "./pages/routes"
-import {fetchMe} from "./pages/account/store"
 
 class App extends Component {
     state = {
@@ -70,18 +68,11 @@ class App extends Component {
                     }
                 });
             }
-            if (Object.keys(window.globalObject.constant).length === 0) {
-                this.getConstants()
-            }
             if (authPrefixes.includes(page_id.split("/")[0])) {
                 if (access_token === null) {
                     go_login()
                 } else {
-                    this.props.dispatch(fetchMe(() => {
-                        this.finishLoading()
-                    }, () => {
-                        this.finishLoading()
-                    }));
+                    this.finishLoading()
                 }
             } else {
                 this.finishLoading()
@@ -96,28 +87,6 @@ class App extends Component {
         setTimeout(() => {
             document.querySelector(".global-loading").style.display = "none";
         }, 700)
-    }
-
-    getConstants() {
-        //const loading = weui.loading("加载中...")
-        axios.get("/constant").then(({data}) => {
-            //loading.hide();
-            const {default_zone, zones, download_urls, plans, payment, zone_names} = data;
-            window.globalObject.constant = {
-                zones: getZoneTree(zones, zone_names),
-                default_zone, payment,
-                zone_names, plans, download_urls
-            };
-            this.props.dispatch({
-                type: "app/setState",
-                payload: {
-                    constant:window.globalObject.constant
-                }
-            });
-        }).catch(() => {
-            //loading.hide();
-            //weui.toast("获取配置失败")
-        })
     }
 
     componentDidMount() {
@@ -143,14 +112,13 @@ class App extends Component {
             ...options
         };
 
-        const p = (page && page[id]) ? {...pageDefault, ...page[id], ...options, visible: page_id === id} : pageDefault;
-        return p
+        return (page && page[id]) ? {...pageDefault, ...page[id], ...options, visible: page_id === id} : pageDefault;
     }
 
     render() {
         if (this.state.loading) return null;
-        const {constant} = this.props
-        if (!constant) return null;
+        //const {constant} = this.props
+        //if (!constant) return null;
         return (
             <div className={"App"}>
                 {

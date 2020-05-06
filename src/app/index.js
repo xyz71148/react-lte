@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import rootReducer from "./pages/root-store";
+import rootReducer from "pages/root-store";
 import thunk from "redux-thunk";
 import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
@@ -10,9 +10,7 @@ import App from './App';
 import 'style/index.css';
 import 'lib/weui/weui.css';
 import 'style/weui.css';
-
 initApp();
-
 const store = createStore(
     rootReducer,
     applyMiddleware(thunk)
@@ -24,10 +22,10 @@ const startApp = () => {
             <App />
         </Provider>
         , document.getElementById('root'));
-    serviceWorker.unregister();
+serviceWorker.unregister();
 };
 if (window.cordova) {
     document.addEventListener('deviceready', startApp, false);
-} else {
+  } else {
     startApp();
-}
+  }

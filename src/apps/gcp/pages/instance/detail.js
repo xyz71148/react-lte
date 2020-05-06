@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import "./style.css"
 import {Cell, CellBody, CellFooter, CellHeader} from "react-weui";
-import Page from "../../../../components/page";
-import {download_file} from "../../../../lib/utils";
+import Page from "components/page";
+import {close_page_1, download_file, get_zone_name, randomWord} from "lib/utils";
 import {base64encode} from "nodejs-base64";
-import {fetchInstances, saveInstanceServices} from "./store"
-import {onConnect} from "../../../../lib/shadowsocks"
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import {fetchInstances, getInstance, saveInstanceServices} from "./store"
+import {onConnect} from "lib/shadowsocks"
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 var QRCode = require('qrcode');
 
@@ -23,7 +23,7 @@ class Detail extends Component {
         const {pwd, ip, port} = item;
         const qr_code = "ss://" + base64encode(`aes-256-cfb:${pwd}@${ip}:${port}`)
         QRCode.toDataURL(qr_code, function (err, url) {
-            window.weui.alert("<div style='flex-direction:column;margin-bottom:16px;display: flex;justify-content: center;align-items: center'>" +
+            weui.alert("<div style='flex-direction:column;margin-bottom:16px;display: flex;justify-content: center;align-items: center'>" +
                 `<h4 style='margin-bottom: 8px'>${ip} : ${port}</h4>` +
                 `<h4 style='margin-bottom: 8px'>密码: ${pwd}</h4>` +
                 `<h4 style='margin-bottom: 8px'>算法: aes-256-cfb</h4>` +
@@ -33,7 +33,7 @@ class Detail extends Component {
     }
 
     onRemove(services, port, instance) {
-        window.weui.confirm("确定要删除么?", () => {
+        weui.confirm("确定要删除么?", () => {
             const s = []
             services.map(service => {
                 if (service.port !== port) {
@@ -42,7 +42,7 @@ class Detail extends Component {
                 return service
             })
             instance.services = s
-            const loading = window.weui.loading("保存中...")
+            const loading = weui.loading("保存中...")
             this.props.dispatch(saveInstanceServices(instance, () => {
                 loading.hide()
                 this.props.dispatch(fetchInstances())
@@ -81,7 +81,7 @@ class Detail extends Component {
 
         } else {
             if (server_type === "openvpn") {
-                window.weui.alert("无法导出")
+                weui.alert("无法导出")
             }
         }
 
@@ -93,7 +93,7 @@ class Detail extends Component {
                 }
             })
         }
-        window.weui.actionSheet(menus, [
+        weui.actionSheet(menus, [
             {
                 label: '取消',
                 onClick: function () {
@@ -115,21 +115,61 @@ class Detail extends Component {
         this.setState({...state})
     }
 
+    componentDidMount() {
+        const {urlQuery} = window;
+        if (urlQuery && urlQuery.id) {
+            const loading = weui.loading("加载中...")
+            this.props.dispatch(getInstance(urlQuery.id, (data) => {
+                this.props.dispatch({
+                    type: "instance/setState",
+                    payload: {
+                        item: data.body
+                    }
+                });
+                loading.hide()
+            }))
+        } else {
+            window.location.href = '#'
+        }
+    }
+
     render() {
-        const {instance, services} = this.props
-        if (!services) {
-            window.location.href = "#"
-            window.location.reload()
+        const {instance, services} = this.props;
+        if (!instance) {
             return null;
         }
+        if (!services) {
+            window.location.href = "#";
+            window.location.reload();
+            return null;
+        }
+        console.log(this.state)
         return (
             <div className={"InstanceView"}>
-
                 <PageTopActionIcon type={"close"}/>
+                <PageTopActionIcon type={"add"} action={"right"} onClick={() => {
+                    let p = instance.port
+                    services.map(service => {
+                        if (service.port > p) {
+                            p = service.port
+                        }
+                        return service
+                    });
+                    this.setState({
+                        port: p + 1,
+                        pwd: randomWord(false, 6).toLowerCase()
+                    })
+                    this.props.dispatch({
+                        type: "route/showPage", payload: {
+                            id: "instance_port_add",
+                            title: "添加端口"
+                        }
+                    })
+                }}/>
                 {
                     instance.ip &&
                     <div style={{paddingTop: 16, paddingLeft: 24, marginBottom: 24}}>
-                        IP: {instance.ip}
+                        {get_zone_name(instance.zone)} <br/>IP: <span className="user_select_text">{instance.ip}</span>
                     </div>
                 }
                 {
@@ -201,7 +241,7 @@ class Detail extends Component {
                         )
                     })
                 }
-                <Page title={"添加"}
+                <Page topGlobal showHeader title={"添加端口"}
                       id={"instance_port_add"}
                       visible={this.props.page.instance_port_add && this.props.page.instance_port_add.visible}
                       onConfirm={() => {
@@ -211,7 +251,7 @@ class Detail extends Component {
 
                               const p = parseInt(port);
                               if ((p < 9000 || p > 9999) || port === "") {
-                                  return window.weui.alert("端口号需在9000-9999之间")
+                                  return weui.alert("端口号需在9000-9999之间")
                               }
                               let f = false
                               instance.services.map(service => {
@@ -222,10 +262,10 @@ class Detail extends Component {
                                   return service
                               })
                               if (f || p === instance.port) {
-                                  return window.weui.alert("端口号已存在")
+                                  return weui.alert("端口号已存在")
                               }
                               if (("" + pwd).length !== 6) {
-                                  return window.weui.alert("密码需要是6位字符")
+                                  return weui.alert("密码需要是6位字符")
                               }
 
                               instance.services.push({
@@ -235,27 +275,21 @@ class Detail extends Component {
                               })
                           } else {
                               if (("" + name).length === 0) {
-                                  return window.weui.alert("请输入名称")
+                                  return weui.alert("请输入名称")
                               }
                               instance.services.push({
                                   name
                               })
                           }
 
-                          const loading = window.weui.loading("保存中...")
+                          const loading = weui.loading("保存中...")
                           this.props.dispatch(saveInstanceServices(instance, () => {
                               loading.hide();
-                              window.weui.toast("保存成功")
+                              weui.toast("保存成功")
                               this.props.dispatch(fetchInstances())
-                              this.props.dispatch({
-                                  type: "route/hidePage"
-                              })
+                              close_page_1(this.props.dispatch, this.props.page, "instance_port_add")
                           }))
-                      }} onClose={() => {
-                    this.props.dispatch({
-                        type: "route/hidePage"
-                    })
-                }}>
+                      }} onClose={() => close_page_1(this.props.dispatch, this.props.page, "instance_port_add")}>
 
                     <div className="">
                         <div className="weui-cells__group weui-cells__group_form">
@@ -327,7 +361,7 @@ class Detail extends Component {
 
 export default connect(({instance, route}) => ({
     instance: instance.item,
-    services: instance.item.services,
+    services: instance.item ? instance.item.services : [],
     page: route.page,
     showAddService: instance.showAddService
 }))(Detail);

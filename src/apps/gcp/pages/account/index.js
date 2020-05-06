@@ -3,8 +3,8 @@ import {connect} from "react-redux";
 import "./style.css"
 import {fetchMe} from "./store"
 import {Cell, CellBody, CellFooter, CellHeader, Cells} from "react-weui";
-import {timeStamp2String} from '../../../../lib/utils'
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import {timeStamp2String} from 'lib/utils'
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class Account extends Component {
     componentDidMount() {

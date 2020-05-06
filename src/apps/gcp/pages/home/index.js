@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Cell, CellBody, CellFooter, CellHeader, Cells} from "react-weui";
 import {connect} from "react-redux";
-import {get_platform, go_login, is_logged} from "../../../../lib/utils";
+import {get_platform, go_login, is_logged} from "lib/utils";
 import {createInstance, fetchInstances} from "../instance/store";
 import {MdAccountBox, MdAddShoppingCart, MdGamepad, MdReceipt, MdSwapCalls} from "react-icons/md";
+import "./style.css"
 
 class Index extends Component {
     state = {
@@ -24,7 +25,7 @@ class Index extends Component {
                 value: "openvpn"
             })
         }
-        window.weui.picker(items, {
+        weui.picker(items, {
             defaultValue: ["shadowsocks"],
             className: 'weui-custom',
             onChange: function (result) {
@@ -34,7 +35,7 @@ class Index extends Component {
             onConfirm: (result) => {
                 const server_type = result[0]
                 setTimeout(() => {
-                    window.weui.picker(window.globalObject.constant.zones, {
+                    weui.picker(window.globalObject.constant.zones, {
                         className: 'weui-custom',
                         container: 'body',
                         title: "选择区域",
@@ -59,7 +60,7 @@ class Index extends Component {
 
     onSelectCell({id}) {
         if (['instance', "line", "order", "plan", "account"].includes(id) && !is_logged()) {
-            return window.weui.alert("请先登陆", () => go_login())
+            return weui.alert("请先登陆", () => go_login())
         } else {
             window.location.href = "#" + id
         }
@@ -103,7 +104,7 @@ class Index extends Component {
                 }
 
                 if (status === "ERROR") {
-                    window.weui.toast(msg)
+                    weui.toast(msg)
                 }
                 this.clearTimeId()
             })
@@ -153,7 +154,7 @@ class Index extends Component {
             this.connect()
         } else {
             this.onSelectCell({
-                id: "vip",
+                id: "instance",
                 title: "我的线路"
             })
         }

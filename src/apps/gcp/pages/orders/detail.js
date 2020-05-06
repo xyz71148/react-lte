@@ -2,16 +2,21 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {fetchRow} from "./store"
 import "./style.css"
-import {timeStamp2String} from "../../../../lib/utils"
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import {timeStamp2String} from "lib/utils"
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class Detail extends Component {
 
     componentDidMount() {
-        const loading = window.weui.loading("加载中...")
-        this.props.dispatch(fetchRow(this.props.order_id, () => {
-            loading.hide()
-        }))
+        const {urlQuery} = window
+        if(urlQuery && urlQuery.id){
+            const loading = weui.loading("加载中...")
+            this.props.dispatch(fetchRow(urlQuery.id, () => {
+                loading.hide()
+            }))
+        }else{
+            window.location.href ='#'
+        }
     }
 
     render() {

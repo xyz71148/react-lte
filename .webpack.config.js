@@ -2,17 +2,20 @@ const {join} = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const root_dir = process.cwd();
+const src_dir = join(root_dir,"src");
+const src_index_dir = join(src_dir,"index.js");
+const src_app_dir = join(src_dir,"app","index.js");
+const apps_dir = join(src_dir,"apps");
+const get_app_path = (app)=>[join(apps_dir,app,"index.js")]
 const webpackHotDevClient = join(root_dir, "node_modules", "react-dev-utils", "webpackHotDevClient.js");
 
 module.exports = config => {
     console.log('NODE_ENV: ', process.env.NODE_ENV);
     config.entry = {
-        index: [
-            join(root_dir, "src", "index.js")
-        ],
-        gcp: [
-            join(root_dir, "src", "apps","gcp","index.js")
-        ]
+        index:  [src_index_dir],
+        app:    [src_app_dir],
+        simple: get_app_path("simple"),
+        gcp:    get_app_path("gcp")
     };
 
     for (let i in config.plugins) {
@@ -45,12 +48,12 @@ module.exports = config => {
     config.output.chunkFilename = "static/js/[name].chunk.js";
     config.output.path = join(root_dir, "build");
     config.resolve.alias = {
-        "lib":join(root_dir,"src","lib"),
-        "store":join(root_dir,"src","store"),
-        "components":join(root_dir,"src","components"),
-        "apps":join(root_dir,"src","apps"),
-        "pages":join(root_dir,"src","pages"),
-        "style":join(root_dir,"src","style")
+        "lib":join(root_dir,"src","app","lib"),
+        "store":join(root_dir,"src","app","store"),
+        "components":join(root_dir,"src","app","components"),
+        "apps":join(root_dir,"src","app","apps"),
+        "pages":join(root_dir,"src","app","pages"),
+        "style":join(root_dir,"src","app","style")
     }
     return config;
 }

@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import "./style.css"
 import {connect} from "react-redux";
-import {validateEmail, set_access_token, get_platform, parse_url} from "../../../../lib/utils"
-import {open_url} from "../../../../lib/utils"
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import {validateEmail, set_access_token, get_platform, parse_url} from "lib/utils"
+import {open_url} from "lib/utils"
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class Index extends Component {
     state = {
@@ -16,18 +16,18 @@ class Index extends Component {
         pass: false
     };
 
-    onSendCapthca() {
+    onSendCaptcha() {
         if (!validateEmail(this.state.email)) {
-            return window.weui.topTips('请输入正确的Email地址');
+            return weui.topTips('请输入正确的Email地址');
         }
-        const loading = window.weui.loading("获取中...")
+        const loading = weui.loading("获取中...")
         axios.post("/auth/email/captcha", {
             email: this.state.email
         }).then(({data}) => {
             const {code, msg} = data;
             loading.hide()
             if (code === 200) {
-                window.weui.toast("发送成功")
+                weui.toast("发送成功")
                 this.setState({
                     sendBtnDisabled: true,
                     sendTxt: "60"
@@ -49,7 +49,7 @@ class Index extends Component {
 
                 }, 1000)
             } else {
-                window.weui.topTips(msg)
+                weui.topTips(msg)
             }
         }).catch(() => loading.hide())
 
@@ -65,7 +65,7 @@ class Index extends Component {
 
     onLogin() {
         this.onCheckInput();
-        const loading = window.weui.loading("登录中...");
+        const loading = weui.loading("登录中...");
         axios.post("/auth/email/captcha/verify", {
             email: this.state.email,
             code: this.state.code,
@@ -73,32 +73,13 @@ class Index extends Component {
             const {code, body, msg} = data;
             loading.hide();
             if (code === 200) {
-                window.weui.toast(msg);
-                const {access_token, user} = body;
-                this.props.dispatch({
-                    type: "user/setState",
-                    payload: {
-                        me: {
-                            ...user,
-                            email: this.state.email
-                        }
-                    }
-                });
+                weui.toast(msg);
+                const {access_token} = body;
                 set_access_token(access_token);
-                this.props.dispatch({
-                    type: "app/logged",
-                    payload: {
-                        access_token
-                    }
-                })
-                window.location.href = "#index"
-                window.location.reload()
-                this.props.dispatch({
-                    type: "app/hideHalfScreenDialog"
-                })
+                const {urlQuery} = window;
+                window.location.href = urlQuery.redirect
             } else {
-
-                window.weui.topTips(msg)
+                weui.topTips(msg)
             }
         }).catch(() => loading.hide())
     }
@@ -155,7 +136,7 @@ class Index extends Component {
                                     </div>
                                     <div className="weui-cell__ft">
                                         <button disabled={this.state.sendBtnDisabled}
-                                                onClick={this.onSendCapthca.bind(this)}
+                                                onClick={this.onSendCaptcha.bind(this)}
                                                 className="weui-btn weui-btn_default weui-vcode-btn">{this.state.sendTxt}</button>
                                     </div>
                                 </div>

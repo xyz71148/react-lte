@@ -2,14 +2,14 @@
   "name": "react-lte",
   "homepage": "https://xyz71148.github.io/react-lte/build",
   "version": "1.0.1",
-  "main": "src/index.js",
+  "main": "src/app/index.js",
   "eslintConfig": {
     "extends": "react-app"
   },
   "scripts": {
     "start": "rescripts start",
     "serve": "serve ./ -l 3001",
-    "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map && cp build/index.html build/index_cordova.html &&  sed -i '' 's/\\<\\/title\\>/\\<\\/title\\>\\<script type=\\\"text\\/javascript\\\" src=\\\"cordova.js\\\"\\>\\<\\/script\\>/g' build/index_cordova.html && rm -rf www && mv build www",
+    "build": "rescripts build && rm -rf build/static/css/*.map && rm -rf build/static/js/*.map && cp build/app.html build/index_cordova.html &&  sed -i '' 's/\\<\\/title\\>/\\<\\/title\\>\\<script type=\\\"text\\/javascript\\\" src=\\\"cordova.js\\\"\\>\\<\\/script\\>/g' build/index_cordova.html && rm -rf www && mv build www",
     "test": "rescripts test",
     "eject": "react-scripts eject"
   },

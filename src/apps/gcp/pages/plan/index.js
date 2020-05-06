@@ -6,9 +6,9 @@ import PlanBlock from "./PlanBlock"
 import PaymentBlock from "./PaymentBlock"
 import IconPaypal from "../../components/icons/IconPaypal"
 import IconEth from "../../components/icons/IconEth"
-import Page from "../../../../components/page"
+import Page from "components/page"
 import EthPaymentConfirm from "./EthPaymentConfirm";
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class Payment extends Component {
     state = {
@@ -23,7 +23,7 @@ class Payment extends Component {
         this.setState({
             btnPaymentDisabled: true
         })
-        const loading = window.weui.loading("加载中...")
+        const loading = weui.loading("加载中...")
         const redirect_url = window.location.href.replace("#plan","#order");
         this.props.dispatch(fetchPaymentUrl({
             payment_type: this.state.payment_type,
@@ -51,7 +51,7 @@ class Payment extends Component {
                 loading.hide()
             } else {
                 loading.hide()
-                window.weui.topTips(msg)
+                weui.topTips(msg)
             }
             this.setState({
                 btnPaymentDisabled: false

@@ -3,31 +3,17 @@ import {connect} from "react-redux";
 import {fetchRows} from "./store"
 import "./style.css"
 import {Cell, CellBody, CellFooter, CellHeader} from "react-weui";
-import EmptyRecord from "../../../../components/EmptyRecord"
-import {timeStamp2String} from "../../../../lib/utils"
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import EmptyRecord from "components/EmptyRecord"
+import {timeStamp2String} from "lib/utils"
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class Index extends Component {
     componentDidMount() {
         this.props.dispatch(fetchRows())
     }
 
-    onSelectCell({id, order_no}) {
-        this.props.dispatch({
-            type: "order/setState",
-            payload: {
-                order_id: id,
-                order_no: order_no,
-                loadingDetail: true
-            }
-        })
-        this.props.dispatch({
-            type: "route/showPage",
-            payload: {
-                id: "order_detail",
-                title: "订单详情"
-            }
-        })
+    onSelectCell({id}) {
+        window.location.href="#order/detail?id="+id
     }
 
     getStatus(status) {

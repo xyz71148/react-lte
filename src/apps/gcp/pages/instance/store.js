@@ -29,7 +29,7 @@ export default function defaultReducer(
 
 export function createInstance({zone, server_type}, callBack) {
     return dispatch => {
-        const loading = window.weui.loading("创建中...")
+        const loading = weui.loading("创建中...")
         return axios.post(`/compute/instance/${zone}/${server_type}`, null)
             .then(({data}) => {
                 const {body, code, msg} = data
@@ -45,7 +45,7 @@ export function createInstance({zone, server_type}, callBack) {
                     callBack && callBack()
                 }else{
                     loading.hide();
-                    window.weui.topTips(msg)
+                    weui.topTips(msg)
                     if(code === 501){
                         setTimeout(()=>{
                             window.location.href = "#plan";
@@ -65,7 +65,7 @@ export function createInstance({zone, server_type}, callBack) {
 export function noteInstance(instance_id, field,value,callback) {
     return dispatch => {
         clear_time_id()
-        const loading = window.weui.loading("保存中...")
+        const loading = weui.loading("保存中...")
         return axios.put(`/compute/instance/change/${instance_id}`, {
             value:{field,value}
         })
@@ -74,7 +74,7 @@ export function noteInstance(instance_id, field,value,callback) {
                 if(data.code === 200){
                     callback && callback()
                 }else{
-                    window.weui.toast("保存失败")
+                    weui.toast("保存失败")
                 }
             })
             .catch(error => {
@@ -87,7 +87,7 @@ export function noteInstance(instance_id, field,value,callback) {
 export function startInstance(instance_id, callback) {
     return dispatch => {
         clear_time_id()
-        const loading = window.weui.loading("启动中...")
+        const loading = weui.loading("启动中...")
         return axios.post(`/compute/instance/status/${instance_id}/start`, null)
             .then(({data}) => {
                 loading.hide()
@@ -95,7 +95,7 @@ export function startInstance(instance_id, callback) {
                     dispatch(getInstance(data.body.id))
                     callback && callback()
                 }else{
-                    window.weui.toast("启动失败")
+                    weui.toast("启动失败")
                 }
 
             })
@@ -109,14 +109,14 @@ export function startInstance(instance_id, callback) {
 export function stopInstance(instance_id, callback) {
     return dispatch => {
         clear_time_id()
-        const loading = window.weui.loading("停止中...")
+        const loading = weui.loading("停止中...")
         return axios.post(`/compute/instance/status/${instance_id}/stop`, null)
             .then(({data}) => {
                 loading.hide()
                 if(data.code === 200){
                     callback && callback()
                 }else{
-                    window.weui.toast("停止失败")
+                    weui.toast("停止失败")
                 }
             })
             .catch(error => {
@@ -129,7 +129,7 @@ export function stopInstance(instance_id, callback) {
 export function resetInstance(instance_id, callback) {
     return dispatch => {
         clear_time_id()
-        const loading = window.weui.loading("重启中...")
+        const loading = weui.loading("重启中...")
         return axios.post(`/compute/instance/status/${instance_id}/restart`, null)
             .then(({data}) => {
                 loading.hide()
@@ -137,7 +137,7 @@ export function resetInstance(instance_id, callback) {
                     dispatch(getInstance(data.body.id))
                     callback && callback()
                 }else{
-                    window.weui.toast("重启失败")
+                    weui.toast("重启失败")
                 }
             })
             .catch(error => {
@@ -150,7 +150,7 @@ export function resetInstance(instance_id, callback) {
 export function removeInstance(instance_id, callback) {
     return dispatch => {
         clear_time_id()
-        const loading = window.weui.loading("删除中...")
+        const loading = weui.loading("删除中...")
         return axios.delete(`/compute/instance/${instance_id}`, null)
             .then(({data}) => {
                 loading.hide()
@@ -166,7 +166,7 @@ export function removeInstance(instance_id, callback) {
 export function saveInstanceServices(instance, callback) {
     console.log("saveInstanceServices", instance.id)
     const {services} = instance
-    const loading = window.weui.loading("保存中...")
+    const loading = weui.loading("保存中...")
     return dispatch => {
         return axios.put(`/compute/instance/services/${instance.id}`, {services})
             .then(({data}) => {
@@ -183,7 +183,7 @@ export function saveInstanceServices(instance, callback) {
 export function getInstance(instance_id, callback) {
     console.log("getInstance", instance_id)
     return dispatch => {
-        //const loading = window.weui.loading("加载中...")
+        //const loading = weui.loading("加载中...")
         return axios.get(`/compute/instance/${instance_id}`, {
             timeout: 25000
         })
@@ -248,7 +248,7 @@ export function fetchInstancePortStatus(dispatch, rows) {
 
 export function fetchInstances() {
     return dispatch => {
-        const loading = window.weui.loading("加载中...")
+        const loading = weui.loading("加载中...")
         return axios.get("/compute/instances")
             .then(({data}) => {
                 dispatch({

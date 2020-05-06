@@ -4,10 +4,10 @@ import QRCode from "qrcode"
 
 import { MdContentCopy,MdInfoOutline } from "react-icons/md";
 
-import {Clipboard} from "../../../../lib/utils"
+import {Clipboard} from "lib/utils"
 import {connect} from "react-redux";
 import {fetchPaymentStatus} from "./store";
-import PageTopActionIcon from "../../../../components/page/PageTopActionIcon";
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class EthPaymentConfirm extends Component {
     state = {
@@ -46,7 +46,7 @@ class EthPaymentConfirm extends Component {
         this.getPaymentStatus(payment_id)
     }
     timeout(){
-        window.weui.alert("付款超时,请重新下单",()=>{
+        weui.alert("付款超时,请重新下单",()=>{
             window.location.reload()
         })
     }
@@ -67,7 +67,7 @@ class EthPaymentConfirm extends Component {
                     this.getPaymentStatus(payment_id)
                 },1000)
             }else{
-                window.weui.alert("支付成功",()=>{
+                weui.alert("支付成功",()=>{
                     window.location.href = "#order"
                     window.location.reload()
                 })
@@ -76,9 +76,9 @@ class EthPaymentConfirm extends Component {
     }
     onSelectQrCode(paymentEth){
         const {address} = paymentEth
-        window.weui.toast("自动复制成功")
+        weui.toast("自动复制成功")
         setTimeout(()=>{
-            window.weui.alert(`请将ETH 发送到: ${address}`,()=>{
+            weui.alert(`请将ETH 发送到: ${address}`,()=>{
                 Clipboard.copy(address);
             })
         },1400)
@@ -95,7 +95,7 @@ class EthPaymentConfirm extends Component {
     }
     showInfo(paymentEth){
         const {amount_eth,amount_usd,exchange_price} = paymentEth
-        window.weui.actionSheet([
+        weui.actionSheet([
             {
                 label: `总价: ${amount_usd} USD`,
                 onClick: function(){}

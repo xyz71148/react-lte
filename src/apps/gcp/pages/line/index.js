@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {clear_time_id, fetchRows} from "./store"
-import "../Home.css"
-import {get_zone_name} from "../../../../lib/utils";
+import {fetchRows} from "./store"
+import {get_zone_name} from "lib/utils";
 import {Cell, CellBody, CellFooter, CellHeader} from "react-weui";
 import IconOvpn from "../../components/icons/IconOvpn";
-import IconSs from "../.././components/icons/IconSs";
+import IconSs from "../../components/icons/IconSs";
 import {base64encode} from "nodejs-base64";
 import QRCode from "qrcode"
-import {onConnect} from "../../../../lib/shadowsocks"
+import {onConnect} from "lib/shadowsocks"
+import PageTopActionIcon from "components/page/PageTopActionIcon";
 
 class FreeLines extends Component {
     componentDidMount() {
@@ -16,7 +16,7 @@ class FreeLines extends Component {
     }
 
     componentWillUnmount() {
-        clear_time_id()
+        //clear_time_id()
     }
 
     onSelectCell(item) {
@@ -29,7 +29,7 @@ class FreeLines extends Component {
             const qr_code = "ss://" + base64encode(`aes-256-cfb:${pwd}@${ip}:${port}`)
             console.log(qr_code)
             QRCode.toDataURL(qr_code, function (err, url) {
-                window.weui.alert("<div style='flex-direction:column;margin-bottom:16px;display: flex;justify-content: center;align-items: center'>" +
+                weui.alert("<div style='flex-direction:column;margin-bottom:16px;display: flex;justify-content: center;align-items: center'>" +
                     `<h4 style='margin-bottom: 8px'>${ip} : ${port}</h4>` +
                     `<h4 style='margin-bottom: 8px'>密码: ${pwd}</h4>` +
                     `<h4 style='margin-bottom: 8px'>算法: aes-256-cfb</h4>` +
@@ -43,9 +43,11 @@ class FreeLines extends Component {
         const {items, timestamp} = this.props;
         return (
             <div className={"FreeLines"}>
+                <PageTopActionIcon type={"close"}/>
+
                 <div style={{margin: "0 2px"}}>
                     {items.length > 0 && items.map((item, i) => {
-                        const {server_type, ip, zone} = item;
+                        const {server_type, ip, port, zone} = item;
                         const zone_name = get_zone_name(zone)
                         const {delays} = window.globalObject;
                         const delay = delays[ip] ? delays[ip].toFixed(1) : null;
@@ -68,6 +70,7 @@ class FreeLines extends Component {
                                         }
                                     </span>
                                 </CellHeader>
+                                {port}
                                 <CellBody>
                                 </CellBody>
                                 <CellFooter>
