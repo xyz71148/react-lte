@@ -259,9 +259,9 @@ export default class extends Component {
         return (
             <div className={classnames('date-picker', 'mode-' + this.state.mode)}>
                 <div className="top-bar">
-                    <Tappable className="left-arrow" onTap={this.handleLeftArrowClick}/>
-                    <Tappable className="right-arrow" onTap={this.handleRightArrowClick}/>
-                    <Tappable className="top-bar-title" onTap={this.handlerTopBarTitleClick}>{topBarTitle}</Tappable>
+                    <Tappable className="left-arrow" onTap={this.handleLeftArrowClick.bind(this)}/>
+                    <Tappable className="right-arrow" onTap={this.handleRightArrowClick.bind(this)}/>
+                    <Tappable className="top-bar-title" onTap={this.handlerTopBarTitleClick.bind(this)}>{topBarTitle}</Tappable>
                 </div>
 
                 {

@@ -133,7 +133,7 @@ export default class extends Component {
                             <UI.GroupHeader>Labelled Inputs</UI.GroupHeader>
                             <UI.GroupBody>
                                 <UI.LabelInput type="email" label="Email" placeholder="your.name@example.com"/>
-                                <Tappable component="label" onTap={this.showDatePicker}>
+                                <Tappable component="label" onTap={this.showDatePicker.bind(this)}>
                                     <UI.LabelValue label="Date" value={this.formatDate(this.state.date)}
                                                    placeholder="Select a date"/>
                                 </Tappable>
@@ -158,8 +158,8 @@ export default class extends Component {
                             Disabled Button
                         </UI.Button>
                 </Container>
-                {/*<UI.DatePickerPopup visible={this.state.datePicker} date={this.state.date}*/}
-                {/*                    onChange={this.handleDatePickerChange}/>*/}
+                <UI.DatePickerPopup visible={this.state.datePicker} date={this.state.date}
+                                    onChange={this.handleDatePickerChange.bind(this)}/>
             </Container>
         );
     }

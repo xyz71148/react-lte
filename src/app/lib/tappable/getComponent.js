@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 import Mixin,{propTypes,defaultProps} from "./TappableMixin";
-import mixin from 'es6-react-mixins';
 import ReactDOM from 'react-dom';
 
 var touchStyles = require('./touchStyles');
