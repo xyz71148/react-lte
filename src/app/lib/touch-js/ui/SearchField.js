@@ -17,13 +17,12 @@ export default class extends Component{
 		cancelText: PropTypes.string,
 		hideOnBlur: PropTypes.bool
 	}
-
-	getInitialState () {
-		return {
+	constructor(props) {
+		super(props);
+		this.state = {
 			isFocused: false
-		};
+		}
 	}
-
 	static defaultProps = {
 		type: 'default',
 		value: '',
@@ -32,12 +31,12 @@ export default class extends Component{
 	}
 
 	handleClear () {
-		this.refs.input.getDOMNode().focus();
+		this.refs.input.focus();
 		this.props.onClear();
 	}
 
 	handleCancel () {
-		this.refs.input.getDOMNode().blur();
+		this.refs.input.blur();
 		this.props.onCancel();
 	}
 
@@ -60,7 +59,7 @@ export default class extends Component{
 	handleSubmit (e) {
 		e.preventDefault();
 
-		let input = this.refs.input.getDOMNode();
+		let input = this.refs.input;
 
 		input.blur();
 		this.props.onSubmit(input.value);
@@ -72,7 +71,7 @@ export default class extends Component{
 		} else {
 			if (!this.props.value.length) return;
 		}
-		return <Tappable className="SearchField__icon SearchField__icon--clear" onTap={this.handleClear} />;
+		return <Tappable className="SearchField__icon SearchField__icon--clear" onTap={this.handleClear.bind(this)} />;
 	}
 
 	renderCancel () {
@@ -83,7 +82,7 @@ export default class extends Component{
 		var className = classnames('SearchField__cancel', {
 			'is-visible': visibleBool
 		});
-		return <Tappable className={className} onTap={this.handleCancel}>{this.props.cancelText}</Tappable>;
+		return <Tappable className={className} onTap={this.handleCancel.bind(this)}>{this.props.cancelText}</Tappable>;
 	}
 
 	render () {
@@ -93,13 +92,13 @@ export default class extends Component{
 		}, this.props.className);
 
 		return (
-			<form onSubmit={this.handleSubmit} action="javascript:;" className={className}>
+			<form onSubmit={this.handleSubmit.bind(this)} className={className}>
 				<label className="SearchField__field">
 					<div className="SearchField__placeholder">
 						<span className="SearchField__icon SearchField__icon--search" />
 						{!this.props.value.length ? this.props.placeholder : null}
 					</div>
-					<input type="search" ref="input" value={this.props.value} onChange={this.handleChange} onFocus={this.handleFocus} onBlur={this.handleBlur} className="SearchField__input" />
+					<input type="search" ref="input" value={this.props.value} onChange={this.handleChange.bind(this)} onFocus={this.handleFocus.bind(this)} onBlur={this.handleBlur.bind(this)} className="SearchField__input" />
 					{this.renderClear()}
 				</label>
 				{this.renderCancel()}

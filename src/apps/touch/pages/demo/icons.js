@@ -3,50 +3,35 @@ import React,{Component} from 'react';
 import Sentry from 'react-sentry';
 import { Link, UI } from 'lib/touch-js';
 import PropTypes from 'prop-types';
-import body from "./list-simple.json"
+import icons from "./icons.json"
 var scrollable = Container.initScrollable({ left: 0, top: 44 });
 
 class SimpleLinkItem  extends Component{
 	static propTypes = {
-		person: PropTypes.object.isRequired
+		row: PropTypes.string.isRequired
 	}
 	render () {
 		return (
-			<Link to="tabs:list-details" transition="show-from-right" viewProps={{ person: this.props.person, prevView: 'list-simple' }}>
-				<UI.Item showDisclosureArrow>
-					<UI.ItemInner>
-						<UI.ItemTitle>{this.props.person.name.full}</UI.ItemTitle>
-					</UI.ItemInner>
-				</UI.Item>
-			</Link>
+			<UI.Item>
+				<UI.ItemInner>
+					<UI.ItemTitle><span>ion-{this.props.row}</span></UI.ItemTitle>
+					<UI.ItemSubTitle>
+						<i style={{fontSize:24}} className={"ion-"+this.props.row} />
+					</UI.ItemSubTitle>
+				</UI.ItemInner>
+			</UI.Item>
 		);
 	}
 }
-
-const peoples = body.results.map(p => p);
-
 
 
 export default class extends Component{
 	constructor(props) {
 		super(props);
 		Object.assign(this,Sentry)
-		// post process new data
-		peoples.forEach((person, i) => {
-			person.id = i;
-			person.name.first = person.name.first[0].toUpperCase() + person.name.first.slice(1);
-			person.name.last = person.name.last[0].toUpperCase() + person.name.last.slice(1);
-			person.name.initials = person.name.first[0] + person.name.last[0];
-			person.name.full = person.name.first + ' ' + person.name.last;
-			person.category = Math.random() > 0.5 ? 'A' : 'B';
-			person.github = person.name.first.toLowerCase() + person.name.last.toLowerCase();
-			person.picture = person.picture.medium;
-			person.twitter = '@' + person.name.first.toLowerCase() + (Math.random().toString(32).slice(2, 5));
-		});
-
 		this.state = {
 			searchString: '',
-			people: peoples
+			icons
 		}
 	}
 	static navigationBar = 'main'
@@ -76,13 +61,13 @@ export default class extends Component{
 	}
 
 	render () {
-		let { people, searchString } = this.state
+		let { icons, searchString } = this.state
 		let searchRegex = new RegExp(searchString)
 
-		function searchFilter (person) { return searchRegex.test(person.name.full.toLowerCase()) };
-		function sortByName (a, b) { return a.name.full.localeCompare(b.name.full) };
+		function searchFilter (item) { return searchRegex.test(item.toLowerCase()) };
+		function sortByName (a, b) { return a.localeCompare(b) };
 
-		let filteredPeople = people.filter(searchFilter).sort(sortByName);
+		let filteredPeople = icons.filter(searchFilter).sort(sortByName);
 
 		let results
 		if (searchString && !filteredPeople.length) {
@@ -96,8 +81,8 @@ export default class extends Component{
 		} else {
 			results = (
 				<UI.GroupBody>
-					{filteredPeople.map((person, i) => {
-						return <SimpleLinkItem key={'person' + i} person={person} />
+					{filteredPeople.map((row, i) => {
+						return <SimpleLinkItem key={'person' + i} row={row} />
 					})}
 				</UI.GroupBody>
 			);

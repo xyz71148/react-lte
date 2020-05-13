@@ -126,7 +126,7 @@ class ViewManager extends Component{
 					transition = app.viewManagerInTransition.activeTransitionOptions.transition;
 				}
 				setTimeout(() => {
-					app.navigationBars[viewElement.type.navigationBar].updateWithTransition(viewElement.type.getNavigation(viewProps, app), transition);
+					app.navigationBars[viewElement.type.navigationBar] && app.navigationBars[viewElement.type.navigationBar].updateWithTransition(viewElement.type.getNavigation(viewProps, app), transition);
 				}, 0);
 			}
 			this.__lastRenderedView = viewKey;

@@ -32,7 +32,7 @@ import RadioList from './RadioList'
 import SearchField from './SearchField'
 import SegmentedControl from './SegmentedControl'
 import Switch from './Switch'
-// import Tabs from './Tabs'
+import Tabs from './Tabs'
 import Textarea from './Textarea'
 
 // depends on above
@@ -53,7 +53,8 @@ export default {
     ItemNote,
     ItemTitle,
     ItemSubTitle,
-    Alertbar,Button,ButtonGroup,DatePicker,DatePickerPopup,FieldControl,FieldLabel,
-    LabelInput,LabelSelect,LabelTextarea,LabelValue,ListHeader,Popup,PopupIcon,
-    RadioList,Textarea,SearchField,SegmentedControl,Switch,Input
+    Tabs,
+    Alertbar, Button, ButtonGroup, DatePicker, DatePickerPopup, FieldControl, FieldLabel,
+    LabelInput, LabelSelect, LabelTextarea, LabelValue, ListHeader, Popup, PopupIcon,
+    RadioList, Textarea, SearchField, SegmentedControl, Switch, Input
 }

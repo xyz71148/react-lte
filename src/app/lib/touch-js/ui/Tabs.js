@@ -4,7 +4,7 @@ import React,{Component} from 'react';
 import Tappable from 'lib/tappable';
 import PropTypes from 'prop-types';
 
-export class Navigator extends Component {
+class Navigator extends Component {
 	static propTypes = {
 		className: PropTypes.string
 	}
@@ -17,7 +17,7 @@ export class Navigator extends Component {
 	}
 }
 
-export class Tab extends Component {
+class Tab extends Component {
 	static propTypes = {
 		selected: PropTypes.bool
 	}
@@ -29,8 +29,11 @@ export class Tab extends Component {
 		return <Tappable className={className} { ... otherProps } />;
 	}
 }
-export class Label extends Component {
+class Label extends Component {
 	render () {
 		return <div className="Tabs-Label" { ... this.props }/>;
 	}
+}
+export default {
+	Label,Tab,Navigator
 }

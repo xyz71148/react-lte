@@ -32,7 +32,13 @@ export default class extends Component{
 								</UI.ItemInner>
 							</UI.Item>
 						</Link>
-
+						<Link to="tabs:icons" transition="show-from-right">
+							<UI.Item showDisclosureArrow>
+								<UI.ItemInner>
+									Icons
+								</UI.ItemInner>
+							</UI.Item>
+						</Link>
 						<Link to="tabs:control" transition="show-from-right">
 							<UI.Item showDisclosureArrow>
 								<UI.ItemInner>
