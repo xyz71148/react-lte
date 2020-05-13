@@ -16,7 +16,8 @@ module.exports = config => {
         app:    [src_app_dir],
         simple: get_app_path("simple"),
         gcp:    get_app_path("gcp"),
-        weui:   get_app_path("weui")
+        weui:   get_app_path("weui"),
+        touch:  get_app_path("touch")
     };
     console.log(config.entry)
     for (let i in config.plugins) {
@@ -45,8 +46,9 @@ module.exports = config => {
             config.entry[key].unshift(webpackHotDevClient)
         }
     }
-    config.output.filename = "static/js/[name].bundle.js";
-    config.output.chunkFilename = "static/js/[name].chunk.js";
+    // console.log(config.module.rules)
+    config.output.filename = "static/js/[name].[hash].bundle.js";
+    config.output.chunkFilename = "static/js/[name].[hash].chunk.js";
     config.output.path = join(root_dir, "build");
     config.resolve.alias = {
         "lib":join(root_dir,"src","app","lib"),

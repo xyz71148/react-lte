@@ -17,7 +17,7 @@ export default connect(({navigation}) => {
     return (
         <BaseComponent id="main-sidebar" className="main-sidebar sidebar-dark-primary elevation-4">
             <a href="#" className="brand-link">
-                <img src="./static/dist/img/AdminLTELogo.png"
+                <img src="./static/assets/dist/img/AdminLTELogo.png"
                      alt="AdminLTE Logo"
                      className="brand-image img-circle elevation-3"
                      style={{opacity: ".8"}}/>
@@ -53,9 +53,13 @@ export default connect(({navigation}) => {
                                         target: menu.target
                                     }
                                 }
+                                const href = {}
+                                if(!has_tree){
+                                    href["href"] = url
+                                }
                                 return (
                                     <li key={menu.id} className={clz}>
-                                        <a {...target1} href={url} className={clz_a} onClick={() => {
+                                        <a {...target1} {...href} className={clz_a} onClick={() => {
                                             const payload = {
                                                 clickedMenu: menu.id,
                                             }

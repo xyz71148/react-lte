@@ -318,28 +318,33 @@ export const navigation = {
     menus: {
         "admin": {
             name: "Home",
+            defaultRouter:"demo/dashboard/dashboard_v1",
             children: [
                 demo_dashboard
             ]
         },
         "demo": {
             name: "Demo",
+            defaultRouter:"demo/dashboard/dashboard_v1",
             children: demo_menus
         },
         "extra": {
             name: "Extra",
+            defaultRouter:"demo/dashboard/dashboard_v1",
             children: [
                 demo_extra,
             ]
         },
         "pages": {
             name: "Pages",
+            defaultRouter:"demo/dashboard/dashboard_v1",
             children: [
                 demo_page
             ]
         },
         "layout": {
             name: "Layout",
+            defaultRouter:"demo/dashboard/dashboard_v1",
             children: [
                 demo_layout
             ]

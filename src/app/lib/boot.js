@@ -13,6 +13,9 @@ const set_axios_default = ()=>{
         }else{
             request["url"] = `${base_api_url}${url}`
         }
+        if(window.globalObject.constant.y_deng && request["url"].indexOf(window.globalObject.constant.y_deng.local_server) >=0){
+            request.headers.common = {}
+        }
         return request
     }, error => {
         console.error("request",error);

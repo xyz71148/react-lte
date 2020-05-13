@@ -8,6 +8,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ededed
 }
+*, body, html, .user_select_none {
+  user-select: none;
+}
+
+a, input,textarea, span, td, p,pre,i,b,strong, .user_select_text {
+  user-select: text;
+}
+
 ::-webkit-scrollbar { display: none; }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -40,16 +48,61 @@ code {
 .width_percent_100{
   width: 100%;
 }
+.mt32{
+  margin-top: 32px;
+}
+.mt16{
+  margin-top: 16px;
+}
+.mb16{
+  margin-bottom: 16px;
+}
 .mr16{
   margin-right: 16px;
 }
 .ml16{
   margin-left: 16px;
 }
+.ml8{
+  margin-left: 8px;
+}
+.mr8{
+  margin-right: 8px;
+}
+.bg_white{
+  background-color: white!important;
+}
 .user_select_text{
   user-select: text;
 }
-
+.position_relative{
+  position: relative;
+}
+.position_absolute{
+  position: absolute;
+}
+.cursor_pointer{
+  cursor: pointer;
+}
+.cursor_progress{
+  cursor: progress;
+}
+.flex_justify_content{
+  display: flex;
+  justify-content:center;
+}
+.flex_align_items{
+  display: flex;
+  align-items:center;
+}
+.flex_direction_row{
+  display: flex;
+  flex-direction:row;
+}
+.flex_direction_column{
+  display: flex;
+  flex-direction:column;
+}
 .fade-in {
   animation: fadeIn ease .5s;
   -webkit-animation: fadeIn ease.6s;
@@ -75,4 +128,11 @@ code {
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+.table_a:hover{
+  color: #3367d6;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(transparent 94%,#3b78e7 94%);
+  background-image: linear-gradient(transparent 94%,#3b78e7 94%);
+  cursor: pointer;
 }

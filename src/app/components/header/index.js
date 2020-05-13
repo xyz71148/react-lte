@@ -7,8 +7,9 @@ export default connect(({navigation}) => {
         menus: navigation.menus
     }
 })(({menus}) => {
-    
+
     const keys = Object.keys(menus);
+
     return (
         <BaseComponent id="top-header" className={"top-header"}>
             <nav className="main-header navbar navbar-expand navbar-white navbar-light">
@@ -20,9 +21,13 @@ export default connect(({navigation}) => {
                     </li>
                     {
                         keys.map(key => {
+                            let target = {};
+                            if(menus[key].target){
+                                target = {target:menus[key].target}
+                            }
                             return (
                                 <li key={key} className="nav-item d-none d-sm-inline-block">
-                                    <a href={menus[key].href ? menus[key] : "?m=" + key}
+                                    <a {...target} href={menus[key].href ? menus[key].href : "?m=" + key}
                                        className="nav-link">{menus[key].name}</a>
                                 </li>
                             )
@@ -153,14 +158,14 @@ export default connect(({navigation}) => {
                     </li>
                     <li className="nav-item dropdown user-menu">
                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <img src="./static/dist/img/user2-160x160.jpg"
+                            <img src="./static/assets/dist/img/user2-160x160.jpg"
                                  className="user-image img-circle elevation-2" alt="User Image"/>
                             <span className="d-none d-md-inline">Alexander Pierce</span>
                         </a>
                         <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right"
                             style={{left: "inherit", right: 0}}>
                             <li className="user-header bg-primary">
-                                <img src="./static/dist/img/user2-160x160.jpg" className="img-circle elevation-2"
+                                <img src="./static/assets/dist/img/user2-160x160.jpg" className="img-circle elevation-2"
                                      alt="User Image"/>
                                 <p>
                                     Alexander Pierce - Web Developer

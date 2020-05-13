@@ -662,7 +662,7 @@ export default connect(
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                         <div className="card">
                             <div className="card-header">
                                 <h3 className="card-title">Block Buttons</h3>
@@ -1203,326 +1203,329 @@ export default connect(
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6">
-                    <div className="card">
-                        <div className="card-header">
-                            <h3 className="card-title">Application Buttons</h3>
-                        </div>
-                        <div className="card-body">
-                            <p>Add the classes <code>.btn.btn-app</code> to an <code>&lt;a></code> tag to achieve the
-                                following:</p>
-                            <a className="btn btn-app">
-                                <i className="fas fa-edit"></i> Edit
-                            </a>
-                            <a className="btn btn-app">
-                                <i className="fas fa-play"></i> Play
-                            </a>
-                            <a className="btn btn-app">
-                                <i className="fas fa-pause"></i> Pause
-                            </a>
-                            <a className="btn btn-app">
-                                <i className="fas fa-save"></i> Save
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-warning">3</span>
-                                <i className="fas fa-bullhorn"></i> Notifications
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-success">300</span>
-                                <i className="fas fa-barcode"></i> Products
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-purple">891</span>
-                                <i className="fas fa-users"></i> Users
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-teal">67</span>
-                                <i className="fas fa-inbox"></i> Orders
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-info">12</span>
-                                <i className="fas fa-envelope"></i> Inbox
-                            </a>
-                            <a className="btn btn-app">
-                                <span className="badge bg-danger">531</span>
-                                <i className="fas fa-heart"></i> Likes
-                            </a>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-header">
-                            <h3 className="card-title">Vertical Button Group</h3>
-                        </div>
-                        <div className="card-body table-responsive pad">
-                            <p>
-                                Vertical button groups are easy to create with bootstrap. Just add your buttons
-                                inside <code>&lt;div class="btn-group-vertical"&gt;&lt;/div&gt;</code>
-                            </p>
-                            <table className="table table-bordered">
-                                <tr>
-                                    <th>Button</th>
-                                    <th>Icons</th>
-                                    <th>Flat</th>
-                                    <th>Dropdown</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default">Top</button>
-                                            <button type="button" className="btn btn-default">Middle</button>
-                                            <button type="button" className="btn btn-default">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-default"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-default"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-default btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-default btn-flat"><i
-                                                className="fas fa-align-right"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-default">1</button>
-                                            <button type="button" className="btn btn-default">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-default dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info">Top</button>
-                                            <button type="button" className="btn btn-info">Middle</button>
-                                            <button type="button" className="btn btn-info">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-info"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-info"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-info btn-flat"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-info btn-flat"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-info">1</button>
-                                            <button type="button" className="btn btn-info">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-info dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger">Top</button>
-                                            <button type="button" className="btn btn-danger">Middle</button>
-                                            <button type="button" className="btn btn-danger">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-danger"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-danger"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-danger btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-danger btn-flat"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-danger">1</button>
-                                            <button type="button" className="btn btn-danger">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-danger dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning">Top</button>
-                                            <button type="button" className="btn btn-warning">Middle</button>
-                                            <button type="button" className="btn btn-warning">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-warning"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-warning"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-warning btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-warning btn-flat"><i
-                                                className="fas fa-align-right"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-warning">1</button>
-                                            <button type="button" className="btn btn-warning">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-warning dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success">Top</button>
-                                            <button type="button" className="btn btn-success">Middle</button>
-                                            <button type="button" className="btn btn-success">Bottom</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-success"><i
-                                                className="fas fa-align-center"></i></button>
-                                            <button type="button" className="btn btn-success"><i
-                                                className="fas fa-align-right"></i></button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success btn-flat"><i
-                                                className="fas fa-align-left"></i></button>
-                                            <button type="button" className="btn btn-success btn-flat"><i
-                                                className="fas fa-align-center"></i>
-                                            </button>
-                                            <button type="button" className="btn btn-success btn-flat"><i
-                                                className="fas fa-align-right"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div className="btn-group-vertical">
-                                            <button type="button" className="btn btn-success">1</button>
-                                            <button type="button" className="btn btn-success">2</button>
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-success dropdown-toggle"
-                                                        data-toggle="dropdown">
-                                                </button>
-                                                <ul className="dropdown-menu">
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                    <li><a className="dropdown-item" href="#">Dropdown link</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-header">
-                            <h3 className="card-title">Radio Button Group</h3>
-                        </div>
-                        <div className="card-body table-responsive pad">
-                            <p className="mb-1">Radio Button Group with <code>.btn-secondary</code></p>
-                            <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label className="btn btn-secondary active">
-                                    <input type="radio" name="options" id="option1" autoComplete="off" checked/> Active
-                                </label>
-                                <label className="btn btn-secondary">
-                                    <input type="radio" name="options" id="option2" autoComplete="off"/> Radio
-                                </label>
-                                <label className="btn btn-secondary">
-                                    <input type="radio" name="options" id="option3" autoComplete="off"/> Radio
-                                </label>
+                <div className="row">
+
+                    <div className="col-md-12">
+                        <div className="card">
+                            <div className="card-header">
+                                <h3 className="card-title">Application Buttons</h3>
                             </div>
-                            <p className="mt-3 mb-1">Radio Button Group with <code>.bg-olive</code></p>
-                            <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label className="btn bg-olive active">
-                                    <input type="radio" name="options" id="option1" autoComplete="off" checked/> Active
-                                </label>
-                                <label className="btn bg-olive">
-                                    <input type="radio" name="options" id="option2" autoComplete="off"/> Radio
-                                </label>
-                                <label className="btn bg-olive">
-                                    <input type="radio" name="options" id="option3" autoComplete="off"/> Radio
-                                </label>
+                            <div className="card-body">
+                                <p>Add the classes <code>.btn.btn-app</code> to an <code>&lt;a></code> tag to achieve the
+                                    following:</p>
+                                <a className="btn btn-app">
+                                    <i className="fas fa-edit"></i> Edit
+                                </a>
+                                <a className="btn btn-app">
+                                    <i className="fas fa-play"></i> Play
+                                </a>
+                                <a className="btn btn-app">
+                                    <i className="fas fa-pause"></i> Pause
+                                </a>
+                                <a className="btn btn-app">
+                                    <i className="fas fa-save"></i> Save
+                                </a>
+                                <a className="btn btn-app">
+                                    <span className="badge bg-warning">3</span>
+                                    <i className="fas fa-bullhorn"></i> Notifications
+                                </a>
+                                <a className="btn btn-app">
+                                    <span className="badge bg-success">300</span>
+                                    <i className="fas fa-barcode"></i> Products
+                                </a>
+                                <a className="btn btn-app">
+                                    <span className="badge bg-purple">891</span>
+                                    <i className="fas fa-users"></i> Users
+                                </a>
+                                <a className="btn btn-app">
+                                    <span className="badge bg-teal">67</span>
+                                    <i className="fas fa-inbox"></i> Orders
+                                </a>
+                                <a className="btn btn-app">
+                                    <span className="badge bg-info">12</span>
+                                    <i className="fas fa-envelope"></i> Inbox
+                                </a>
+                                <a className="btn btn-app">
+                                    <span className="badge bg-danger">531</span>
+                                    <i className="fas fa-heart"></i> Likes
+                                </a>
+                            </div>
+                        </div>
+                        <div className="card">
+                            <div className="card-header">
+                                <h3 className="card-title">Vertical Button Group</h3>
+                            </div>
+                            <div className="card-body table-responsive pad">
+                                <p>
+                                    Vertical button groups are easy to create with bootstrap. Just add your buttons
+                                    inside <code>&lt;div class="btn-group-vertical"&gt;&lt;/div&gt;</code>
+                                </p>
+                                <table className="table table-bordered">
+                                    <tr>
+                                        <th>Button</th>
+                                        <th>Icons</th>
+                                        <th>Flat</th>
+                                        <th>Dropdown</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-default">Top</button>
+                                                <button type="button" className="btn btn-default">Middle</button>
+                                                <button type="button" className="btn btn-default">Bottom</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-default"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-default"><i
+                                                    className="fas fa-align-center"></i></button>
+                                                <button type="button" className="btn btn-default"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-default btn-flat"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-default btn-flat"><i
+                                                    className="fas fa-align-center"></i>
+                                                </button>
+                                                <button type="button" className="btn btn-default btn-flat"><i
+                                                    className="fas fa-align-right"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-default">1</button>
+                                                <button type="button" className="btn btn-default">2</button>
+                                                <div className="btn-group">
+                                                    <button type="button" className="btn btn-default dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                    </button>
+                                                    <ul className="dropdown-menu">
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-info">Top</button>
+                                                <button type="button" className="btn btn-info">Middle</button>
+                                                <button type="button" className="btn btn-info">Bottom</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-info"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-info"><i
+                                                    className="fas fa-align-center"></i></button>
+                                                <button type="button" className="btn btn-info"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-info btn-flat"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-info btn-flat"><i
+                                                    className="fas fa-align-center"></i></button>
+                                                <button type="button" className="btn btn-info btn-flat"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-info">1</button>
+                                                <button type="button" className="btn btn-info">2</button>
+                                                <div className="btn-group">
+                                                    <button type="button" className="btn btn-info dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                    </button>
+                                                    <ul className="dropdown-menu">
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-danger">Top</button>
+                                                <button type="button" className="btn btn-danger">Middle</button>
+                                                <button type="button" className="btn btn-danger">Bottom</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-danger"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-danger"><i
+                                                    className="fas fa-align-center"></i></button>
+                                                <button type="button" className="btn btn-danger"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-danger btn-flat"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-danger btn-flat"><i
+                                                    className="fas fa-align-center"></i>
+                                                </button>
+                                                <button type="button" className="btn btn-danger btn-flat"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-danger">1</button>
+                                                <button type="button" className="btn btn-danger">2</button>
+                                                <div className="btn-group">
+                                                    <button type="button" className="btn btn-danger dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                    </button>
+                                                    <ul className="dropdown-menu">
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-warning">Top</button>
+                                                <button type="button" className="btn btn-warning">Middle</button>
+                                                <button type="button" className="btn btn-warning">Bottom</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-warning"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-warning"><i
+                                                    className="fas fa-align-center"></i></button>
+                                                <button type="button" className="btn btn-warning"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-warning btn-flat"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-warning btn-flat"><i
+                                                    className="fas fa-align-center"></i>
+                                                </button>
+                                                <button type="button" className="btn btn-warning btn-flat"><i
+                                                    className="fas fa-align-right"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-warning">1</button>
+                                                <button type="button" className="btn btn-warning">2</button>
+                                                <div className="btn-group">
+                                                    <button type="button" className="btn btn-warning dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                    </button>
+                                                    <ul className="dropdown-menu">
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-success">Top</button>
+                                                <button type="button" className="btn btn-success">Middle</button>
+                                                <button type="button" className="btn btn-success">Bottom</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-success"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-success"><i
+                                                    className="fas fa-align-center"></i></button>
+                                                <button type="button" className="btn btn-success"><i
+                                                    className="fas fa-align-right"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-success btn-flat"><i
+                                                    className="fas fa-align-left"></i></button>
+                                                <button type="button" className="btn btn-success btn-flat"><i
+                                                    className="fas fa-align-center"></i>
+                                                </button>
+                                                <button type="button" className="btn btn-success btn-flat"><i
+                                                    className="fas fa-align-right"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="btn-group-vertical">
+                                                <button type="button" className="btn btn-success">1</button>
+                                                <button type="button" className="btn btn-success">2</button>
+                                                <div className="btn-group">
+                                                    <button type="button" className="btn btn-success dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                    </button>
+                                                    <ul className="dropdown-menu">
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                        <li><a className="dropdown-item" href="#">Dropdown link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div className="card">
+                            <div className="card-header">
+                                <h3 className="card-title">Radio Button Group</h3>
+                            </div>
+                            <div className="card-body table-responsive pad">
+                                <p className="mb-1">Radio Button Group with <code>.btn-secondary</code></p>
+                                <div className="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label className="btn btn-secondary active">
+                                        <input type="radio" name="options" id="option1" autoComplete="off" checked/> Active
+                                    </label>
+                                    <label className="btn btn-secondary">
+                                        <input type="radio" name="options" id="option2" autoComplete="off"/> Radio
+                                    </label>
+                                    <label className="btn btn-secondary">
+                                        <input type="radio" name="options" id="option3" autoComplete="off"/> Radio
+                                    </label>
+                                </div>
+                                <p className="mt-3 mb-1">Radio Button Group with <code>.bg-olive</code></p>
+                                <div className="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label className="btn bg-olive active">
+                                        <input type="radio" name="options" id="option1" autoComplete="off" checked/> Active
+                                    </label>
+                                    <label className="btn bg-olive">
+                                        <input type="radio" name="options" id="option2" autoComplete="off"/> Radio
+                                    </label>
+                                    <label className="btn bg-olive">
+                                        <input type="radio" name="options" id="option3" autoComplete="off"/> Radio
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>

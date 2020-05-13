@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import rootReducer from "pages/root-store";
+import rootReducer from "./pages/root-store";
 import thunk from "redux-thunk";
 import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";

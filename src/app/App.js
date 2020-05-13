@@ -9,7 +9,7 @@ import MainSidebar from "components/sider-menu/main-sidebar";
 import Footer from "components/footer";
 import Header from "components/header";
 import ContentHeader from "components/content-header";
-import {authPrefixes, defaultRoute, routes} from "./pages/routes"
+import {authPrefixes, routes} from "./pages/routes"
 import {navigation} from "./pages/navigation"
 
 class App extends Component {
@@ -50,15 +50,27 @@ class App extends Component {
             }
         });
     }
+
+    getDefaultRoute(urlQuery){
+        let {menus,module} = navigation;
+        const {m} = urlQuery;
+        if(m){
+            module = m;
+        }
+        return menus[module].defaultRouter
+    }
     handlePageId(urlObject){
         let page_id = "404";
         let id = urlObject.hash.replace("#", "");
-        if(id.indexOf("?")){
+        window.urlQuery = {};
+        if (id.indexOf("?") > 0) {
             window.urlQuery = parse_url(id).query;
             id = id.split("?")[0]
+        }else{
+            window.urlQuery = urlObject.query;
         }
         if (id.length === 0) {
-            page_id = defaultRoute
+            page_id = this.getDefaultRoute(window.urlQuery)
         } else {
             if (Object.keys(routes).includes(id)) {
                 page_id = id
@@ -85,14 +97,18 @@ class App extends Component {
         });
         return page_id;
     }
+
+    go_login(urlObject){
+        const {pathname} = window.location
+        const t = pathname.split("/")
+        const path_dir = pathname.substring(0, pathname.length - t[t.length - 1].length)
+        return go_login(`${urlObject.protocol}//${urlObject.host}${path_dir}login.html`)
+    }
     handleUrl(url) {
         const urlObject = parse_url(url);
 
         if(urlObject.hash.indexOf("#login") >= 0){
-            const {pathname} = window.location
-            const t = pathname.split("/")
-            const path_dir = pathname.substring(0,pathname.length - t[t.length-1].length)
-            return go_login(`${urlObject.protocol}//${urlObject.host}${path_dir}login.html`)
+            return this.go_login(urlObject)
         }
 
         window.urlObject = urlObject
@@ -124,7 +140,7 @@ class App extends Component {
             }
             if (authPrefixes.includes(page_id.split("/")[0])) {
                 if (access_token === null) {
-                    go_login(`${urlObject.protocol}//${urlObject.host}/login.html`)
+                    return this.go_login(urlObject)
                 } else {
                     this.props.dispatch(fetchMe(() => {
                         this.finishLoading()
