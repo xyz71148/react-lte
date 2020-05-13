@@ -66,10 +66,6 @@ self.__precacheManifest = [
     "url": "./static/media/paypal.69739912.png"
   },
   {
-    "revision": "cfe2932b6e835ee0d882f09843c6506d",
-    "url": "./static/media/vpn_on_icon0_Normal.cfe2932b.png"
-  },
-  {
     "revision": "8a49d36471d549c590d2bb18870292e4",
     "url": "./static/media/vpn_on_icon_Normal.8a49d364.png"
   },
@@ -80,6 +76,10 @@ self.__precacheManifest = [
   {
     "revision": "5447e33510890552906f137816925b25",
     "url": "./static/media/vpn_on_icon1_Normal.5447e335.png"
+  },
+  {
+    "revision": "cfe2932b6e835ee0d882f09843c6506d",
+    "url": "./static/media/vpn_on_icon0_Normal.cfe2932b.png"
   },
   {
     "revision": "327ae90a3f80de37a38e2ae4c0df93fc",
