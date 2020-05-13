@@ -1,29 +1,36 @@
 .App {
-  text-align: center;
-  user-select: none;
-  background-color: #f7f7f7;
+    text-align: center;
+    background-color: #f7f7f7;
 }
-#main-content{
+.wrapper{
+    background-color: #f4f6f9;
+}
+
+#main-content {
     /*height:100vh;*/
 }
+
 #root {
-  position: relative;
+    position: relative;
 }
-.empty_record{
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.empty_record {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.topGlobal{
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom: 0;
-  background-color: white;
-  z-index: 10000;
+
+.topGlobal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 10000;
 }
-.content-header{
-  padding: 3px .5rem!important;
+
+.content-header {
+    padding: 3px .5rem !important;
 }

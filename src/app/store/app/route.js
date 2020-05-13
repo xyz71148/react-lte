@@ -1,6 +1,7 @@
 export const namespace = "route";
 const initialState = {
     page: {},
+    breadcrumb_actions:[],
     index: true,
     page_close_id:null,
     pages_history:[],
@@ -17,6 +18,21 @@ export default function defaultReducer(
             return {
                 ...state,
                 ...action.payload
+            };
+        case namespace + "/init":
+            return {
+                ...state,
+                page:{}
+            };
+        case namespace + "/hideBreadcrumb_actions":
+            return {
+                ...state,
+                breadcrumb_actions:[]
+            };
+        case namespace + "/showBreadcrumb_actions":
+            return {
+                ...state,
+                breadcrumb_actions:action.payload
             };
         case namespace + "/onClosePage":
             return {

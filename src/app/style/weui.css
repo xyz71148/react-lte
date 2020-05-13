@@ -73,3 +73,12 @@
 .weui-loading_toast p{
     margin-bottom: 0;
 }
+
+.admin-weui-custom .weui-mask,.admin-weui-custom .weui-half-screen-dialog {
+    z-index: 100000;
+}
+.admin-weui-custom .weui-half-screen-dialog {
+    max-width: 450px;
+    margin:0 auto
+}
+

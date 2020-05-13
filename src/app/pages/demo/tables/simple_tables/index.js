@@ -45,36 +45,6 @@ export default connect(
                                         </td>
                                         <td><span className="badge bg-danger">55%</span></td>
                                     </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>Clean database</td>
-                                        <td>
-                                            <div className="progress progress-xs">
-                                                <div className="progress-bar bg-warning" style={{width: "70%"}}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-warning">70%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>Cron job running</td>
-                                        <td>
-                                            <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-primary" style={{width: "30%"}}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-primary">30%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>Fix and squish bugs</td>
-                                        <td>
-                                            <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-success" style={{width: "90%"}}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-success">90%</span></td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>

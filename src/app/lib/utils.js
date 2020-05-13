@@ -5,11 +5,18 @@ export function cloneJson(dict) {
     return JSON.parse(JSON.stringify(dict))
 }
 
-export function show_page(dispatch,id,payload = {}) {
+export function show_page(dispatch, pages, payload) {
     dispatch({
         type: "route/showPage",
-        payload:{id,...payload}
+        payload
     })
+    pages[payload.id] = payload
+    document.addEventListener('keydown', function (event) {
+        const key = event.key; // const {key} = event; in ES6+
+        if (key === "Escape") {
+            weui.confirm("确定要退出么?",()=>close_page_1(dispatch, pages, payload.id))
+        }
+    });
 }
 
 export function timeStamp2String(time) {
@@ -55,18 +62,21 @@ export function randomWord(randomFlag, min, max) {
     }
     return str;
 }
+
 export function body_overflow_hidden() {
-    if(document.body.className.indexOf("overflow_hidden") === -1){
+    if (document.body.className.indexOf("overflow_hidden") === -1) {
         document.body.className += " overflow_hidden"
     }
 }
+
 export function body_overflow_hidden_remove() {
-    if(document.body.className.indexOf("overflow_hidden") > -1){
-        document.body.className = document.body.className.replace("overflow_hidden","")
+    if (document.body.className.indexOf("overflow_hidden") > -1) {
+        document.body.className = document.body.className.replace("overflow_hidden", "")
     }
 }
-export function close_page_1(dispatch, page, page_id) {
-    const p = page[page_id];
+
+export function close_page_1(dispatch, pages, page_id) {
+    const p = pages[page_id];
     p.visible = false;
     const t = {}
     t[page_id] = p
@@ -74,12 +84,12 @@ export function close_page_1(dispatch, page, page_id) {
         type: "route/setState",
         payload: {
             page: {
-                ...page,
+                ...pages,
                 ...t
             }
         }
     })
-    if(document.getElementsByClassName("topGlobal").length === 1){
+    if (document.getElementsByClassName("topGlobal").length === 1) {
         body_overflow_hidden_remove()
     }
 }
@@ -143,7 +153,10 @@ export function go_login(path = "#login") {
     if (window.location.href.indexOf("?redirect=") > 0) {
         return;
     }
-    window.location.href = `${path}?redirect=` + encodeURIComponent(window.location.href.replace("#login", ""))
+    const url = `${path}?redirect=` + encodeURIComponent(window.location.href.replace("#login", ""))
+    console.log(url)
+    window.location.href = url;
+    //window.location.reload();
 }
 
 export function getZoneTree(zones, names) {

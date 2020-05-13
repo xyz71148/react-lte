@@ -69,4 +69,3 @@ export const routes = {
 };
 
 export const authPrefixes = ["admin", "user"];
-export const defaultRoute = "demo/dashboard/dashboard_v1";

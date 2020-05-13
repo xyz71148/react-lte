@@ -54,7 +54,7 @@ export default connect(({route}) => {
                             <div className="left">
                                 {
                                     onClose &&
-                                    <div className={"icon"} onClick={({target}) => {
+                                    <div className={"icon cursor_pointer"} onClick={({target}) => {
                                         onClose()
                                     }}>
                                         <MdChevronLeft size={"1.8em"}/>

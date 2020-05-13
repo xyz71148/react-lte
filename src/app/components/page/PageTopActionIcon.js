@@ -22,9 +22,9 @@ export default connect()(({dispatch, type, style = {}, onClick, index = 1, actio
             }
         }
     };
-    style_[action] = (parseInt(index) - 1) * 52
+    style_[action] = (parseInt(index) - 1) * 52 + 12
     return (
-        <div style={{...style_, ...style}} className={"page_top_icons"} onClick={(e) => {
+        <div style={{...style_, ...style}} className={"page_top_icons cursor_pointer"} onClick={(e) => {
             onClose_(e)
         }}>
             {Icons[type]}
