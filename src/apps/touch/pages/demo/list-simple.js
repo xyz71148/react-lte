@@ -33,6 +33,7 @@ export default class extends Component{
 		Object.assign(this,Sentry)
 		// post process new data
 		peoples.forEach((person, i) => {
+			if(!person) return
 			person.id = i;
 			person.name.first = person.name.first[0].toUpperCase() + person.name.first.slice(1);
 			person.name.last = person.name.last[0].toUpperCase() + person.name.last.slice(1);
