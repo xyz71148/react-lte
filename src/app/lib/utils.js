@@ -1,6 +1,17 @@
 import axios from "axios";
 import URL from "url-parse";
 
+export function cloneJson(dict) {
+    return JSON.parse(JSON.stringify(dict))
+}
+
+export function show_page(dispatch,id,payload = {}) {
+    dispatch({
+        type: "route/showPage",
+        payload:{id,...payload}
+    })
+}
+
 export function timeStamp2String(time) {
     var datetime = new Date();
     datetime.setTime(time);
