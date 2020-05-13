@@ -1,22 +1,21 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
 import Tappable from 'lib/tappable';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'Switch',
+export default class extends Component{
+	displayName = 'Switch'
 
-	propTypes: {
+	static propTypes = {
 		disabled: PropTypes.bool,
 		on: PropTypes.bool,
 		onTap: PropTypes.func,
 		type: PropTypes.string
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			type: 'default'
-		};
-	},
+	static defaultProps = {
+		type: 'default'
+	}
 
 	render () {
 		var className = classnames('Switch', 'Switch--' + this.props.type, {
@@ -32,4 +31,4 @@ module.exports = React.createClass({
 			</Tappable>
 		);
 	}
-});
+}

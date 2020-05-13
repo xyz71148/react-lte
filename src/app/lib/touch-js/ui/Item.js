@@ -1,22 +1,21 @@
 import blacklist from 'blacklist';
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'Item',
+export default class extends Component{
+	displayName= 'Item'
 
-	propTypes: {
+	static propTypes= {
 		children: PropTypes.node.isRequired,
 		component: PropTypes.any,
 		className: PropTypes.string,
 		showDisclosureArrow: PropTypes.bool
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			component: 'div'
-		};
-	},
+	static defaultProps= {
+		component: 'div'
+	}
 
 	render () {
 		var componentClass = classnames('Item', {
@@ -32,4 +31,4 @@ module.exports = React.createClass({
 			this.props.children
 		);
 	}
-});
+}

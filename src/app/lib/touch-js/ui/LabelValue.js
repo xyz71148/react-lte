@@ -2,18 +2,19 @@ import classnames from 'classnames';
 import FieldControl from './FieldControl';
 import Item from './Item';
 import ItemInner from './ItemInner';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'LabelValue',
+export default class extends Component{
+	displayName = 'LabelValue'
 
-	propTypes: {
+	static propTypes = {
 		alignTop: PropTypes.bool,
 		className: PropTypes.string,
 		label: PropTypes.string,
 		placeholder: PropTypes.string,
 		value: PropTypes.string
-	},
+	}
 
 	render () {
 		return (
@@ -29,4 +30,4 @@ module.exports = React.createClass({
 			</Item>
 		);
 	}
-});
+}

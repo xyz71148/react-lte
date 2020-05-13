@@ -1,13 +1,14 @@
 import classNames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'PopupIcon',
-	propTypes: {
+export default class extends Component{
+	displayName = 'PopupIcon'
+	static propTypes = {
 		name: PropTypes.string,
 		type: PropTypes.oneOf(['default', 'muted', 'primary', 'success', 'warning', 'danger']),
 		spinning: PropTypes.bool
-	},
+	}
 
 	render () {
 		var className = classNames('PopupIcon', {
@@ -16,4 +17,4 @@ module.exports = React.createClass({
 
 		return <div className={className} />;
 	}
-});
+}

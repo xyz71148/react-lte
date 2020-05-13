@@ -6,12 +6,10 @@ var classnames = require('classnames');
 var ReactDOM = require('react-dom');
 function hasChildrenWithVerticalFill(children) {
 	var result = false;
-
 	React.Children.forEach(children, (c) => {
 		if (result) return; // early-exit
 		if (!c) return;
-		if (!c.type) return
-
+		if (!c.type.shouldFillVerticalSpace) return
 		result = !!c.type.shouldFillVerticalSpace;
 	});
 

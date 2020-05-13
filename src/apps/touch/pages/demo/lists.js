@@ -1,20 +1,20 @@
-import Container from 'react-container';
-import React from 'react';
-import { Link, UI } from 'touchstonejs';
+import Container from 'lib/container';
+import React, {Component} from 'react';
+import { Link, UI } from 'lib/touch-js';
 
-module.exports = React.createClass({
-	statics: {
-		navigationBar: 'main',
-		getNavigation () {
-			return {
-				title: 'Lists'
-			}
+export default class extends Component{
+
+	static navigationBar = 'main'
+	static getNavigation = () => {
+		return {
+			title: 'Lists'
 		}
-	},
+	}
 
-	render: function () {
+	render () {
 		return (
 			<Container scrollable>
+
 				<UI.Group>
 					<UI.GroupHeader>Lists</UI.GroupHeader>
 					<UI.GroupBody>
@@ -25,10 +25,25 @@ module.exports = React.createClass({
 								</UI.ItemInner>
 							</UI.Item>
 						</Link>
-						<Link to="tabs:list-complex" transition="show-from-right">
+						<Link to="tabs:form" transition="show-from-right">
 							<UI.Item showDisclosureArrow>
 								<UI.ItemInner>
-									Complex List
+									Form
+								</UI.ItemInner>
+							</UI.Item>
+						</Link>
+
+						<Link to="tabs:control" transition="show-from-right">
+							<UI.Item showDisclosureArrow>
+								<UI.ItemInner>
+									Control
+								</UI.ItemInner>
+							</UI.Item>
+						</Link>
+						<Link to="tabs:transitions" transition="show-from-right">
+							<UI.Item showDisclosureArrow>
+								<UI.ItemInner>
+									Transition
 								</UI.ItemInner>
 							</UI.Item>
 						</Link>
@@ -42,9 +57,8 @@ module.exports = React.createClass({
 							GroupBody will apply the background for content inside groups.
 						</UI.GroupInner>
 					</UI.GroupBody>
-					<UI.GroupFooter>GroupFooter: useful for a detailed explanation to express the intentions of the Group. Try to be concise - remember that users are likely to read the text in your UI many times.</UI.GroupFooter>
 				</UI.Group>
 			</Container>
 		);
 	}
-});
+}

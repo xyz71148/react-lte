@@ -1,10 +1,11 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
 import Tappable from 'lib/tappable';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'SearchField',
-	propTypes: {
+export default class extends Component{
+	displayName = 'SearchField'
+	static propTypes = {
 		className: PropTypes.string,
 		onCancel: PropTypes.func,
 		onChange: PropTypes.func,
@@ -15,48 +16,46 @@ module.exports = React.createClass({
 		value: PropTypes.string,
 		cancelText: PropTypes.string,
 		hideOnBlur: PropTypes.bool
-	},
+	}
 
 	getInitialState () {
 		return {
 			isFocused: false
 		};
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			type: 'default',
-			value: '',
-			cancelText: 'Cancel',
-			hideOnBlur: false
-		};
-	},
+	static defaultProps = {
+		type: 'default',
+		value: '',
+		cancelText: 'Cancel',
+		hideOnBlur: false
+	}
 
 	handleClear () {
 		this.refs.input.getDOMNode().focus();
 		this.props.onClear();
-	},
+	}
 
 	handleCancel () {
 		this.refs.input.getDOMNode().blur();
 		this.props.onCancel();
-	},
+	}
 
 	handleChange (e) {
 		this.props.onChange(e.target.value);
-	},
+	}
 
 	handleBlur (e) {
 		this.setState({
 			isFocused: false
 		});
-	},
+	}
 
 	handleFocus (e) {
 		this.setState({
 			isFocused: true
 		});
-	},
+	}
 
 	handleSubmit (e) {
 		e.preventDefault();
@@ -65,7 +64,7 @@ module.exports = React.createClass({
 
 		input.blur();
 		this.props.onSubmit(input.value);
-	},
+	}
 
 	renderClear () {
 		if (this.props.hideOnBlur) {
@@ -74,7 +73,7 @@ module.exports = React.createClass({
 			if (!this.props.value.length) return;
 		}
 		return <Tappable className="SearchField__icon SearchField__icon--clear" onTap={this.handleClear} />;
-	},
+	}
 
 	renderCancel () {
 		if (this.props.hideOnBlur)
@@ -85,7 +84,7 @@ module.exports = React.createClass({
 			'is-visible': visibleBool
 		});
 		return <Tappable className={className} onTap={this.handleCancel}>{this.props.cancelText}</Tappable>;
-	},
+	}
 
 	render () {
 		var className = classnames('SearchField', ('SearchField--' + this.props.type), {
@@ -107,4 +106,4 @@ module.exports = React.createClass({
 			</form>
 		);
 	}
-});
+}

@@ -1,9 +1,10 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 import Container from 'lib/container';
+
 class ErrorView extends Component {
 
-	propTypes= {
+	static propTypes = {
 		children: PropTypes.node
 	}
 

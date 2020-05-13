@@ -2,8 +2,9 @@ import blacklist from 'blacklist';
 import FieldControl from './FieldControl';
 import Item from './Item';
 import ItemInner from './ItemInner';
-import React from 'react';
+import React,{Component} from 'react';
 import Tappable from 'lib/tappable';
+import PropTypes from 'prop-types';
 
 // Many input types DO NOT support setSelectionRange.
 // Email will show an error on most desktop browsers but works on
@@ -17,10 +18,10 @@ const SELECTABLE_INPUT_TYPES = {
 	'url': true
 };
 
-module.exports = React.createClass({
-	displayName: 'LabelInput',
+export default class extends Component{
+	displayName = 'LabelInput'
 
-	propTypes: {
+	static propTypes = {
 		alignTop: PropTypes.bool,
 		autoFocus: PropTypes.bool,
 		children: PropTypes.node,
@@ -29,13 +30,13 @@ module.exports = React.createClass({
 		label: PropTypes.string,
 		readOnly: PropTypes.bool,
 		value: PropTypes.string
-	},
+	}
 
 	componentDidMount () {
 		if (this.props.autoFocus) {
 			this.moveCursorToEnd();
 		}
-	},
+	}
 
 	moveCursorToEnd () {
 		var target = this.refs.focusTarget.getDOMNode();
@@ -45,7 +46,7 @@ module.exports = React.createClass({
 			target.focus();
 			target.setSelectionRange(endOfString, endOfString);
 		}
-	},
+	}
 
 	render () {
 		var inputProps = blacklist(this.props, 'alignTop', 'children', 'first', 'readOnly');
@@ -67,4 +68,4 @@ module.exports = React.createClass({
 			</Item>
 		);
 	}
-});
+}

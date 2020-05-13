@@ -2,11 +2,12 @@ import FieldControl from './FieldControl';
 import FieldLabel from './FieldLabel';
 import Item from './Item';
 import ItemInner from './ItemInner';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'LabelSelect',
-	propTypes: {
+export default class extends Component{
+	displayName = 'LabelSelect'
+	static propTypes = {
 		className: PropTypes.string,
 		disabled: PropTypes.bool,
 		label: PropTypes.string,
@@ -16,13 +17,11 @@ module.exports = React.createClass({
 			PropTypes.number,
 			PropTypes.string
 		])
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			className: ''
-		};
-	},
+	static defaultProps = {
+		className: ''
+	}
 
 	renderOptions () {
 		return this.props.options.map(op => {
@@ -32,7 +31,7 @@ module.exports = React.createClass({
 				</option>
 			);
 		});
-	},
+	}
 
 	render () {
 		return (
@@ -51,4 +50,4 @@ module.exports = React.createClass({
 			</Item>
 		);
 	}
-});
+}

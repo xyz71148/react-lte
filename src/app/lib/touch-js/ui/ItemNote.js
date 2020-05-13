@@ -1,19 +1,18 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'ItemNote',
-	propTypes: {
+export default class extends Component{
+	displayName = 'ItemNote'
+	static propTypes = {
 		className: PropTypes.string,
 		icon: PropTypes.string,
 		label: PropTypes.string,
 		type: PropTypes.string
-	},
-	getDefaultProps () {
-		return {
-			type: 'default'
-		};
-	},
+	}
+	static defaultProps  = {
+		type: 'default'
+	}
 	render () {
 		var className = classnames('Item__note', (
 			'Item__note--' + this.props.type
@@ -34,4 +33,4 @@ module.exports = React.createClass({
 			</div>
 		);
 	}
-});
+}

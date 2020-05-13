@@ -1,11 +1,12 @@
 import blacklist from 'blacklist';
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'LabelTextarea',
+export default class extends Component{
+	displayName = 'LabelTextarea'
 
-	propTypes: {
+	static propTypes = {
 		children: PropTypes.node,
 		className: PropTypes.string,
 		disabled: PropTypes.bool,
@@ -13,13 +14,11 @@ module.exports = React.createClass({
 		label: PropTypes.string,
 		readOnly: PropTypes.bool,
 		value: PropTypes.string
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			rows: 3
-		};
-	},
+	defaultProps =  {
+		rows: 3
+	}
 
 	render () {
 		var className = classnames(this.props.className, 'list-item', 'field-item', 'align-top', {
@@ -47,4 +46,4 @@ module.exports = React.createClass({
 			</div>
 		);
 	}
-});
+}

@@ -1,11 +1,15 @@
-import "./assets/css/app.css"
-var React = require('react');
+import React from 'react';
+import Animation1 from "./core/animation"
+import Link1 from "./core/Link"
+import ViewManager1 from "./core/ViewManager"
+import View1 from "./core/View"
+import Mixins1 from "./mixins"
+import UI1 from "./ui"
 
-export const animation = require('./core/animation');
-export const Link = require('./core/Link');
-export const ViewManager = require('./core/ViewManager');
 
-export const Container = require('lib/container');
-export const Mixins = require('./mixins');
-export const UI = require('./ui');
-
+export const Link = Link1
+export const UI = UI1
+export const Animation = Animation1
+export const ViewManager = ViewManager1
+export const View = View1
+export const Mixins = Mixins1

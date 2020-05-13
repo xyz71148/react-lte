@@ -3,22 +3,23 @@ import Item from './Item';
 import ItemInner from './ItemInner';
 import ItemNote from './ItemNote';
 import ItemTitle from './ItemTitle';
-import React from 'react';
+import React,{Component} from 'react';
 import Tappable from 'lib/tappable';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'RadioList',
+export default class extends Component{
+	displayName = 'RadioList'
 
-	propTypes: {
+	static propTypes = {
 		options: PropTypes.array.isRequired,
 		value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 		icon: PropTypes.string,
 		onChange: PropTypes.func
-	},
+	}
 
 	onChange (value) {
 		this.props.onChange(value);
-	},
+	}
 
 	render () {
 		var self = this;
@@ -48,4 +49,4 @@ module.exports = React.createClass({
 
 		return <div>{options}</div>;
 	}
-});
+}

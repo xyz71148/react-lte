@@ -1,11 +1,19 @@
 import blacklist from 'blacklist';
 import React,{Component} from 'react';
-import Transitions from '../mixins/Transitions';
 import PropTypes from 'prop-types';
+import Tappable from "lib/tappable"
 
 class Link extends Component {
-	mixins= [Transitions]
-	propTypes= {
+
+	static contextTypes = {
+		app: PropTypes.object
+	}
+
+	transitionTo (view, opts) {
+		this.context.app.transitionTo(view, opts);
+	}
+
+	static propTypes= {
 		children: PropTypes.any,
 		options: PropTypes.object,
 		transition: PropTypes.string,
@@ -21,11 +29,10 @@ class Link extends Component {
 
 	render () {
 		var tappableProps = blacklist(this.props, 'children', 'options', 'transition', 'viewProps');
-
 		return (
-			<div {...tappableProps}>
+			<Tappable onTap={this.doTransition.bind(this)} {...tappableProps}>
 				{this.props.children}
-			</div>
+			</Tappable>
 		);
 	}
 }

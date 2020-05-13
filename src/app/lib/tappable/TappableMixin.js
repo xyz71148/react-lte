@@ -11,37 +11,33 @@ function getTouchProps (touch) {
 		clientY: touch.clientY
 	};
 }
+export const propTypes = {
+	moveThreshold: PropTypes.number,       // pixels to move before cancelling tap
+	active_delay: PropTypes.number,         // ms to wait before adding the `-active` class
+	pressDelay: PropTypes.number,          // ms to wait before detecting a press
+	pressMoveThreshold: PropTypes.number,  // pixels to move before cancelling press
+	preventDefault: PropTypes.bool,        // whether to preventDefault on all events
+	stopPropagation: PropTypes.bool,       // whether to stopPropagation on all events
 
-var Mixin = {
-	propTypes: {
-		moveThreshold: PropTypes.number,       // pixels to move before cancelling tap
-		activeDelay: PropTypes.number,         // ms to wait before adding the `-active` class
-		pressDelay: PropTypes.number,          // ms to wait before detecting a press
-		pressMoveThreshold: PropTypes.number,  // pixels to move before cancelling press
-		preventDefault: PropTypes.bool,        // whether to preventDefault on all events
-		stopPropagation: PropTypes.bool,       // whether to stopPropagation on all events
+	onTap: PropTypes.func,                 // fires when a tap is detected
+	onPress: PropTypes.func,               // fires when a press is detected
+	onTouchStart: PropTypes.func,          // pass-through touch event
+	onTouchMove: PropTypes.func,           // pass-through touch event
+	onTouchEnd: PropTypes.func,            // pass-through touch event
+	onMouseDown: PropTypes.func,           // pass-through mouse event
+	onMouseUp: PropTypes.func,             // pass-through mouse event
+	onMouseMove: PropTypes.func,           // pass-through mouse event
+	onMouseOut: PropTypes.func             // pass-through mouse event
+}
+export const defaultProps = {
+	active_delay: 0,
+	moveThreshold: 100,
+	pressDelay: 1000,
+	pressMoveThreshold: 5
+}
 
-		onTap: PropTypes.func,                 // fires when a tap is detected
-		onPress: PropTypes.func,               // fires when a press is detected
-		onTouchStart: PropTypes.func,          // pass-through touch event
-		onTouchMove: PropTypes.func,           // pass-through touch event
-		onTouchEnd: PropTypes.func,            // pass-through touch event
-		onMouseDown: PropTypes.func,           // pass-through mouse event
-		onMouseUp: PropTypes.func,             // pass-through mouse event
-		onMouseMove: PropTypes.func,           // pass-through mouse event
-		onMouseOut: PropTypes.func             // pass-through mouse event
-	},
-
-	getDefaultProps: function () {
-		return {
-			activeDelay: 0,
-			moveThreshold: 100,
-			pressDelay: 1000,
-			pressMoveThreshold: 5
-		};
-	},
-
-	componentWillUnmount: function () {
+const Mixin = {
+	componentWillUnmount() {
 		this.cleanupScrollDetection();
 		this.cancelPressDetection();
 		this.clearActiveTimeout();
@@ -60,7 +56,7 @@ var Mixin = {
 			this._initialTouch = this._lastTouch = getTouchProps(event.touches[0]);
 			this.initScrollDetection();
 			this.initPressDetection(event, this.endTouch);
-			this._activeTimeout = setTimeout(this.makeActive, this.props.activeDelay);
+			this._activeTimeout = setTimeout(this.makeActive, this.props.active_delay);
 		} else if (this.onPinchStart &&
 				(this.props.onPinchStart || this.props.onPinchMove || this.props.onPinchEnd) &&
 				event.touches.length === 2) {
@@ -68,7 +64,7 @@ var Mixin = {
 		}
 	},
 
-	makeActive: function () {
+	makeActive() {
 		if (!this.isMounted()) return;
 		this.clearActiveTimeout();
 		this.setState({
@@ -76,12 +72,12 @@ var Mixin = {
 		});
 	},
 
-	clearActiveTimeout: function () {
+	clearActiveTimeout() {
 		clearTimeout(this._activeTimeout);
 		this._activeTimeout = false;
 	},
 
-	initScrollDetection: function () {
+	initScrollDetection() {
 		this._scrollPos = { top: 0, left: 0 };
 		this._scrollParents = [];
 		this._scrollParentPos = [];
@@ -106,7 +102,7 @@ var Mixin = {
 		};
 	},
 
-	detectScroll: function () {
+	detectScroll() {
 		var currentScrollPos = { top: 0, left: 0 };
 		for (var i = 0; i < this._scrollParents.length; i++) {
 			currentScrollPos.top += this._scrollParents[i].scrollTop;
@@ -115,7 +111,7 @@ var Mixin = {
 		return !(currentScrollPos.top === this._scrollPos.top && currentScrollPos.left === this._scrollPos.left);
 	},
 
-	cleanupScrollDetection: function () {
+	cleanupScrollDetection() {
 		this._scrollParents = undefined;
 		this._scrollPos = undefined;
 	},
@@ -128,7 +124,7 @@ var Mixin = {
 		}.bind(this), this.props.pressDelay);
 	},
 
-	cancelPressDetection: function () {
+	cancelPressDetection() {
 		clearTimeout(this._pressTimeout);
 	},
 
@@ -242,7 +238,7 @@ var Mixin = {
 		this.endMouseEvent();
 	},
 
-	endMouseEvent: function () {
+	endMouseEvent() {
 		this.cancelPressDetection();
 		this._mouseDown = false;
 		this.setState({
@@ -250,12 +246,12 @@ var Mixin = {
 		});
 	},
 
-	cancelTap: function () {
+	cancelTap() {
 		this.endTouch();
 		this._mouseDown = false;
 	},
 
-	handlers: function () {
+	handlers() {
 		return {
 			onTouchStart: this.onTouchStart,
 			onTouchMove: this.onTouchMove,

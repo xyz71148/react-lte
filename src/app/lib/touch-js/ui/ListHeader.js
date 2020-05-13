@@ -1,14 +1,15 @@
 import blacklist from 'blacklist';
 import classNames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'ListHeader',
+export default class extends Component{
+	displayName = 'ListHeader'
 
-	propTypes: {
+	static propTypes = {
 		className: PropTypes.string,
 		sticky: PropTypes.bool
-	},
+	}
 
 	render () {
 		var className = classNames('list-header', {
@@ -19,4 +20,4 @@ module.exports = React.createClass({
 
 		return <div className={className} {...props} />;
 	}
-});
+}

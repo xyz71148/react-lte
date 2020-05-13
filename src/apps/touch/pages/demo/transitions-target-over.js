@@ -2,7 +2,6 @@ import Container from 'lib/container';
 import React, {Component} from 'react';
 import Timers from 'react-timers';
 import NavigationBar from 'lib/touch-js/ui/NavigationBar';
-import Mixins from "lib/touch-js/mixins";
 import PropTypes from "prop-types";
 
 export default class extends Component{
@@ -20,7 +19,7 @@ export default class extends Component{
 	}
 	componentDidMount () {
 		this.setTimeout(()=> {
-			//this.transitionTo('app:main', { transition: 'fade' });
+			this.transitionTo('app:main', { transition: 'fade' });
 		}, 2000);
 	}
 	render () {

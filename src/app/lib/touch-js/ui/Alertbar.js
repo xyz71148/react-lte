@@ -1,23 +1,22 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
 import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'Alertbar',
-	propTypes: {
+export default class extends Component{
+	displayName = 'Alertbar'
+	static propTypes = {
 		animated: PropTypes.bool,
 		children: PropTypes.node.isRequired,
 		className: PropTypes.string,
 		pulse: PropTypes.bool,
 		type: PropTypes.oneOf(['default', 'primary', 'success', 'warning', 'danger']),
 		visible: PropTypes.bool
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			type: 'default'
-		};
-	},
+	static defaultProps = {
+		type: 'default'
+	}
 
 	render () {
 		var className = classnames('Alertbar', ('Alertbar--' + this.props.type), {
@@ -36,4 +35,4 @@ module.exports = React.createClass({
 
 		return component;
 	}
-});
+}

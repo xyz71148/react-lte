@@ -1,26 +1,25 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
 import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'Popup',
+export default class extends Component{
+	displayName = 'Popup'
 
-	propTypes: {
+	static propTypes = {
 		children: PropTypes.node,
 		className: PropTypes.string,
 		visible: PropTypes.bool
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			transition: 'none'
-		};
-	},
+	static defaultProps = {
+		transition: 'none'
+	}
 
 	renderBackdrop () {
 		if (!this.props.visible) return null;
 		return <div className="Popup-backdrop" />;
-	},
+	}
 
 	renderDialog () {
 		if (!this.props.visible) return null;
@@ -31,7 +30,7 @@ module.exports = React.createClass({
 		return (<div className={dialogClassName}>
 			{this.props.children}
 		</div>);
-	},
+	}
 
 	render () {
 		return (
@@ -45,4 +44,4 @@ module.exports = React.createClass({
 			</div>
 		);
 	}
-});
+}

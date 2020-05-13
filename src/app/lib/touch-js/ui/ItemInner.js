@@ -1,17 +1,18 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'ItemInner',
+export default class extends Component{
+	displayName = 'ItemInner'
 
-	propTypes: {
+	static propTypes= {
 		children: PropTypes.node.isRequired,
 		className: PropTypes.string
-	},
+	}
 
 	render () {
 		var className = classnames('Item__inner', this.props.className);
 
 		return <div className={className} {... this.props} />;
 	}
-});
+}

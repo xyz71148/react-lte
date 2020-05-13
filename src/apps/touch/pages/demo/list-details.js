@@ -1,24 +1,20 @@
-import Container from 'react-container';
-import React from 'react';
+import Container from 'lib/container';
+import React,{Component} from 'react';
 
-module.exports = React.createClass({
-	statics: {
-		navigationBar: 'main',
-		getNavigation (props, app) {
-			var leftLabel = props.prevView === 'list-simple' ? 'Simple' : 'Complex';
-			return {
-				leftArrow: true,
-				leftLabel: leftLabel,
-				leftAction: () => { app.transitionTo('tabs:' + props.prevView, { transition: 'reveal-from-right' }) },
-				title: 'Person'
-			}
-		}
-	},
-	getDefaultProps () {
+export default class extends Component{
+	static navigationBar= 'main'
+	static getNavigation = (props, app)=> {
+		var leftLabel = props.prevView === 'list-simple' ? 'Simple' : 'Complex';
 		return {
-			prevView: 'home'
+			leftArrow: true,
+			leftLabel: leftLabel,
+			leftAction: () => { app.transitionTo('tabs:' + props.prevView, { transition: 'reveal-from-right' }) },
+			title: 'Person'
 		}
-	},
+	}
+	static defaultProps = {
+		prevView: 'home'
+	}
 	render () {
 		var { person } = this.props;
 
@@ -42,4 +38,4 @@ module.exports = React.createClass({
 			</Container>
 		);
 	}
-});
+}

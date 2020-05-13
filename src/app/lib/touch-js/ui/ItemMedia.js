@@ -1,15 +1,16 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'ItemMedia',
-	propTypes: {
+export default class extends Component{
+	displayName= 'ItemMedia'
+	static propTypes= {
 		avatar: PropTypes.string,
 		avatarInitials: PropTypes.string,
 		className: PropTypes.string,
 		icon: PropTypes.string,
 		thumbnail: PropTypes.string
-	},
+	}
 
 	render () {
 		var className = classnames({
@@ -42,4 +43,4 @@ module.exports = React.createClass({
 			</div>
 		);
 	}
-});
+}

@@ -1,18 +1,20 @@
-import Container from 'react-container';
-import React from 'react';
-import { Link, UI } from 'touchstonejs';
+import Container from 'lib/container';
+import React, {Component} from 'react';
+import { Link, UI } from 'lib/touch-js';
 
 var scrollable = Container.initScrollable();
 
-module.exports = React.createClass({
-	statics: {
-		navigationBar: 'main',
-		getNavigation () {
-			return {
-				title: 'Transitions'
-			}
+export default class extends Component {
+	static navigationBar = 'main'
+	static getNavigation = (props,app) => {
+		return {
+			title: 'Transitions',
+			leftArrow: true,
+			leftLabel: 'Lists',
+			leftAction: () => { app.transitionTo('tabs:lists', { transition: 'reveal-from-right' }) },
 		}
-	},
+	}
+
 	
 	render () {
 		return (
@@ -100,4 +102,4 @@ module.exports = React.createClass({
 			</Container>
 		);
 	}
-});
+}

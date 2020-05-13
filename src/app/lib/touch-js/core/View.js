@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // eslint-disable-next-line react/require-render-return
 class View extends Component {
 	static propTypes = {
-		component: PropTypes.func.isRequired,
+		component: PropTypes.any.isRequired,
 		name: PropTypes.string.isRequired
 	}
 	render () {

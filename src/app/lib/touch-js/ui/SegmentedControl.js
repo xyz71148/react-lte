@@ -1,11 +1,12 @@
 import classnames from 'classnames';
-import React from 'react';
+import React,{Component} from 'react';
 import Tappable from 'lib/tappable';
+import PropTypes from 'prop-types';
 
-module.exports = React.createClass({
-	displayName: 'SegmentedControl',
+export default class extends Component{
+	displayName = 'SegmentedControl'
 
-	propTypes: {
+	static propTypes = {
 		className: PropTypes.string,
 		equalWidthSegments: PropTypes.bool,
 		isInline: PropTypes.bool,
@@ -14,17 +15,15 @@ module.exports = React.createClass({
 		options: PropTypes.array.isRequired,
 		type: PropTypes.string,
 		value: PropTypes.string
-	},
+	}
 
-	getDefaultProps () {
-		return {
-			type: 'primary'
-		};
-	},
+	static defaultProps = {
+		type: 'primary'
+	}
 
 	onChange (value) {
 		this.props.onChange(value);
-	},
+	}
 
 	render () {
 		var componentClassName = classnames('SegmentedControl', ('SegmentedControl--' + this.props.type), {
@@ -41,13 +40,13 @@ module.exports = React.createClass({
 
 			var itemClassName = classnames('SegmentedControl__item', {
 				'is-selected': op.value === self.props.value
-			});
+			})
 
 			return (<Tappable key={'option-' + op.value} onTap={onChange} className={itemClassName}>
 				{op.label}
 			</Tappable>);
-		});
+		})
 
 		return <div className={componentClassName}>{options}</div>;
 	}
-});
+}

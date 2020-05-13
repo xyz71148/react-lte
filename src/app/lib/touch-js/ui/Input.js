@@ -2,7 +2,8 @@ import blacklist from 'blacklist';
 import Item from './Item';
 import ItemContent from './ItemContent';
 import ItemInner from './ItemInner';
-import React from 'react';
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
 // Many input types DO NOT support setSelectionRange.
 // Email will show an error on most desktop browsers but works on
@@ -16,21 +17,21 @@ const SELECTABLE_INPUT_TYPES = {
 	'url': true
 };
 
-module.exports = React.createClass({
-	displayName: 'Input',
+export default class extends Component{
+	displayName = 'Input'
 
-	propTypes: {
+	static propTypes = {
 		autoFocus: PropTypes.bool,
 		className: PropTypes.string,
 		children: PropTypes.node,
 		disabled: PropTypes.bool
-	},
+	}
 
 	componentDidMount () {
 		if (this.props.autoFocus) {
 			this.moveCursorToEnd();
 		}
-	},
+	}
 
 	moveCursorToEnd () {
 		var target = this.refs.focusTarget.getDOMNode();
@@ -40,7 +41,7 @@ module.exports = React.createClass({
 			target.focus();
 			target.setSelectionRange(endOfString, endOfString);
 		}
-	},
+	}
 
 	render () {
 		var inputProps = blacklist(this.props, 'children', 'className');
@@ -56,4 +57,4 @@ module.exports = React.createClass({
 			</Item>
 		);
 	}
-});
+}

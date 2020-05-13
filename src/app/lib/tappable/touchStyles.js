@@ -1,5 +1,3 @@
-'use strict';
-
 var touchStyles = {
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
   WebkitTouchCallout: 'none',

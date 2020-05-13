@@ -1,22 +1,23 @@
-import Container from 'react-container';
-import React from 'react';
-import Tappable from 'react-tappable';
+import Container from 'lib/container';
+import React, {Component} from 'react';
+import Tappable from 'lib/tappable';
 import Timers from 'react-timers';
-import { Link, UI } from 'touchstonejs';
+import { Link, UI } from 'lib/touch-js';
 
-module.exports = React.createClass({
-	mixins: [Timers],
-	statics: {
-		navigationBar: 'main',
-		getNavigation () {
-			return {
-				title: 'Controls'
-			}
-		}
-	},
-	
-	getInitialState () {
+export default class extends Component {
+	static navigationBar = 'main'
+	static getNavigation = (props,app) => {
 		return {
+			title: "Controls",
+			leftArrow: true,
+			leftLabel: 'List',
+			leftAction: () => { app.transitionTo('tabs:lists', { transition: 'reveal-from-right' }) },
+		}
+	}
+	constructor(props) {
+		super(props);
+		Object.assign(this, Timers);
+		this.state = {
 			alertbar: {
 				visible: false,
 				type: '',
@@ -26,7 +27,8 @@ module.exports = React.createClass({
 				visible: false
 			}
 		}
-	},
+	}
+
 	
 	showLoadingPopup () {
 		this.setState({
@@ -58,7 +60,7 @@ module.exports = React.createClass({
 				}
 			});
 		}, 3000);
-	},
+	}
 	
 	showAlertbar (type, text) {
 		this.setState({
@@ -76,7 +78,7 @@ module.exports = React.createClass({
 				}
 			});
 		}, 2000);
-	},
+	}
 	
 	handleModeChange (newMode) {
 		let selectedItem = newMode;
@@ -89,16 +91,16 @@ module.exports = React.createClass({
 			selectedMode: selectedItem
 		});
 
-	},
-	
+	}
+
 	render () {
 		let { alertbar } = this.state;
 		return (
 			<Container scrollable>
 				<UI.Alertbar type={alertbar.type || 'default'} visible={alertbar.visible} animated>{alertbar.text || ''}</UI.Alertbar>
-				<UI.Group hasTopGutter>
+				<UI.Group hastopgutter={"true"}>
 					<UI.GroupHeader>Segmented Control</UI.GroupHeader>
-					<UI.SegmentedControl value={this.state.selectedMode} onChange={this.handleModeChange} hasGutter options={[
+					<UI.SegmentedControl value={this.state.selectedMode} onChange={this.handleModeChange.bind(this)} hasGutter options={[
 						{ label: 'One', value: 'one' },
 						{ label: 'Two', value: 'two' },
 						{ label: 'Three', value: 'three' },
@@ -122,7 +124,7 @@ module.exports = React.createClass({
 				</UI.Group>
 				<UI.Group>
 					<UI.GroupHeader>Popup</UI.GroupHeader>
-					<UI.Button type="primary" onTap={this.showLoadingPopup} disabled={this.state.popup.visible}>
+					<UI.Button type="primary" onTap={this.showLoadingPopup.bind(this)} disabled={this.state.popup.visible}>
 						Show Popup
 					</UI.Button>
 				</UI.Group>
@@ -138,10 +140,10 @@ module.exports = React.createClass({
 				</UI.Group>
 
 				<UI.Popup visible={this.state.popup.visible}>
-					<UI.PopupIcon name={this.state.popup.iconName} type={this.state.popup.iconType} spinning={this.state.popup.loading} />		
+					<UI.PopupIcon name={this.state.popup.iconName} type={this.state.popup.iconType} spinning={this.state.popup.loading} />
 					<div><strong>{this.state.popup.header}</strong></div>
 				</UI.Popup>
 			</Container>
 		);
 	}
-});
+}

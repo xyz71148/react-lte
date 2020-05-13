@@ -16,9 +16,8 @@ function createViewsFromChildren (children) {
 }
 
 class ViewContainer extends Component{
-	statics= {
-		shouldFillVerticalSpace: true
-	}
+
+	static shouldFillVerticalSpace= true
 	static propTypes = {
 		children: PropTypes.node
 	}
@@ -30,6 +29,10 @@ class ViewContainer extends Component{
 class ViewManager extends Component{
 	static contextTypes = {
 		app: PropTypes.object
+	}
+
+	transitionTo (view, opts) {
+		this.context.app.transitionTo(view, opts);
 	}
 
 	static defaultProps ={
@@ -44,10 +47,8 @@ class ViewManager extends Component{
 			options: {}
 		}
 	}
-	statics = {
-		shouldFillVerticalSpace: true
-	}
 
+	static shouldFillVerticalSpace= true
 	static propTypes = {
 		name: PropTypes.string,
 		children: PropTypes.node,
