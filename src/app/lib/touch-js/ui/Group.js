@@ -1,0 +1,22 @@
+import blacklist from 'blacklist';
+import classnames from 'classnames';
+import React from 'react';
+
+module.exports = React.createClass({
+	displayName: 'Group',
+	propTypes: {
+		children: PropTypes.node.isRequired,
+		className: PropTypes.string,
+		hasTopGutter: PropTypes.bool
+	},
+	render () {
+		var className = classnames('Group', {
+			'Group--has-gutter-top': this.props.hasTopGutter
+		}, this.props.className);
+		var props = blacklist(this.props, 'className');
+
+		return (
+			<div className={className} {...props} />
+		);
+	}
+});

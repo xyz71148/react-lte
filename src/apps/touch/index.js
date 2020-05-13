@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import rootReducer from "./pages/root-store";
 import thunk from "redux-thunk";
 import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
@@ -14,11 +13,14 @@ import 'style/weui.css';
 initApp();
 
 const store = createStore(
-    rootReducer,
     applyMiddleware(thunk)
 );
 const startApp = () => {
     window.pages_history = []
+
+    if (window.StatusBar) {
+        window.StatusBar.styleDefault();
+    }
     ReactDOM.render(
         <Provider store={store}>
             <App />
