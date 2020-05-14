@@ -34,7 +34,7 @@ export default class extends Component {
 
 		this.setTimeout(function () {
 			self.transitionTo('tabs:transitions', { transition: 'fade' });
-		}, 1000);
+		}, 20000);
 	}
 	render () {
 		return (

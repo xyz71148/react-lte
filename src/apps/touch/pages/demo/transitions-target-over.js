@@ -19,8 +19,9 @@ export default class extends Component{
 	}
 	componentDidMount () {
 		this.setTimeout(()=> {
+			debugger
 			this.transitionTo('app:main', { transition: 'fade' });
-		}, 2000);
+		}, 20000);
 	}
 	render () {
 		return (

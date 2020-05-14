@@ -61,6 +61,47 @@ export default class extends Component{
 					<UI.GroupHeader>Lists</UI.GroupHeader>
 					<UI.GroupBody>
 						<Link onTap={()=>{
+							weui.drawer([
+								{
+									label: 'VIP',
+									onClick: function () {
+										console.log('onclick');
+									}
+								},
+								{
+									label: '订单',
+									onClick: function () {
+										console.log('onclick');
+									}
+								},
+								{
+									label: '我的',
+									onClick: function () {
+										console.log('onclick');
+									}
+								},
+								{
+									label: '退出',
+									onClick: function () {
+										console.log('onclick');
+									}
+								}
+							], {
+								title: '',
+								className: "custom-classname",
+								onClose: function(){
+									console.log('关闭');
+								}
+							});
+						}}>
+							<UI.Item showDisclosureArrow>
+								<UI.ItemInner>
+									drawer
+								</UI.ItemInner>
+							</UI.Item>
+						</Link>
+
+						<Link onTap={()=>{
 							weui.alert('content', function () {
 								console.log('yes')
 							}, {
