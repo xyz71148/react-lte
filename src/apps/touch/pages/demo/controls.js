@@ -1,6 +1,5 @@
 import Container from 'lib/container';
 import React, {Component} from 'react';
-import Tappable from 'lib/tappable';
 import Timers from 'react-timers';
 import { Link, UI } from 'lib/touch-js';
 

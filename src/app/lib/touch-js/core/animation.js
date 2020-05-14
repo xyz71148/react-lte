@@ -48,7 +48,8 @@ Mixins.ScrollContainerToTop = {
 		}
 	},
 	scrollContainerToTop () {
-		if (!this.isMounted() || !this.refs.scrollContainer) return;
+		//if (!this.isMounted() || !this.refs.scrollContainer) return;
+		if ( !this.refs.scrollContainer) return;
 		this._scrollContainerAnimation = scrollToTop(this.refs.scrollContainer, {
 			onComplete: () => { delete this._scrollContainerAnimation; }
 		});

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-var React = require('react');
-var ReactDOM = require('react-dom');
+import ReactDOM from 'react-dom';
 
 function getTouchProps (touch) {
 	if (!touch) return {};
@@ -65,7 +64,7 @@ const Mixin = {
 	},
 
 	makeActive() {
-		if (!this.isMounted()) return;
+		//if (!this.isMounted()) return;
 		this.clearActiveTimeout();
 		this.setState({
 			isActive: true

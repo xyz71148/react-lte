@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
-import Mixin,{propTypes,defaultProps} from "./TappableMixin";
+import {propTypes,defaultProps} from "./TappableMixin";
 import ReactDOM from 'react-dom';
 
 var touchStyles = require('./touchStyles');
@@ -67,7 +67,7 @@ class Tappable extends Component{
 	}
 
 	makeActive() {
-		if (!this.isMounted()) return;
+		//if (!this.isMounted()) return;
 		this.clearActiveTimeout();
 		this.setState({
 			isActive: true

@@ -1,4 +1,3 @@
-import React from 'react';
 import Animation1 from "./core/animation"
 import Link1 from "./core/Link"
 import ViewManager1 from "./core/ViewManager"

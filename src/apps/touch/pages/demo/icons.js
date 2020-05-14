@@ -1,7 +1,7 @@
 import Container from 'lib/container';
 import React,{Component} from 'react';
 import Sentry from 'react-sentry';
-import { Link, UI } from 'lib/touch-js';
+import {  UI } from 'lib/touch-js';
 import PropTypes from 'prop-types';
 import icons from "./icons.json"
 var scrollable = Container.initScrollable({ left: 0, top: 44 });

@@ -1,8 +1,8 @@
-import React,{Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/require-render-return
-class View extends Component {
+class View extends React.Component {
 	static propTypes = {
 		component: PropTypes.any.isRequired,
 		name: PropTypes.string.isRequired

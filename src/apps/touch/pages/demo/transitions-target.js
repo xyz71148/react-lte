@@ -3,8 +3,6 @@ import React, {Component} from 'react';
 import Timers from 'react-timers';
 import PropTypes from "prop-types";
 
-var scrollable = Container.initScrollable();
-
 export default class extends Component {
 	static navigationBar = 'main'
 	static getNavigation = (props,app) => {

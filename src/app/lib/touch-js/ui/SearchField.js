@@ -75,10 +75,11 @@ export default class extends Component{
 	}
 
 	renderCancel () {
+		let visibleBool;
 		if (this.props.hideOnBlur)
-			var visibleBool = this.state.isFocused;
+			visibleBool = this.state.isFocused;
 		else
-			var visibleBool = this.state.isFocused || this.props.value;
+			visibleBool = this.state.isFocused || this.props.value;
 		var className = classnames('SearchField__cancel', {
 			'is-visible': visibleBool
 		});

@@ -31,9 +31,9 @@ class ViewManager extends Component{
 		app: PropTypes.object
 	}
 
-	transitionTo (view, opts) {
-		this.context.app.transitionTo(view, opts);
-	}
+	// transitionTo (view, opts) {
+	// 	this.context.app.transitionTo(view, opts);
+	// }
 
 	static defaultProps ={
 		name: '__default'
@@ -148,11 +148,11 @@ class ViewManager extends Component{
 			// console.log('applying view transition: ' + this.state.options.transition + ' to view ' + this.state.currentView);
 			transitionName = 'view-transition-' + this.state.options.transition;
 			if (this.state.options.transition === 'fade') {
-				var transitionDurationEnter = 10;
-				var transitionDurationLeave = 340;
+				transitionDurationEnter = 10;
+				transitionDurationLeave = 340;
 			} else {
-				var transitionDurationEnter = this.state.options.transition === 'instant'? 50: 500;
-				var transitionDurationLeave = this.state.options.transition === 'instant'? 50: 500;
+				transitionDurationEnter = this.state.options.transition === 'instant'? 50: 500;
+				transitionDurationLeave = this.state.options.transition === 'instant'? 50: 500;
 			}
 		}
 		return (
